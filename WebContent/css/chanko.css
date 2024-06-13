@@ -1,1 +1,18 @@
 @charset "UTF-8";
+html {
+    font-size: 16px;
+    @font-face {
+        font-family:"myfont" ;
+        src: url("../fonts/kai.ttf")format("truetype");
+    }
+}
+.chankopic {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: black;
+        text-align: center;
+        margin: auto;
+        padding: 287px 0;
+        background-image: url(/c1/img/nabe.png);
+      }
