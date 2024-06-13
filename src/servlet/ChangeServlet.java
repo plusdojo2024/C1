@@ -28,6 +28,15 @@ public class ChangeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする 開発中はコメントアウト
+	/*	HttpSession session = request.getSession();
+		if (session.getAttribute("id") == null) {
+			response.sendRedirect("/C1/LoginServlet");
+			return;
+		}
+	*/
+
+
 		// 登録情報変更ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/change.jsp");
 		dispatcher.forward(request, response);

@@ -31,31 +31,18 @@
 
 					<div id="error_message" style="color: red;"></div>
 
-					<input type="submit" id="btnLogin" value="login"
-					style="margin-top:20px;">
+					<input type="submit" id="btnLogin" value="土俵入り" style="width :120px; padding: 3px;">
 				</form>
 				<!-- 問い合わせ先は作る時間ないため#にしておく ただ下線引くだけ-->
-				<a class="login-link" href="#">パスワードを忘れましたか?</a>
+				<a class="login-link" href="RegistServlet">入門はこちらから</a>
 			</div>
+
+			<div class="toiawase">パスワードを忘れた方<br>000-0000-0000まで</div>
 		</div>
 	</div>
 
+	<!-- JavaScriptを読み込む -->
+	<script src="/C1/js/login.js"></script>
 
-	<!-- JavaScript（ここから） -->
-	<script>
-  /* HTML要素をオブジェクトとして取得する */
-  let formObj = document.getElementById('login_form');
-  let errorMessageObj = document.getElementById('error_message');
-
-  /* [ログイン]ボタンをクリックしたときの処理 */
-  formObj.onsubmit = function() {
-    if (!formObj.id.value || !formObj.pw.value) {
-      errorMessageObj.textContent = '※IDとパスワードを入力してください！';
-      return false;
-    }
-    errorMessageObj.textContent = null;
-  };
-</script>
-	<!-- JavaScript（ここまで） -->
 </body>
 </html>
