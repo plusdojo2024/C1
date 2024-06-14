@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.RikishiesDao;
-
 /**
  * Servlet implementation class CalenderServlet
  */
@@ -36,9 +34,6 @@ public class CalenderServlet extends HttpServlet {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
 		}*/
-
-		//該当する力士の予定データを取得する
-		RikishiesDao rDao = new RikishiesDao();
 
 
 		// カレンダーページにフォワードする

@@ -4,16 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>投稿</title>
+<title>各部屋</title>
 </head>
 <body>
-<form method="post" action="/C1/ContributionServlet">
-  <input type="file"><br>
-  <input type="text"><br>
-  <button type="submit">送信する</button>
-</form>
+  <img src="${rikishies.pic}">
+  <a href="/C1/CalenderServlet">カレンダー</a>
+  <c:forEach var="e" items="${}" > <!-- contributionsテーブルより -->
+    <img src="${e.pic_movie}">
+    <p><%  %></p>
+
+  </c:forEach>
+  <button><a href="/C1/ContributionServlet">投稿ボタン</a></button>
 <div id="footer">
-  <ul id="nav">
+<ul id="nav">
     <li><a href="/C1/StandByServlet">待機部屋</a></li>
     <li><a href="/C1/UserSearchServlet">ユーザ検索</a></li>
     <li><a href="/C1/RikishiSearchServlet">力士一覧</a></li>
