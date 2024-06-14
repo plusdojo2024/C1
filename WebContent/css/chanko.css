@@ -12,13 +12,11 @@ html {
 
 
 
-@media(max-width:767px) {
 
-}
 
 /*上部のちゃんこの写真*/
 .chankopic {
-        font-size: 3rem;
+        font-size: 4rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -26,13 +24,13 @@ html {
         text-align: center;
         margin: auto;
         padding: 150px 0;
-        background-image: url(/c1/img/nabe.png);
+        background-image: url(/C1/img/nabe.png);
       }
 
 /*レシピ検索リストボックス*/
 .recipe{
     text-align: center;
-    font-size: 1rem;
+    font-size: 3rem;
     margin: auto;
     padding: auto;
 }
@@ -40,7 +38,8 @@ html {
 /*お店検索リストボックス*/
 .store{
     text-align: center;
-    font-size: 1rem;
+    width:300px;
+    font-size: 3rem;
     margin: auto;
     padding: auto;
 }
@@ -52,23 +51,23 @@ html {
 input[type="submit"]{
     border:none;
     padding:auto;
-    width: 150px;
+    width: 300px;
     background-color:#800080;
     color:aliceblue;
-    font-size: small;
+    font-size: 3rem;
 }
 
 /*リストボックスの幅*/
-#recipe{
-    width: 150px;
+/* #recipe{
+    width: 300px;
 }
 #sumostable{
-    width: 150px;
+    width: 300px;
 }
 #category{
-    width: 150px;
+    width: 300px;
 }
 #venue{
-    width: 150px;
-}
+    width: 300px;
+} */
 

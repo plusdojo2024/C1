@@ -12,7 +12,7 @@
 
 
     <h2>レシピ検索</h2>
-    <form action="/c1/ChankoServlet">
+    <form method="post" action="/C1/ChankoServlet">
 
     <p>
         力士名<br>
@@ -42,13 +42,13 @@
         </select>
     </p>
     <p class="submit">
-            <input type="submit" value="検索">
+            <input type="submit" name="submit" value="レシピ検索">
     </p>
     </form>
 
 
     <h2>お店検索</h2>
-    <form action="/c1/ChankoServlet">
+    <form method="post" action="/C1/ChankoServlet">
 
         <p>
             会場<br>
@@ -61,7 +61,7 @@
         </p>
 
         <p class="submit">
-                <input type="submit" value="検索">
+                <input type="submit" name="submit" value="お店検索">
         </p>
         </form>
 
