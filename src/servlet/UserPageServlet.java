@@ -27,7 +27,7 @@ public class UserPageServlet extends HttpServlet {
 			return;
 		}*/
 
-		// メニューページにフォワードする
+		// マイページ（他人）にフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/userPage.jsp");
 		dispatcher.forward(request, response);
 	}
