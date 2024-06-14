@@ -14,7 +14,7 @@
   <header class="header">
     <nav class="nav">
       <ul>
-<a href="/C1/FllowServlet"><img src="/C1/img/heartred.svg"></a><!-- フォロー一覧 -->
+<a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg"></a><!-- フォロー一覧 -->
 <a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" ></a><!-- 白星一覧 -->
 <a href="/C1/ChangeServlet"><img src="/C1/img/settei.svg"></a><!-- 設定 -->
 <a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg" ></a><!-- ログアウト -->
