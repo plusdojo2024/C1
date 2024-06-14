@@ -36,7 +36,6 @@ public class ChangeServlet extends HttpServlet {
 		}
 	*/
 
-
 		// 登録情報変更ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/change.jsp");
 		dispatcher.forward(request, response);
