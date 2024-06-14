@@ -9,12 +9,10 @@
 </head>
 <body>
   <h2 class="calender">今後の予定</h2><br>
-  <c:forEach var="e" items="${}" >
   <ul><br>
     <li name="calender" value="${e.calender}"></li>
   </ul>
-  </c:forEach>
-  <button><a href="aaaa.xlsx">Googleカレンダーと連携する</a></button>
+  <button>Googleカレンダーと連携する</button>
 <div id="footer">
 <ul id="nav">
     <li><a href="/C1/StandByServlet">待機部屋</a></li>
