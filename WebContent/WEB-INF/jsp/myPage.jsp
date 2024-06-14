@@ -12,7 +12,7 @@
 <body id="top">
   <!--ヘッダー-->
   <header class="header">
-    <nav class="awano">
+    <nav class="navigation">
       <a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg"  id="pic"></a><!-- ログアウト --><br>
       <a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg" id="pic"></a><!-- フォロー一覧 -->
       <a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" id="pic" ></a><!-- 白星一覧 -->
@@ -28,6 +28,89 @@
   <!-- ほんとは推しの力士のアイコンが入る-->
     <img src="/simpleBC/img/ホーム.png">
     <h1 class="toko">投稿一覧</h1>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
+     <h1>あ</h1><br>
 
   </main>
   <footer>
