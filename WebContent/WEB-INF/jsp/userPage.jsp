@@ -13,32 +13,33 @@
   <!--ヘッダー-->
   <header class="header">
     <nav class="nav">
-      <ul>
-<p><a href="/C1/FllowServlet">フォロー中のユーザー一覧</a></p>
-<p><a href="/C1/StarsServlet">白星一覧</a></p>
-<p><a href="/C1/SearchServlet">設定</a></p>
-<p><a href="/C1/SearchServlet">フォロー</a></p>
-      </ul>
+        <a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg" id="pic"></a><!-- フォロー一覧 -->
+        <a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" id="pic" ></a><!-- 白星一覧 -->
     </nav>
   </header>
   <main>
-  <!-- ほんとはユーザーが設定した画像が入る -->
-    <img src="/simpleBC/img/ホーム.png" width="200" height="100" alt="ホームの男">
+  <!-- ほんとは自分のアイコンが入る-->
+    <img src="/simpleBC/img/ホーム.png" >
     <h1 class="user_name">ユーザーネーム</h1>
     <h1 class="message">メッセージ</h1>
     <h1 class="oshirikishi">推し力士</h1>
-   <!-- ほんとは推し力士の画像が入る -->
-    <img src="/simpleBC/img/ホーム.png" width="200" height="100" alt="ホームの男">
+  <!-- ほんとは推しの力士のアイコンが入る-->
+    <img src="/simpleBC/img/ホーム.png">
     <h1 class="toko">投稿一覧</h1>
 
   </main>
-</body>
- <footer>
-  <p><a href="/C1/StandByServlet">待機部屋</a></p>
-  <p><a href="/C1/UserSearchServlet">ユーザー検索</a></p>
-  <p><a href="/C1/RikishiSearchServlet">力士一覧</a></p>
-  <p><a href="/C1/ChankoServlet">レシピ検索</a></p>
-  <p><a href="/C1/SchoolServlet">教習所</a></p>
-  <p><a href="/C1/MyPageServlet">マイページ</a></p>
+  <footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+
+  </nav>
   </footer>
+</body>
+	<!--JavaScriptを読み込む-->
+	<script src="/C1/js/userPage.js"></script>
 </html>

@@ -1,1 +1,85 @@
 @charset "UTF-8";
+@font-face {
+    font-family:"myfont" ;
+    src: url("../fonts/kai.ttf")format("truetype");
+}
+
+
+
+/*html（全体）
+ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
+html {
+    font-size: 16px;
+    background-color:#FFEEFF;
+	font-family: "myfont";
+    }
+
+
+
+
+
+/*上部のちゃんこの写真*/
+.school-pic {
+        font-size: 10rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color:black;
+        text-align: center;
+        margin: auto;
+        padding: 100px 0;
+        background-image: url(/C1/img/school.jpg);
+      }
+
+
+
+/*レシピ検索リストボックス*/
+.recipe{
+    text-align: center;
+    font-size: 3rem;
+    margin: auto;
+    padding: auto;
+}
+
+/*お店検索リストボックス*/
+.store{
+    text-align: center;
+    font-size: 3rem;
+    margin: auto;
+    padding: auto;
+}
+
+/*検索ボタン*/
+.submit{
+    text-align: center;
+}
+
+input[type="submit"]{
+    border:none;
+    padding:auto;
+    width: 150px;
+    background-color:#800080;
+    color:aliceblue;
+    font-size: small;
+}
+
+
+
+
+
+
+
+/*リストボックスの幅*/
+#recipe{
+    width: 150px;
+}
+#sumostable{
+    width: 150
+}
+#category{
+    width: 150px;
+}
+#venue{
+    width: 150px;
+}
+

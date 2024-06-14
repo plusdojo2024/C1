@@ -1,7 +1,7 @@
 // HTML要素をオブジェクトとして取得する
 	'use strict';
 
-  let formObj = document.getElementById('login_form');
+  let formObj = document.getElementById('regist_form');
   let errorMessageObj = document.getElementById('error_message');
 
   /* [ログイン]ボタンをクリックしたときの処理 */
