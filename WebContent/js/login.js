@@ -1,5 +1,6 @@
+// HTML要素をオブジェクトとして取得する
+	'use strict';
 
-  // HTML要素をオブジェクトとして取得する
   let formObj = document.getElementById('login_form');
   let errorMessageObj = document.getElementById('error_message');
 
