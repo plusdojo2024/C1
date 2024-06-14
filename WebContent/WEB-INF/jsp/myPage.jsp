@@ -12,13 +12,11 @@
 <body id="top">
   <!--ヘッダー-->
   <header class="header">
-    <nav class="nav">
-      <ul>
-<a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg"></a><!-- フォロー一覧 -->
-<a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" ></a><!-- 白星一覧 -->
-<a href="/C1/ChangeServlet"><img src="/C1/img/settei.svg"></a><!-- 設定 -->
-<a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg" ></a><!-- ログアウト -->
-      </ul>
+    <nav class="awano">
+      <a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg"  id="pic"></a><!-- ログアウト --><br>
+      <a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg" id="pic"></a><!-- フォロー一覧 -->
+      <a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" id="pic" ></a><!-- 白星一覧 -->
+      <a href="/C1/ChangeServlet"><img src="/C1/img/settei.svg" id="pic"></a><!-- 設定 -->
     </nav>
   </header>
   <main>
@@ -33,12 +31,14 @@
 
   </main>
   <footer>
-  <p><a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" ></a></p>
-  <p><a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png"></a></p>
-  <p><a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png"></a></p>
-  <p><a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png"></a></p>
-  <p><a href="/C1/SchoolServlet"><img src="/C1/img/school.png"></a></p>
-  <p><a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" ></a></p>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
   </footer>
 </body>
 	<!--JavaScriptを読み込む-->

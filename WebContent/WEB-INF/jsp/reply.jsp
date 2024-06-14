@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SUMOO</title>
+<link rel="stylesheet" href="/C1/css/reply.css">
 </head>
 <main>
   <h1>ユーザーネーム</h1>
@@ -30,11 +31,11 @@
 
 </body>
   <footer>
-  <p><a href="/C1/StandByServlet">待機部屋</a></p>
-  <p><a href="/C1/UserSearchServlet">ユーザー検索</a></p>
-  <p><a href="/C1/RikishiSearchServlet">力士一覧</a></p>
-  <p><a href="/C1/ChankoServlet">レシピ検索</a></p>
-  <p><a href="/C1/SchoolServlet">教習所</a></p>
-  <p><a href="/C1/MyPageServlet">マイページ</a></p>
+  <p><a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" ></a></p>
+  <p><a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png"></a></p>
+  <p><a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png"></a></p>
+  <p><a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png"></a></p>
+  <p><a href="/C1/SchoolServlet"><img src="/C1/img/school.png"></a></p>
+  <p><a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" ></a></p>
   </footer>
 </html>

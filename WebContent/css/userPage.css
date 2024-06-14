@@ -1,1 +1,37 @@
 @charset "UTF-8";
+ @font-face {
+  font-family: "myfont";
+  src: url("/C1/fonts/kai.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "myfont";
+}
+
+html {
+    font-size: 16px;
+    background-color:#FFEEFF;
+	font-family: "myfont";
+    }
+.menu{
+  background-color:#800080;
+  margin: 10px 0 0 0;
+  padding-bottom: 20px;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.nav {
+		text-align: right;
+}
+#pic{
+    width:120px;
+    height:120px;
+}
+#icon{
+border-radius: 50%;
+width:120px;
+height:120px;
+}
