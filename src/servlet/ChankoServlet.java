@@ -44,7 +44,7 @@ public class ChankoServlet extends HttpServlet {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
 		}*/
-		//request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		/*	// リクエストパラメータを取得する
 			request.setCharacterEncoding("UTF-8");
 			String company = request.getParameter("company");
