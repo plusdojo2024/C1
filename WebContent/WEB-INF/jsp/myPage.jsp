@@ -14,10 +14,10 @@
   <header class="header">
     <nav class="nav">
       <ul>
-<p><a href="/C1/FllowServlet">フォロー中のユーザー一覧</a></p>
-<p><a href="/C1/StarsServlet">白星一覧</a></p>
-<p><a href="/C1/SearchServlet">設定</a></p>
-<p><a href="/C1/LoginServlet" id="logout">ログアウト</a></p>
+<a href="/C1/FllowServlet"><img src="/C1/img/heartred.svg" width="1500" height="300"></a><!-- フォロー一覧 -->
+<a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" width="1500" height="300"></a><!-- 白星一覧 -->
+<a href="/C1/ChangeServlet"><img src="/C1/img/settei.svg" width="1500" height="300"></a><!-- 設定 -->
+<a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg" width="1500" height="300"></a><!-- ログアウト -->
       </ul>
     </nav>
   </header>
@@ -33,23 +33,14 @@
 
   </main>
   <footer>
-  <p><a href="/C1/StandByServlet">待機部屋</a></p>
-  <p><a href="/C1/UserSearchServlet">ユーザー検索</a></p>
-  <p><a href="/C1/RikishiSearchServlet">力士一覧</a></p>
-  <p><a href="/C1/ChankoServlet">レシピ検索</a></p>
-  <p><a href="/C1/SchoolServlet">教習所</a></p>
-  <p><a href="/C1/MyPageServlet">マイページ</a></p>
+  <p><a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" width="1500" height="300"></a></p>
+  <p><a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" width="1500" height="300"></a></p>
+  <p><a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" width="1500" height="300"></a></p>
+  <p><a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" width="1500" height="300"></a></p>
+  <p><a href="/C1/SchoolServlet"><img src="/C1/img/school.png" width="1500" height="300"></a></p>
+  <p><a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" width="1500" height="300"></a></p>
   </footer>
 </body>
-<script>
-  'use strict';
-  document.getElementById("logout").onclick = function() {
-  if(window.confirm('ログアウトしますか')) {
-  }
-  else{
-  (console.log('クリックされました'));
-   event.preventDefault();
-  }
-  }
-</script>
+	<!--JavaScriptを読み込む-->
+	<script src="/C1/js/myPage.js"></script>
 </html>

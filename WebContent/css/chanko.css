@@ -1,18 +1,74 @@
 @charset "UTF-8";
+@font-face {
+    font-family:"myfont" ;
+    src: url("../fonts/kai.ttf")format("truetype");
+}
+/*html*/
 html {
     font-size: 16px;
-    @font-face {
-        font-family:"myfont" ;
-        src: url("../fonts/kai.ttf")format("truetype");
+    background-color:#FFEEFF;
+	font-family: "myfont";
     }
+
+
+
+@media(max-width:767px) {
+
 }
+
+/*上部のちゃんこの写真*/
 .chankopic {
+        font-size: 3rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        color: black;
+        color:black;
         text-align: center;
         margin: auto;
-        padding: 287px 0;
+        padding: 150px 0;
         background-image: url(/c1/img/nabe.png);
       }
+
+/*レシピ検索リストボックス*/
+.recipe{
+    text-align: center;
+    font-size: 1rem;
+    margin: auto;
+    padding: auto;
+}
+
+/*お店検索リストボックス*/
+.store{
+    text-align: center;
+    font-size: 1rem;
+    margin: auto;
+    padding: auto;
+}
+
+/*検索ボタン*/
+.submit{
+    text-align: center;
+}
+input[type="submit"]{
+    border:none;
+    padding:auto;
+    width: 150px;
+    background-color:#800080;
+    color:aliceblue;
+    font-size: small;
+}
+
+/*リストボックスの幅*/
+#recipe{
+    width: 150px;
+}
+#sumostable{
+    width: 150px;
+}
+#category{
+    width: 150px;
+}
+#venue{
+    width: 150px;
+}
+
