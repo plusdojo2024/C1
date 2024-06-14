@@ -35,10 +35,10 @@ public class ChangeServlet extends HttpServlet {
 			return;
 		}
 	*/
-
 		// 登録情報変更ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/change.jsp");
 		dispatcher.forward(request, response);
+
 	}
 
 	/**
@@ -48,5 +48,8 @@ public class ChangeServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
+	/*これからやりたいこと
+	 登録情報を変更した後にマイページに画面遷移するようにしたい。名刺管理アプリの更新を参考にする*/
 
 }

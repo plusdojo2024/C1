@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>お店</title>
+<link rel="stylesheet" type="text/css" href="/C1/css/chanko.css">
 </head>
 <body>
+   <h1 class="chankopic">お店（検索結果)</h1>
+
+
 
 </body>
 </html>
