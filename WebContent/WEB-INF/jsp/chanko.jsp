@@ -12,6 +12,8 @@
 
 	<div class="recipe">
 		<h2>レシピ検索</h2>
+
+
 		<form method="post" action="/C1/ChankoServlet">
 
 			<p>
