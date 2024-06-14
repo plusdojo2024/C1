@@ -83,3 +83,13 @@ input:focus {
     font-size: 10px;
     margin-top: 20px;
 }
+
+ @font-face {
+  font-family: "myfont";
+  src: url("/C1/fonts/kai.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "myfont";
+}
+

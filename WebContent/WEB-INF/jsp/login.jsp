@@ -19,7 +19,7 @@
 				<form id="login_form" method="post" action="/C1/LoginServlet">
 					<div class="login-name">
 						<input type="text" class="login-field" name="id"
-							placeholder="username" id="login-name"> <label
+							placeholder="ID" id="login-name"> <label
 							class="login-field-name" for="login-name"></label>
 					</div>
 

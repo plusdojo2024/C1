@@ -8,12 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-//まだない
+/*まだないためコメントアウト。コメントアウト消すとエラー発生
 import dao.IdpwDAO;
 import model.Idpw;
 import model.LoginUser;
+*/
 
 /**
  * Servlet implementation class LoginServlet
@@ -42,11 +42,14 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	/*まだエラーが出るためコメントアウト
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
+
+
 
 		// ログイン処理を行う
 		//まだDAO設定していないためエラーが出ています
@@ -67,6 +70,5 @@ public class LoginServlet extends HttpServlet {
 			// 結果ページにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
 			dispatcher.forward(request, response);
+			*/
 		}
-	}
-}
