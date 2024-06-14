@@ -41,26 +41,28 @@
 
 
   </form>
-  <h2>名刺一覧（名刺データの更新と削除ができます）</h2>
 
-  <c:if test="${empty cardList}">
+  <%-- <c:if test="${empty cardList}">
     <p>一致するデータはありません。</p>
-  </c:if>
+  </c:if> --%>
 
 
-  <c:forEach var="e" items="${cardList}" >
-    <form class="search_result" method="post" action="/simpleBC/UpdateDeleteServlet">
+<%--   <c:forEach var="e" items="${cardList}" > --%>
+    <form class="search_result" method="post" action="/C1/UserServlet">
     <table>
-      <a href="/C1/MenuServlet">
       <tr>
+      <a href="/C1/UserPageServlet?id=0">
+      <%-- id=${ cardList.user_id } --%>
         <td>
-          <input type="image" src="/C1/img/daiamami.png" alt="SUMOO | ユーザー検索" value="daiamami">
-            <!-- ユーザーのURLを属性にしたinputにして、これが押されたら
-             サーブレットのdoPostでユーザーページに飛ぶようにする
+            <input type="image" src="/C1/img/daiamami.png" alt="SUMOO | ユーザー検索" value="daiamami">
+            <!--
+             各ユーザーのページに直接飛ぶことができる
             ということはここが押されたらユーザーのURLを
             渡して、そのページにリダイレクトする
             srcの中身はアイコンで、valueの中身はユーザーのURLだといいかも
             それで、サーブレットでユーザーのURLが渡されたらそのユーザーページに遷移するとする-->
+
+
         </td>
         <td>
           ユーザー名
@@ -75,14 +77,13 @@
             followsテーブルにレコードを追加する。
             width,heightはいい感じで-->
         </td>
-      </tr>
       </a>
+      </tr>
     </table>
     </form>
     <hr>
-  </c:forEach>
+<%--   </c:forEach> --%>
 
- <p class="center"> <a href="#top">ページトップへ戻る</a></p>
   <!-- メイン（ここまで） -->
   <!-- フッター（ここから） -->
   <div id="footer">
