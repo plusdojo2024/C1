@@ -20,11 +20,17 @@ public class ChankoServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	// もしもログインしていなかったらログインサーブレットにリダイレクトする
+	/*HttpSession session = request.getSession();
+	if (session.getAttribute("id") == null) {
+		response.sendRedirect("/c1/LoginServlet");
+		return;
+	}*/
+
 		// ちゃんこページにフォワードする
 	RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/chanko.jsp");
 	dispatcher.forward(request, response);
-
-
 	}
+
 
 }
