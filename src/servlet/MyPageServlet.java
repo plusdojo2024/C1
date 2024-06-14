@@ -27,7 +27,7 @@ public class MyPageServlet extends HttpServlet {
 			return;
 		}*/
 
-		// メニューページにフォワードする
+		// マイページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/myPage.jsp");
 		dispatcher.forward(request, response);
 	}

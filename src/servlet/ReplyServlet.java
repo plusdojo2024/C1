@@ -27,7 +27,7 @@ public class ReplyServlet extends HttpServlet {
 			return;
 		}*/
 
-		// メニューページにフォワードする
+		// 返信ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/reply.jsp");
 		dispatcher.forward(request, response);
 	}

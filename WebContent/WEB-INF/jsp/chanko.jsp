@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/c1/css/chanko.css">
 <title>ちゃんこ</title>
+<link rel="stylesheet" type="text/css" href="/C1/css/chanko.css">
 </head>
 <body>
    <h1 class="chankopic">ちゃんこ</h1>
