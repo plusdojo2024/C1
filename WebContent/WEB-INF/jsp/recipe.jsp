@@ -11,7 +11,7 @@
 	<h1 class="chankopic">レシピ（検索結果）</h1>
 
 
-	<hr>
+<%-- 	<hr>
 	<div id="mess">
 		<c:if test="${empty cardList}">
 			<p>一致するデータはありません。</p>
@@ -21,15 +21,15 @@
 
 
 	<c:forEach var="e" items="${cardList}">
-		<form id="regist_form" method="post" action="/C1/"RecipeServlet">
+		<form id="regist_form" method="post" action="/C1/"RecipeServlet"> --%>
 			<table class="tb">
 				<tr>
 					<td>
 					<table class="minitable">
-					<tr><td>あ</td></tr>
-					<tr><td>あ</td></tr>
-					<tr><td>あ</td></tr>
-					<tr><td>あ</td></tr>
+					<tr><td><img src="/C1/img/recipepicture.png"></td></tr>
+					<tr><td>鍋</td></tr>
+					<tr><td>雪見ちゃんこ</td></tr>
+					<tr><td>伊勢ケ浜部屋</td></tr>
 
 					</table>
 					</td>
@@ -48,8 +48,8 @@
 
 
 			</table>
-		</form>
+<!-- 		</form>
 		<hr>
-	</c:forEach>
+	</c:forEach> -->
 </body>
 </html>
