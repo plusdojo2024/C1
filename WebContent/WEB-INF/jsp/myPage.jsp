@@ -21,14 +21,27 @@
   </header>
   <main>
   <!-- ほんとは自分のアイコンが入る-->
-    <img src="/simpleBC/img/ホーム.png" >
+    <img src="/C1/img/daiamami.png" >
     <h1 class="user_name">ユーザーネーム</h1>
     <h1 class="message">メッセージ</h1>
     <h1 class="oshirikishi">推し力士</h1>
   <!-- ほんとは推しの力士のアイコンが入る-->
-    <img src="/simpleBC/img/ホーム.png">
+    <img src="/C1/img/daiamami.png">
     <h1 class="toko">投稿一覧</h1>
-       </main>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>あ</h1><br>
+    <h1>い</h1><br>
+    <img src="/C1/img/daiamami.png" >
+  </main>
   <footer>
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
