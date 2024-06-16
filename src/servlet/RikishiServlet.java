@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,25 +10,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class RikishiServlet
+ * Servlet implementation class UserSearchServlet
  */
 @WebServlet("/RikishiServlet")
 public class RikishiServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RikishiServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
+	String favorite = "";
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		if (favorite.equals("0")) {
+			//favoriteテーブルにレコードを追加する処理！
+
+		} else if (favorite.equals("1")) {
+			//favoriteテーブルからレコードを削除する処理！
+
+		}
+		if (false) {
+
+		}
+
+
+
+
+		// ユーザー検索・一覧ページにフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/rikishi.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
