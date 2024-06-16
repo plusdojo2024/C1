@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>SUMOO</title>
 <link rel="stylesheet" href="/C1/css/reply.css">
+<link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <main>
   <h1>ユーザーネーム</h1>
@@ -30,12 +31,14 @@
 <body>
 
 </body>
-  <footer>
-  <p><a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" ></a></p>
-  <p><a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png"></a></p>
-  <p><a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png"></a></p>
-  <p><a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png"></a></p>
-  <p><a href="/C1/SchoolServlet"><img src="/C1/img/school.png"></a></p>
-  <p><a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" ></a></p>
-  </footer>
+<footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
+</footer>
 </html>

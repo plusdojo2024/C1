@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <title>SUMOO</title>
   <link rel="stylesheet" href="/C1/css/myPage.css">
-
+  <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body id="top">
   <!--ヘッダー-->
@@ -28,91 +28,7 @@
   <!-- ほんとは推しの力士のアイコンが入る-->
     <img src="/simpleBC/img/ホーム.png">
     <h1 class="toko">投稿一覧</h1>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-     <h1>あ</h1><br>
-
-  </main>
+       </main>
   <footer>
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
