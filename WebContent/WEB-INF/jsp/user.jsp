@@ -12,11 +12,9 @@
 <div class="wrapper" id="top">
   <!-- ヘッダー（ここから） -->
   <header class="header">
-    <a href="/C1/MenuServlet">
       <div class="logo">
         <h2>ユーザー検索</h2>
       </div>
-    </a>
   </header>
   <!-- ヘッダー（ここまで） -->
 <!--   <ul id="nav">
@@ -46,52 +44,53 @@
     <p>一致するデータはありません。</p>
   </c:if> --%>
 
-
 <%--   <c:forEach var="e" items="${cardList}" > --%>
-    <form class="search_result" method="post" action="/C1/UserServlet">
+<!--     <form class="search_result" method="post" action="/C1/UserServlet"> -->
     <table>
       <tr>
-      <a href="/C1/UserPageServlet?id=0">
-      <%-- id=${ cardList.user_id } --%>
         <td>
-            <input type="image" src="/C1/img/daiamami.png" alt="SUMOO | ユーザー検索" value="daiamami">
+        <a href="/C1/UserPageServlet?id=0">
+            <img src="/C1/img/daiamami.png" width="30" height="30" alt="SUMOO | ユーザー検索">
             <!--
-             各ユーザーのページに直接飛ぶことができる
-            ということはここが押されたらユーザーのURLを
-            渡して、そのページにリダイレクトする
-            srcの中身はアイコンで、valueの中身はユーザーのURLだといいかも
-            それで、サーブレットでユーザーのURLが渡されたらそのユーザーページに遷移するとする-->
+             src="${user_pic} widthとheightはCSSで決める
+             -->
 
-
+		</a>
         </td>
         <td>
           ユーザー名
         </td>
         <td>
-          <input type="image" src="/C1/img/daiamami.png" width="30" height="30" alt="SUMOO | ユーザー検索" value="フォロー">
-            <!-- フォローを属性にしたinputにして、これが押されたら
-             doPostでfollowsテーブルにレコードを追加する。
-            そして、フォローしたという情報をもって再びこのページにフォワードする
-            srcの中身はフォローの画像で、valueの中身はそのユーザーのIDがいいかな？
-            それで、サーブレットでユーザーIDが渡されたら、自分のIDとそのユーザーのIDで
-            followsテーブルにレコードを追加する。
-            width,heightはいい感じで-->
+          <c:if test="false">
+          <%-- このユーザーのことをフォローしていなかったら --%>
+            <a href="/C1/UserSearchServlet?follow=0&id=0">
+        	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
+              <img src="/C1/img/heartwhite.png" width="30" height="30" alt="SUMOO | ユーザー検索">
+		    </a>
+		  </c:if>
+          <c:if test="true">
+          <%-- このユーザーのことをフォローしていたら --%>
+            <a href="/C1/UserSearchServlet?follow=1&id=0">
+        	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
+              <img src="/C1/img/heartred.svg" width="30" height="30" alt="SUMOO | ユーザー検索">
+		    </a>
+		  </c:if>
         </td>
-      </a>
       </tr>
     </table>
-    </form>
-    <hr>
+<!--     </form> -->
 <%--   </c:forEach> --%>
 
   <!-- メイン（ここまで） -->
   <!-- フッター（ここから） -->
   <div id="footer">
-    <p class="copyright">Copyright&copy; managebusiness Co.,Ltd All Rights Reserved.</p>
+    <p class="copyright"></p>
   </div>
   <!-- フッター（ここまで） -->
 </div>
 <!-- JavaScript（ここから） -->
+
+<!--
 <script>
 /* submitボタンをクリックしたときの処理 */
 function submitClick() {
@@ -110,6 +109,8 @@ for (let item of formObjs) {
 }
 </script>
 <script src="/simpleBC/js/script.js"></script>
+
+-->
 <!-- JavaScript（ここまで） -->
 
 </body>

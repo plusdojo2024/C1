@@ -1,3 +1,14 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "myfont";
+  src: url("/C1/fonts/kai.ttf") format("truetype");
+}
+
+* {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "myfont";
+}
+
 
 
