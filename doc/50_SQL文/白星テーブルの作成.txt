@@ -1,4 +1,4 @@
-白星テーブルの作成
+/*白星テーブルの作成*/
 create table stars (
 id int  primary key auto_increment,
 contribution_id int ,
@@ -7,7 +7,7 @@ created_at timestamp  default CURRENT_TIMESTAMP,
 updated_at timestamp  default CURRENT_TIMESTAMP 
 )
 
-白星テーブルにテスト用のデータを登録する
+/*白星テーブルにテスト用のデータを登録する*/
 INSERT INTO stars (id, contribution_id, user_id, created_at, updated_at) VALUES
 (null, 4, 'saku', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (null, 5, 'saku', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
