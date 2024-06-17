@@ -23,3 +23,6 @@ INSERT INTO follows VALUES (null, 'saku', 'awa', current_timestamp, current_time
 
 /* トランザクションを完了（確定）する */
 COMMIT;
+
+/* 全選択 */
+SELECT * FROM FOLLOWS
