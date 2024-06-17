@@ -1,6 +1,7 @@
 /*お店*/
 
-/*SELECT * FROM stores;*/
+/*SELECT * FROM stores;
+  DROP TABLE stores;    */
 
 /*テーブル*/
 
