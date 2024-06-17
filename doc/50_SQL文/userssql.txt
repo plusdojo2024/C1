@@ -1,0 +1,57 @@
+ jdbc:h2:file:C:/pleiades/workspace/data/C1
+
+
+SELECT*FROM USERS;
+
+
+DROP TABLE USERS;
+
+
+
+/*USERSテーブルを作成する SQL 文*/
+
+CREATE TABLE USERS (
+ID		VARCHAR (50) ,
+USER_ID		VARCHAR (50) NOT NULL,
+PASSWORD	VARCHAR (20) NOT NULL,
+USER_NAME	VARCHAR (30) NOT NULL,
+ICON		VARCHAR (100),
+MESSAGE		VARCHAR (200),
+ASK		VARCHAR (20) NOT NULL,
+QUESTION	VARCHAR (20) NOT NULL,
+CREATED_AT	TIMESTAMP,
+UPDATED_AT	TIMESTAMP,
+PRIMARY KEY (ID));
+
+
+
+/*USERSテーブルにテスト用のデータを登録*/
+BEGIN TRANSACTION;
+
+
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'saku',
+'s',
+'サク',
+'/C1/img/iconsaku.jpg',
+'７月場所参戦します！',
+'初恋の人は？',
+'アンパンマン',
+'CURRENT_TIMESTAMP',
+'CURRENT_TIMESTAMP');
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'saku',
+'s',
+'サク',
+'/C1/img/iconsaku.jpg',
+'７月場所参戦します！',
+'初恋の人は？',
+'アンパンマン',
+'CURRENT_TIMESTAMP',
+'CURRENT_TIMESTAMP');
