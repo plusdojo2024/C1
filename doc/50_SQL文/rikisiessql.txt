@@ -1,11 +1,11 @@
- jdbc:h2:file:C:/pleiades/workspace/data/C1
-
+/*コピペ用
+jdbc:h2:file:C:/pleiades/workspace/data/C1
 SELECT*FROM RIKISHIES;
 
 DROP TABLE RIKISHIES;
 
 DELETE FROM RIKISHIES;
-
+*/
 
 /*RIKISHIESテーブルを作成する SQL 文*/
 CREATE TABLE RIKISHIES (
@@ -31,3 +31,5 @@ INSERT INTO RIKISHIES (
 (5, '/c1/img/iconendo.png', '遠藤 聖大', 'https://www.sumo.or.jp/ResultRikishiData/profile/3464/', '大相撲フィーバーの火付け役イケメン力士', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (6, '/C1/img/icoonosato.png', '大の里 泰輝', 'https://www.sumo.or.jp/ResultRikishiData/profile/4227/', '相撲界に現れた令和の“怪物”', ' ', '二所ノ関部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+/* テーブルの表示 */
+SELECT * FROM RIKISHIES;

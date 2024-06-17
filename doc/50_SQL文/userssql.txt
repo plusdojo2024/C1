@@ -1,7 +1,7 @@
  jdbc:h2:file:C:/pleiades/workspace/data/C1
 
 
-SELECT*FROM USERS;
+
 
 DROP TABLE USERS;
 
@@ -54,3 +54,5 @@ NULL,
 'ƒAƒ“ƒpƒ“ƒ}ƒ“',
 'CURRENT_TIMESTAMP',
 'CURRENT_TIMESTAMP');
+
+SELECT*FROM USERS;
