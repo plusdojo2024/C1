@@ -5,11 +5,20 @@ PIC			VARCHAR (100),
 RIKISHI_NAME		VARCHAR (20),
 SUMO_ASSOCIATION_LINK	VARCHAR (500),
 RIKISHI_PROFILE		VARCHAR (400),
-CALENDER,
+CALENDAR VARCHAR(200),
 SUMO_STABLE_NAME	VARCHAR (30),
 CREATED_AT		TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
 UPDATED_AT		TIMESTAMP  DEFAULT CURRENT_TIMESTAMP
 )
 
-
+/*RIKISHIESテーブルにテスト用データを登録する*/
+INSERT INTO RIKISHIES (
+    ID, PIC, RIKISHI_NAME, SUMO_ASSOCIATION_LINK, RIKISHI_PROFILE, CALENDAR, SUMO_STABLE_NAME, CREATED_AT, UPDATED_AT
+) VALUES
+(1, '/C1/img/iconatami.png', '熱海富士朔太郎', 'https://www.sumo.or.jp/ResultRikishiData/profile/4055/', '好感度MAX正統派力士', ' ', '伊勢ヶ濱部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(2, '/C1/img/enho.jpg', '炎鵬友哉', 'https://www.sumo.or.jp/ResultRikishiData/profile/3803/', '小兵のひねり王子', ' ', '伊勢ヶ濱部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(3, '/C1/img/icontakerufuji.png', '尊富士 弥輝也', 'https://www.sumo.or.jp/ResultRikishiData/profile/4171/', '果物が好きで、特に桃が好き。', ' ', '伊勢ヶ濱部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(4, '/C1/img/icondaiamami.png', '大奄美　元規', 'https://www.sumo.or.jp/ResultRikishiData/profile/3665/', '鹿児島出身。好きな食べ物は「食べ物」', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(5, '/c1/img/iconendo.png', '遠藤 聖大', 'https://www.sumo.or.jp/ResultRikishiData/profile/3464/', '大相撲フィーバーの火付け役イケメン力士', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(6, '/C1/img/icoonosato.png', '大の里 泰輝', 'https://www.sumo.or.jp/ResultRikishiData/profile/4227/', '相撲界に現れた令和の“怪物”', ' ', '二所ノ関部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
