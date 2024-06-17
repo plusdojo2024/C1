@@ -11,7 +11,7 @@ DROP TABLE USERS;
 /*USERSテーブルを作成する SQL 文*/
 
 CREATE TABLE USERS (
-ID		VARCHAR (50) ,
+ID		INTEGER AUTO_INCREMENT(1),
 USER_ID		VARCHAR (50) NOT NULL,
 PASSWORD	VARCHAR (20) NOT NULL,
 USER_NAME	VARCHAR (30) NOT NULL,
@@ -26,9 +26,6 @@ PRIMARY KEY (ID));
 
 
 /*USERSテーブルにテスト用のデータを登録*/
-BEGIN TRANSACTION;
-
-
 
 
 INSERT INTO USERS VALUES(
@@ -40,18 +37,70 @@ NULL,
 '７月場所参戦します！',
 '初恋の人は？',
 'アンパンマン',
-'CURRENT_TIMESTAMP',
-'CURRENT_TIMESTAMP');
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
 
 
 INSERT INTO USERS VALUES(
 NULL,
-'saku',
-'s',
-'サク',
-'/C1/img/iconsaku.jpg',
-'７月場所参戦します！',
+'tomo',
+'t',
+'トモ',
+'/C1/img/icontomo.png',
+'5月場所参戦してました！',
 '初恋の人は？',
-'アンパンマン',
-'CURRENT_TIMESTAMP',
-'CURRENT_TIMESTAMP');
+'カレーパンマン',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'ogu',
+'o',
+'オグ',
+'/C1/img/iconogu.jpg',
+'初心者です！',
+'初恋の人は？',
+'ショクパンマン',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'tana',
+'a',
+'タナ',
+'/C1/img/icontana.png',
+'追手風部屋推しです',
+'はじめて飼った動物は？',
+'金魚',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'hiji',
+'h',
+'ヒジ',
+'/C1/img/icononosato.png',
+'最近始めました',
+'はじめて飼った動物は？',
+'猫',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
+
+
+INSERT INTO USERS VALUES(
+NULL,
+'awa',
+'c',
+'アワ',
+'/C1/img/iconawa.jpg',
+'伊勢ヶ濱部屋推し！',
+'推し力士は？',
+'えんほうゆうや',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP);
