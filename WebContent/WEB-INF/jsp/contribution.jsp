@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>投稿</title>
+<link rel="stylesheet" type="text/css" href="/C1/css/contribution.css">
+<link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body>
 <form method="post" action="/C1/ContributionServlet">
@@ -12,15 +14,15 @@
   <input type="text"><br>
   <button type="submit">送信する</button>
 </form>
-<div id="footer">
-  <ul id="nav">
-    <li><a href="/C1/StandByServlet">待機部屋</a></li>
-    <li><a href="/C1/UserSearchServlet">ユーザ検索</a></li>
-    <li><a href="/C1/RikishiSearchServlet">力士一覧</a></li>
-    <li><a href="/C1/ChankoServlet">ちゃんこ</a></li>
-    <li><a href="/C1/SchoolServlet">教習所</a></li>
-    <li><a href="/C1/MyPageServlet">マイページ</a></li>
-  </ul>
-</div>
+<footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
+</footer>
 </body>
 </html>

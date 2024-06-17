@@ -1,1 +1,13 @@
 @charset "UTF-8";
+@font-face {
+    font-family:"myfont" ;
+    src: url("../fonts/kai.ttf")format("truetype");
+}
+
+/*html（全体）
+ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
+html {
+    font-size: 16px;
+    background-color:#FFEEFF;
+	font-family: "myfont";
+    }
