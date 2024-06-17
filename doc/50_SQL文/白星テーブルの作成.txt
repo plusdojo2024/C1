@@ -1,10 +1,12 @@
- jdbc:h2:file:C:/pleiades/workspace/data/C1
+/*コピペ用
+jdbc:h2:file:C:/pleiades/workspace/data/C1
 
 SELECT*FROM STARS;
 
 DROP TABLE STARS;
 
 DELETE FROM STARS;
+*/
 
 /*白星テーブルの作成*/
 create table STARS (
@@ -22,3 +24,7 @@ INSERT INTO STARS (id, contribution_id, user_id, created_at, updated_at) VALUES
 (null, 6, 'saku', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (null, 7, 'saku', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (null, 8, 'saku', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
+/* テーブルの表示 */
+SELECT * FROM STARS;

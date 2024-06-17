@@ -1,3 +1,4 @@
+ /*コピペ用
  jdbc:h2:file:C:/pleiades/workspace/data/C1
 
 SELECT*FROM FAVORITES;
@@ -5,6 +6,7 @@ SELECT*FROM FAVORITES;
 DROP TABLE FAVORITES;
 
 DELETE FROM FAVORITES;
+*/
 
 /*推し力士テーブルの作成*/
 create table FAVORITES (
@@ -25,3 +27,5 @@ INSERT INTO FAVORITES (id, user_id, rikishi_id, created_at, updated_at) VALUES
 (5, 'hiji', 6, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (6, 'awa', 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+/* テーブルの表示 */
+SELECT * FROM FAVORITES;
