@@ -1,5 +1,4 @@
 /*推し力士テーブルの作成*/
-ss
 create table favorites (
 id int  primary key,
 user_id varchar (50),
