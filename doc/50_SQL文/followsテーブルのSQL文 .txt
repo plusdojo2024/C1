@@ -1,0 +1,25 @@
+/* followsテーブルを作成するCREATE TABLE文 */
+CREATE TABLE follows
+(id INT auto_increment,
+ user_id VARCHAR(50),
+ follow_user_id VARCHAR(50),
+ created_at TIMESTAMP default CURRENT_TIMESTAMP,
+ updated_at TIMESTAMP default CURRENT_TIMESTAMP,
+ PRIMARY KEY (id)
+);
+
+
+
+/* トランザクションを開始する */
+BEGIN TRANSACTION;
+
+/* followsテーブルにデータを登録する */
+INSERT INTO follows VALUES (null, 'saku',  'tomo', current_timestamp, current_timestamp);
+INSERT INTO follows VALUES (null, 'saku', 'ogu', current_timestamp, current_timestamp);
+INSERT INTO follows VALUES (null, 'saku', 'tana', current_timestamp, current_timestamp);
+INSERT INTO follows VALUES (null, 'saku', 'hiji', current_timestamp, current_timestamp);
+INSERT INTO follows VALUES (null, 'saku', 'awa', current_timestamp, current_timestamp);
+
+
+/* トランザクションを完了（確定）する */
+COMMIT;

@@ -1,0 +1,28 @@
+/* recipesテーブルを作成するCREATE TABLE文 */
+CREATE TABLE recipes
+(id INT auto_increment,
+ rikishi_id INT,
+ category VARCHAR(50),
+ recipe_pic VARCHAR(100),
+ recipi_name VARCHAR(50),
+ recipi_link VARCHAR(500),
+ created_at TIMESTAMP default CURRENT_TIMESTAMP,
+ updated_at TIMESTAMP default CURRENT_TIMESTAMP,
+ PRIMARY KEY (id)
+);
+
+
+/* トランザクションを開始する */
+BEGIN TRANSACTION;
+
+/* recipesテーブルにデータを登録する */
+INSERT INTO recipes VALUES (null, '1',  'ちゃんこ鍋', '/C1/img/recipepicture.png', '雪見ちゃんこ', 'https://isegahama.net/%e3%81%a1%e3%82%83%e3%82%93%e3%81%93%e3%83%ac%e3%82%b7%e3%83%94/' , current_timestamp, current_timestamp);
+INSERT INTO recipes VALUES (null, '2', 'ちゃんこ鍋', '/C1/img/curryChanko.jpg', 'カレーちゃんこ', 'https://isegahama.net/%e3%81%a1%e3%82%83%e3%82%93%e3%81%93%e3%83%ac%e3%82%b7%e3%83%94/', current_timestamp, current_timestamp);
+INSERT INTO recipes VALUES (null,  '4',  'ちゃんこ鍋',  '/C1/img/daikonoroshichankonabe.jpg',  '大根おろしちゃんこ鍋',  'https://nowkore.net/archives/76751', current_timestamp, current_timestamp);
+INSERT INTO recipes VALUES (null, '5', '韓国料理', '/C1/img/recipechapuche.png', 'チャプチェ', 'https://www.youtube.com/watch?v=kj8P46aCQas', current_timestamp, current_timestamp);
+INSERT INTO recipes VALUES (null, '3', 'お茶漬け', '/C1/img/ochaduke1.jpg', '特製茶漬け', 'https://isegahama.net/%e3%81%a1%e3%82%83%e3%82%93%e3%81%93%e3%83%ac%e3%82%b7%e3%83%94/#chaduke',  current_timestamp, current_timestamp);
+
+
+/* トランザクションを完了（確定）する */
+COMMIT;
+
