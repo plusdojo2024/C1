@@ -33,6 +33,36 @@ html {
 
 
 
+
+
+
+
+
+/*リストボックス 「選択してください」を選択しからを外す*/
+option[selected][disabled]{
+  display:none;
+}
+
+
+
+
+/*リストボックス*/
+select{
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  height: 40px;
+  width: 150px;
+  background: #cfcedb;
+}
+
+
+
+
+
+
+
 /*レシピ検索リストボックス*/
 .recipe{
     text-align: center;
@@ -61,25 +91,13 @@ input[type="submit"]{
     background-color:#800080;
     color:aliceblue;
     font-size: small;
+        font-family: "myfont";
+    height: 40px;
+    border-radius: 5px;
 }
 
 
 
 
 
-
-
-/*リストボックスの幅*/
-#recipe{
-    width: 150px;
-}
-#sumostable{
-    width: 150
-}
-#category{
-    width: 150px;
-}
-#venue{
-    width: 150px;
-}
 
