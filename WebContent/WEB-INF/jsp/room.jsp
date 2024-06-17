@@ -9,11 +9,7 @@
 <body>
   <img src="${rikishies.pic}">
   <a href="/C1/CalenderServlet">カレンダー</a>
-  <c:forEach var="e" items="${}" > <!-- contributionsテーブルより -->
-    <img src="${e.pic_movie}">
-    <p><%  %></p>
 
-  </c:forEach>
   <button><a href="/C1/ContributionServlet">投稿ボタン</a></button>
 <div id="footer">
 <ul id="nav">
