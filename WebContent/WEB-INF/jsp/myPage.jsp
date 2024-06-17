@@ -14,7 +14,7 @@
   <header class="header">
     <nav class="navigation">
       <a href="/C1/LoginServlet" id="logout"><img src="/C1/img/logout.svg"  id="pic"></a><!-- ログアウト --><br>
-      <a href="/C1/FllowServlet"><img src="/C1/img/followuser.svg" id="pic"></a><!-- フォロー一覧 -->
+      <a href="/C1/FollowServlet"><img src="/C1/img/followuser.svg" id="pic"></a><!-- フォロー一覧 -->
       <a href="/C1/StarsServlet"><img src="/C1/img/starwhite.png" id="pic" ></a><!-- 白星一覧 -->
       <a href="/C1/ChangeServlet"><img src="/C1/img/settei.svg" id="pic"></a><!-- 設定 -->
     </nav>
