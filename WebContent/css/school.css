@@ -18,7 +18,7 @@ html {
 
 
 
-/*上部のちゃんこの写真*/
+/*教習所の写真*/
 .school-pic {
         font-size: 10rem;
         background-repeat: no-repeat;
@@ -27,40 +27,63 @@ html {
         color:black;
         text-align: center;
         margin: auto;
-        padding: 100px 0;
+        padding: 200px 0;
         background-image: url(/C1/img/school.jpg);
       }
 
-
-
-/*レシピ検索リストボックス*/
-.recipe{
-    text-align: center;
-    font-size: 3rem;
-    margin: auto;
-    padding: auto;
+.accordion {
+	margin: 3em auto;
+	max-width: 60vw;
 }
 
-/*お店検索リストボックス*/
-.store{
-    text-align: center;
-    font-size: 3rem;
-    margin: auto;
-    padding: auto;
+.toggle {
+	display: none;
 }
 
-/*検索ボタン*/
-.submit{
-    text-align: center;
+.option {
+	position: relative;
+	margin-bottom: 1em;
 }
 
-input[type="submit"]{
-    border:none;
-    padding:auto;
-    width: 150px;
-    background-color:#800080;
-    color:aliceblue;
-    font-size: small;
+.title,
+.content{
+	-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+transform: translateZ(0);
+transition: all 0.3s;
+}
+
+.title::after,
+.title::before {
+content: "";
+position: absolute;
+right: 1.25em;
+top: 1.25em;
+width: 2px;
+height: 0.75em;
+background-color: #999;
+transition: all 0.3s;
+}
+.title::after {
+transform: rotate(90deg);
+}
+.content {
+max-height: 0;
+overflow: hidden;
+}
+.content p {
+margin: 0;
+padding: 0.5em 1em 1em;
+font-size: 0.9em;
+line-height: 1.5;
+}
+
+.toggle:checked + .title + .content {
+max-height: 500px;
+transition: all 1.5s;
+}
+.toggle:checked + .title::before {
+transform: rotate(90deg) !important;
 }
 
 
@@ -69,17 +92,8 @@ input[type="submit"]{
 
 
 
-/*リストボックスの幅*/
-#recipe{
-    width: 150px;
-}
-#sumostable{
-    width: 150
-}
-#category{
-    width: 150px;
-}
-#venue{
-    width: 150px;
-}
+
+
+
+
 

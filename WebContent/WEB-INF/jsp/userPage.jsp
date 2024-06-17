@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <title>SUMOO</title>
   <link rel="stylesheet" href="/C1/css/userPage.css">
-
+  <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body id="top">
   <!--ヘッダー-->
@@ -28,7 +28,7 @@
     <h1 class="toko">投稿一覧</h1>
 
   </main>
-  <footer>
+<footer>
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
       <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
@@ -36,9 +36,8 @@
       <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
       <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
       <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
-
   </nav>
-  </footer>
+</footer>
 </body>
 	<!--JavaScriptを読み込む-->
 	<script src="/C1/js/userPage.js"></script>

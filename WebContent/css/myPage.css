@@ -9,7 +9,6 @@ h1 {
 }
 
 html {
-	position: relative;
     font-size: 16px;
     background-color:#FFEEFF;
 	font-family: "myfont";
@@ -18,30 +17,7 @@ html {
 	text-align: right;
 }
 
-footer {
-  position: absolute;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  background-color: #800080;
-	text-align: center;
-}
-.menu{
-  margin: 10px 0 0 0;
-  padding-bottom: 20px;
-  list-style-type: none;
-
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
 #pic{
-width:120px;
-height:120px;
-}
-#icon{
-border-radius: 50%;
 width:120px;
 height:120px;
 }
