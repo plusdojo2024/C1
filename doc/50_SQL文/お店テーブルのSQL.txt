@@ -1,0 +1,74 @@
+/*お店*/
+
+/*SELECT * FROM stores;*/
+
+/*テーブル*/
+
+CREATE TABLE stores (
+ id integer  auto_increment(1),
+ shop_name varchar(50),
+ shop_pic varchar(100),
+ food_pic vacher(100),
+ shop_link varcher(500),
+ venue_name varchar(50),
+ created_at timestamp,
+ updated_at timestamp,
+ PRIMARY KEY (id)
+);
+
+/*データ*/
+
+BEGIN TRANSACTION;
+
+INSERT INTO stores VALUES (
+NULL,
+'鍋料理 ちゃんこ巴潟 両国店',
+'/C1/img/TokyoStore1.png',
+'/C1/img/TokyoFood1.png',
+'https://tabelog.com/tokyo/A1312/A131201/13002987/',
+'東京',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO stores VALUES (
+NULL,
+'川崎',
+'/C1/img/TokyoStore2.png',
+'/C1/img/TokyoFood2.png',
+'https://tabelog.com/tokyo/A1312/A131201/13002979/',
+'東京',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO stores VALUES (
+NULL,
+'佐賀昇',
+'/C1/img/OsakaStore.jpg',
+'/C1/img/OsakaFood.jpg',
+'https://tabelog.com/osaka/A2701/A270202/27052343/',
+'大阪',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO stores VALUES (
+NULL,
+'王瀧',
+'/C1/img/store14.jpg',
+'/C1/img/store4.jpg',
+'https://tabelog.com/aichi/A2301/A230101/23007093/',
+'名古屋',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO stores VALUES (
+NULL,
+'ちゃんこ重ノ海',
+'/C1/img/shigenoumi.jpg',
+'/C1/img/shigenoumi_chanko.jpg',
+'https://tabelog.com/fukuoka/A4001/A400102/40014460/',
+'福岡',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+
+COMMIT;
