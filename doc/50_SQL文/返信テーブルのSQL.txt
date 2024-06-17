@@ -1,0 +1,72 @@
+/*返信画面*/
+
+/*SELECT * FROM reply;*/
+
+/*返信テーブル作成*/
+
+CREATE TABLE reply (
+ id integer  auto_increment(1),
+ contribution_id integer,
+ user_id varchar,
+ text varchar(140),
+ created_at timestamp,
+ updated_at timestamp,
+ PRIMARY KEY (id)
+);
+
+/*データ*/
+
+BEGIN TRANSACTION;
+
+INSERT INTO reply VALUES (
+NULL,
+'1',
+'tomo',
+'おめでとう！',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO reply VALUES (
+NULL,
+'1',
+'ogu',
+'かっこいい、、',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO reply VALUES (
+NULL,
+'1',
+'tana',
+'ちゅき♡',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO reply VALUES (
+NULL,
+'1',
+'hiji',
+'いいね！',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+INSERT INTO reply VALUES (
+NULL,
+'1',
+'awa',
+'最高！',
+CURRENT_TIMESTAMP,
+CURRENT_TIMESTAMP
+);
+
+COMMIT;
+
+
+
+
+
+
+
+
+
+
