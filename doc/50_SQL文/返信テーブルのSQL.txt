@@ -1,25 +1,26 @@
 /*返信画面*/
 
-/*SELECT * FROM reply;
-　DROP TABLE reply;    */
+/*SELECT * FROM REPLY;
+
+　DROP TABLE REPLY;    */
 
 /*返信テーブル作成*/
 
-CREATE TABLE reply (
- id integer  auto_increment(1),
- contribution_id integer,
- user_id varchar,
- text varchar(140),
- created_at timestamp,
- updated_at timestamp,
- PRIMARY KEY (id)
+CREATE TABLE REPLY (
+ ID INTEGER  AUTO_INCREMENT(1),
+ CONTRIBUTION_ID INTEGER,
+ USER_ID VARCHAR,
+ TEXT VARCHAR(140),
+ CREATED_AT TIMESTAMP,
+ UPDATED_AT TIMESTAMP,
+ PRIMARY KEY (ID)
 );
 
 /*データ*/
 
 BEGIN TRANSACTION;
 
-INSERT INTO reply VALUES (
+INSERT INTO REPLY VALUES (
 NULL,
 '1',
 'tomo',
@@ -27,7 +28,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO reply VALUES (
+INSERT INTO REPLY VALUES (
 NULL,
 '1',
 'ogu',
@@ -35,15 +36,15 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO reply VALUES (
+INSERT INTO REPLY VALUES (
 NULL,
 '1',
 'tana',
-'ちゅき♡',
+'ちゅき?',
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO reply VALUES (
+INSERT INTO REPLY VALUES (
 NULL,
 '1',
 'hiji',
@@ -51,7 +52,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO reply VALUES (
+INSERT INTO REPLY VALUES (
 NULL,
 '1',
 'awa',

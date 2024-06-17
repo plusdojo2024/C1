@@ -1,20 +1,21 @@
 /*お店*/
 
-/*SELECT * FROM stores;
-  DROP TABLE stores;    */
+/*SELECT * FROM STORES;
+
+  DROP TABLE STORES;    */
 
 /*テーブル*/
 
-CREATE TABLE stores (
- id integer  auto_increment(1),
- shop_name varchar(50),
- shop_pic varchar(100),
- food_pic varchar(100),
- shop_link varchar(500),
- venue_name varchar(50),
- created_at timestamp,
- updated_at timestamp,
- PRIMARY KEY (id)
+CREATE TABLE STORES (
+ ID INTEGER  AUTO_INCREMENT(1),
+ SHOP_NAME VARCHAR(50),
+ SHOP_PIC VARCHAR(100),
+ FOOD_PIC VARCHAR(100),
+ SHOP_LINK VARCHAR(500),
+ VENUE_NAME VARCHAR(50),
+ CREATED_AT TIMESTAMP,
+ UPDATED_AT TIMESTAMP,
+ PRIMARY KEY (ID)
 );
 
 /*データ*/
@@ -31,7 +32,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO stores VALUES (
+INSERT INTO STORES VALUES (
 NULL,
 '川崎',
 '/C1/img/TokyoStore2.png',
@@ -41,7 +42,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO stores VALUES (
+INSERT INTO STORES VALUES (
 NULL,
 '佐賀昇',
 '/C1/img/OsakaStore.jpg',
@@ -51,7 +52,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO stores VALUES (
+INSERT INTO STORES VALUES (
 NULL,
 '王瀧',
 '/C1/img/store14.jpg',
@@ -61,7 +62,7 @@ NULL,
 CURRENT_TIMESTAMP,
 CURRENT_TIMESTAMP
 );
-INSERT INTO stores VALUES (
+INSERT INTO STORES VALUES (
 NULL,
 'ちゃんこ重ノ海',
 '/C1/img/shigenoumi.jpg',
