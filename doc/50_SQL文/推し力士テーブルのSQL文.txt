@@ -1,0 +1,20 @@
+推し力士テーブルの作成
+
+create table favorites (
+id int  primary key,
+user_id varchar (50),
+rikishi_id int ,
+created_at timestamp  default CURRENT_TIMESTAMP,
+updated_at timestamp  default CURRENT_TIMESTAMP
+)
+
+
+推し力士のテーブルにテスト用のデータを登録する
+INSERT INTO favorites (id, user_id, rikishi_id, created_at, updated_at) VALUES
+(1, 'saku', 5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(2, 'tomo', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(3, 'ogu', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(4, 'tana', 4, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(5, 'hiji', 6, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(6, 'awa', 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
