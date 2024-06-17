@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <title>登録情報の変更画面</title>
 <link rel="stylesheet" href="/C1/css/change.css">
+<link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body class="change-page">
+<main>
 	<div class="wrapper"></div>
 	<div class="change">
 		<div class="change-screen">
@@ -57,5 +59,17 @@
 	<!-- JavaScriptを読み込む -->
 	<script src="/C1/js/login.js"></script>
 
+<footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
+</footer>
+
+</main>
 </body>
 </html>
