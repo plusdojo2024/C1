@@ -25,14 +25,14 @@
     <a href="/simpleBC/LogoutServlet" id="myLink"><li>ログアウト</li></a>
   </ul> -->
   <!-- メイン（ここから） -->
-  <form>
+  <form id="UserSearchform" method="post" action="/C1/UserSearchServlet">
     <table>
-      <tr>
+      <tr >
         <td>
- 	      <input type="text" placeholder="ユーザーネームを入力してください" name="user_search">
+ 	      <input type="text" class="userform" id="userform" placeholder="ユーザーネームを入力してください" name="user_search">
         </td>
         <td>
-          <input type="submit" id="search" name="submit" value="検索">
+          <input type="submit" class="userform" id="search" name="submit" value="検索">
         </td>
       </tr>
     </table>
@@ -46,11 +46,11 @@
 
 <%--   <c:forEach var="e" items="${cardList}" > --%>
 <!--     <form class="search_result" method="post" action="/C1/UserServlet"> -->
-    <table>
+    <table class="boardpic">
       <tr>
         <td>
         <a href="/C1/UserPageServlet?id=0">
-            <img src="/C1/img/daiamami.png" width="30" height="30" alt="SUMOO | ユーザー検索">
+            <img src="/C1/img/daiamami.png" width="40" height="40" alt="SUMOO | ユーザー検索">
             <!--
              src="${user_pic} widthとheightはCSSで決める
              -->
@@ -63,14 +63,14 @@
         <td>
           <c:if test="false">
           <%-- このユーザーのことをフォローしていなかったら --%>
-            <a href="/C1/UserSearchServlet?follow=0&id=0">
+            <a href="/C1/UserServlet?follow=0&id=0">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
               <img src="/C1/img/heartwhite.png" width="30" height="30" alt="SUMOO | ユーザー検索">
 		    </a>
 		  </c:if>
           <c:if test="true">
           <%-- このユーザーのことをフォローしていたら --%>
-            <a href="/C1/UserSearchServlet?follow=1&id=0">
+            <a href="/C1/UserServlet?follow=1&id=0">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
               <img src="/C1/img/heartred.svg" width="30" height="30" alt="SUMOO | ユーザー検索">
 		    </a>

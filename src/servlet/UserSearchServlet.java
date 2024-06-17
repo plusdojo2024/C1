@@ -22,13 +22,6 @@ public class UserSearchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		if (follow.equals("0")) {
-			//followテーブルにレコードを追加する処理！
-
-		} else if (follow.equals("1")) {
-			//followテーブルからレコードを削除する処理！
-
-		}
 		if (false) {
 			//()の中でfollowsテーブルのuser_idに自分のidの入ったレコードをDAOからもらう。
 			//で、それをリクエストスコープでフォワード先に送る
@@ -49,6 +42,15 @@ public class UserSearchServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+
+		//ゲットパラメータを取得
+
+		//検索処理
+
+		//ユーザー検索・一覧ページにフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/user.jsp");
+		dispatcher.forward(request, response);
+
 	}
 
 }
