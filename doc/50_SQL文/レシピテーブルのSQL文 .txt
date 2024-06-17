@@ -26,3 +26,5 @@ INSERT INTO recipes VALUES (null, '3', 'お茶漬け', '/C1/img/ochaduke1.jpg', 
 /* トランザクションを完了（確定）する */
 COMMIT;
 
+/* 全選択 */
+SELECT * FROM RECIPES
