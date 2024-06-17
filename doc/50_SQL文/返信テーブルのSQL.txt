@@ -1,6 +1,7 @@
 /*返信画面*/
 
-/*SELECT * FROM reply;*/
+/*SELECT * FROM reply;
+　DROP TABLE reply;    */
 
 /*返信テーブル作成*/
 
@@ -60,13 +61,3 @@ CURRENT_TIMESTAMP
 );
 
 COMMIT;
-
-
-
-
-
-
-
-
-
-
