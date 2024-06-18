@@ -1,0 +1,12 @@
+SELECT * FROM RIKISHIES;
+
+SELECT * FROM FAVORITES ; 
+
+/* RIKISHIESテーブルとFAVORITESテーブルを力士IDで内部結合したもの */
+SELECT * FROM RIKISHIES AS R INNER JOIN FAVORITES AS F
+ON R.id = F.rikishi_id;
+
+/* 上のSELECT文の中の情報を厳選したもの */
+SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, F.rikishi_id
+FROM RIKISHIES AS R INNER JOIN FAVORITES AS F
+ON R.id = F.rikishi_id;

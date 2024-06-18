@@ -1,0 +1,450 @@
+﻿/* CREATE DATABASE <データベース名>; */
+CREATE DATABASE shop;
+
+/*Shohinテーブルを柵瀬宇するCREATE TABLE文*/
+/*CREATE TABLE <テーブル名>
+(<列名１> <データ型> <この列の制約>,
+・・・
+<このテーブルの制約1>,<このテーブルの制約2>,・・・);*/
+
+CREATE TABLE Shohin
+(shohin_id	CHAR(4)		NOT NULL,
+ shohin_mei	VARCHAR(100)	NOT NULL,
+ shohin_bunrui	VARCHAR(32)	NOT NULL,
+ hanbai_tanka	INTEGER		,
+ shiire_tanka	INTEGER		,
+ torokubi	DATE		,
+ PRIMARY KEY (shohin_id));
+
+/* Shohinテーブルを削除する命令 */
+DROP TABLE Shohin;
+
+/* トランザクションを開始する */
+BEGIN TRANSACTION;
+
+/* Shohinテーブルにデータを登録する */
+INSERT INTO Shohin VALUES ('0001', 'Ｔシャツ', '衣服', 1000, 500, '2009-09-20');
+INSERT INTO Shohin VALUES ('0002', '穴あけパンチ', '事務用品', 500, 320, '2009-09-11');
+INSERT INTO Shohin VALUES ('0003', 'カッターシャツ', '衣服', 4000, 2800, NULL);
+INSERT INTO Shohin VALUES ('0004', '包丁', 'キッチン用品', 3000, 2800, '2009-09-20');
+INSERT INTO Shohin VALUES ('0005', '圧力鍋', 'キッチン用品', 6800, 5000, '2009-01-15');
+INSERT INTO Shohin VALUES ('0006', 'フォーク', 'キッチン用品', 500, NULL, '2009-09-20');
+INSERT INTO Shohin VALUES ('0007', 'おろしがね', 'キッチン用品', 880, 790, '2008-04-28');
+INSERT INTO Shohin VALUES ('0008', 'ボールペン', '事務用品', 100, NULL, '2009-11-11');
+
+
+/* トランザクションを完了（確定）する */
+COMMIT;
+
+
+
+
+/* Shohinテーブルのすべてのデータを検索する（取得する） */
+SELECT * FROM Shohin;
+
+/* 全てのレコードを削除 */
+DELETE FROM Shohin;
+
+/* 3つの列を出力 */
+SELECT shohin_id, shohin_mei, shiire_tanka FROM Shohin;
+
+/* 列に別名を付ける */
+SELECT shohin_id	AS id,
+       shohin_mei	AS name,
+       shiire_tanka	AS tanka
+  FROM Shohin;
+
+/* 列に日本語の別名を付ける */
+SELECT shohin_id	AS "商品ID",
+       shohin_mei	AS "商品名",
+       shiire_tanka	AS "仕入単価"
+  FROM Shohin;
+
+/* shohin_mei_kana列を追加するALTER TABLE文 */
+ALTER TABLE Shohin ADD COLUMN shohin_mei_kana VARCHAR(100);
+
+/* shohin_mei_kana列を削除するALTER TABLE文 */
+ALTER TABLE Shohin DROP COLUMN shohin_mei_kana;
+
+/* 定数を出力 */
+SELECT '商品' AS mojiretsu, 38 AS kazu, '2009-02-24' AS hizuke, shohin_id, shohin_mei FROM Shohin;
+
+/* 結果から重複行を省く */
+SELECT DISTINCT shohin_bunrui FROM Shohin;
+
+/* 結果から重複行を省かない */
+SELECT shohin_bunrui FROM Shohin;
+
+/* shohin_bunrui列が'衣服'の行を選択するSELECT文 */
+SELECT shohin_mei, shohin_bunrui
+FROM Shohin
+WHERE shohin_bunrui = '衣服';
+
+/* shohin_bunrui列が'衣服'でない行を選択するSELECT文 */
+SELECT shohin_mei, shohin_bunrui
+FROM Shohin
+WHERE shohin_bunrui <> '衣服';
+
+--1行のコメント
+/* 
+複数行のコメント
+ */
+
+/* SQL文には計算式もかける */
+SELECT shohin_mei, hanbai_tanka, hanbai_tanka * 2 AS "hanbai_tanka_×2"
+FROM Shohin;
+
+/* hanbai_tanka列が500の行を選択 */
+SELECT shohin_mei, shohin_bunrui
+FROM Shohin
+WHERE hanbai_tanka = 500;
+
+/* hanbai_tanka列が500でない行を選択 */
+SELECT shohin_mei, shohin_bunrui
+FROM Shohin
+WHERE hanbai_tanka <> 500;
+
+/* hanbai_tanka列が1000円以上の行を選択 */
+SELECT shohin_mei, shohin_bunrui
+FROM Shohin
+WHERE hanbai_tanka >= 1000;
+
+/* torokubi列が'2009-09-27'より前の行を選択 */
+SELECT shohin_mei, shohin_bunrui, torokubi
+FROM Shohin
+WHERE torokubi < '2009-09-27';
+
+/* WHERE句の条件式にも計算式を書ける */
+SELECT shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin
+WHERE hanbai_tanka - shiire_tanka >= 500;
+
+/* DDL:テーブル作成 */
+CREATE TABLE Chars
+(chr CHAR(3) NOT NULL,
+ PRIMARY KEY (chr));
+
+/* DML：データ登録→勝手に昇順に並び変えてくれる */
+BEGIN TRANSACTION;
+
+INSERT INTO Chars VALUES ('1');
+INSERT INTO Chars VALUES ('2');
+INSERT INTO Chars VALUES ('3');
+INSERT INTO Chars VALUES ('10');
+INSERT INTO Chars VALUES ('11');
+INSERT INTO Chars VALUES ('222');
+
+COMMIT;
+
+/* '2'より大きいデータを選択する */
+SELECT chr
+FROM Chars
+WHERE chr > '2';
+
+/* 「販売単価が1000円以上」の行を選択 */
+SELECT shohin_mei, shohin_bunrui, hanbai_tanka
+FROM Shohin
+WHERE hanbai_tanka >= 1000;
+
+/* 上の結果にnotを追加すると */
+SELECT shohin_mei, shohin_bunrui, hanbai_tanka
+FROM Shohin
+WHERE NOT hanbai_tanka >= 1000;
+
+/* 上の結果と同じ */
+SELECT shohin_mei, shohin_bunrui, hanbai_tanka
+FROM Shohin
+WHERE hanbai_tanka < 1000;
+
+/* WHERE句の検索条件にAND演算子を使った検索 */
+SELECT shohin_mei, shiire_tanka
+FROM Shohin
+WHERE shohin_bunrui = 'キッチン用品'
+AND hanbai_tanka >= 3000;
+
+/* WHERE句の検索条件にOR演算子を使った検索 */
+SELECT shohin_mei, shiire_tanka
+FROM Shohin
+WHERE shohin_bunrui = 'キッチン用品'
+OR hanbai_tanka >= 3000;
+
+/* NULLの比較 NULLである */
+SELECT shohin_mei, shiire_tanka
+FROM Shohin
+WHERE shiire_tanka IS NULL;
+
+/* NULLの比較 NULLでない */
+SELECT shohin_mei, shiire_tanka
+FROM Shohin
+WHERE shiire_tanka IS NOT NULL;
+
+第3章　2日目はここから
+
+/* 全行を数える */
+SELECT COUNT (*)
+FROM Shohin;
+
+/* shiire_tanka行にNULLが入っていない(データが入っている)レコードを数える */
+SELECT COUNT (shiire_tanka)
+FROM Shohin;
+
+/* ↑のNULLが入っている行を求める */
+SELECT COUNT(*) - COUNT(shiire_tanka)
+FROM Shohin;
+
+--東講師は下をよく使うと言っていた
+SELECT COUNT(*)
+FROM Shohin
+WHERE shiire_tanka IS NULL;
+
+/* 販売単価の合計を求める */
+SELECT SUM(hanbai_tanka)
+FROM Shohin;
+
+/* 販売単価と仕入単価の合計を求める */
+SELECT SUM(hanbai_tanka), SUM(shiire_tanka)
+FROM Shohin;
+
+/* 販売単価の平均値を求める(H2では小数点以下切り捨てで整数表示される) */
+SELECT AVG(hanbai_tanka)
+FROM Shohin;
+
+/* 販売単価と仕入単価の平均値を求める */
+SELECT AVG(hanbai_tanka), AVG(shiire_tanka)
+FROM Shohin;
+
+/* 販売単価の最大値、仕入単価の最小値を求める */
+SELECT MAX(hanbai_tanka), MIN(shiire_tanka)
+FROM Shohin;
+
+/* 登録日の最大値、最小値を求める */
+SELECT MAX(torokubi), MIN(torokubi)
+FROM Shohin;
+
+/* 値の重複を除いて行数を数える */
+SELECT COUNT(DISTINCT shohin_bunrui)
+FROM Shohin;
+
+/* DISTINCTの有無による動作の違い(値が500の行が2行あったため、それが1回の数えになっている) */
+SELECT SUM(hanbai_tanka), SUM(DISTINCT hanbai_tanka)
+FROM Shohin;
+
+/* 商品分類ごとの行数を数える */
+SELECT shohin_bunrui, COUNT(*)
+FROM Shohin
+GROUP BY shohin_bunrui;
+
+/* 商品分類で集約したグループから「含まれる行数が2行」のものを選択する */
+SELECT shohin_bunrui, COUNT(*)
+FROM Shohin
+GROUP BY shohin_bunrui
+HAVING COUNT(*) = 2;
+
+/* ↑のHAVING無し */
+SELECT shohin_bunrui, COUNT(*)
+FROM Shohin
+GROUP BY shohin_bunrui;
+
+/* ↑のHAVING無しのAVGに変更 */
+SELECT shohin_bunrui, AVG(hanbai_tanka)
+FROM Shohin
+GROUP BY shohin_bunrui;
+
+/* HAVING句で条件を設定して選択 */
+SELECT shohin_bunrui, AVG(hanbai_tanka)
+FROM Shohin
+GROUP BY shohin_bunrui
+HAVING AVG(hanbai_tanka) >= 2500;
+
+/* H2だとAVGが整数型になっているため、小数を表示させる場合にこうする */
+SELECT
+    AVG(    CAST(hanbai_tanka AS double)    )   AS hanbai_tanka  ,
+    AVG(    CAST(shiire_tanka   AS double)    )   AS shiire_tanka     
+FROM Shohin;
+
+/* 商品ID、商品名、販売単価、仕入れ単価を表示するSELECT文→基本に立ち返る */
+SELECT shohin_id, shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin;
+
+/* 販売単価の低い順（昇順）に並べる(省略あり) List3-28 */
+SELECT shohin_id, shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin
+ORDER BY hanbai_tanka;
+
+/* 販売単価の低い順（昇順）に並べる(省略なし) */
+SELECT shohin_id, shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin
+ORDER BY hanbai_tanka ASC;
+
+/* 販売単価の低い順（昇順）に並べる(同じ場合は商品IDの昇順に並べる) */
+SELECT shohin_id, shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin
+ORDER BY hanbai_tanka ASC, shohin_id ASC;
+
+/* 販売単価の高い順（降順）に並べる List3-29 */
+SELECT shohin_id, shohin_mei, hanbai_tanka, shiire_tanka
+FROM Shohin
+ORDER BY hanbai_tanka DESC;
+
+/* ShohinInsテーブルを作成するCREATE TABLE文 List4-1*/
+CREATE TABLE ShohinIns
+(shohin_id	CHAR(4)		NOT NULL,
+ shohin_mei	VARCHAR(100)	NOT NULL,
+ shohin_bunrui	VARCHAR(32)	NOT NULL,
+ hanbai_tanka	INTEGER		DEFAULT 0,
+ shiire_tanka	INTEGER		,
+ torokubi	DATE		,
+ PRIMARY KEY (shohin_id));
+
+/* INSERT文の省略なしバージョン 全ての行ならVALUESの後ろはなくても大丈夫 List4-2*/
+INSERT INTO ShohinIns (shohin_id, shohin_mei, shohin_bunrui, hanbai_tanka, shiire_tanka, torokubi,)
+VALUES ('0001', 'Tシャツ', '衣服', 1000, 500, '2009-09-20');
+
+/* List4-14 販売単価が4000円以上の行だけを削除 */
+DELETE FROM Shohin
+WHERE hanbai_tanka >= 4000;
+
+/* List4-14 販売単価が4000円以上の行だけを削除 */
+--1
+BEGIN TRANSACTION;
+
+DELETE FROM Shohin
+WHERE hanbai_tanka >= 4000;
+
+--2
+ROLLBACK;
+
+--3
+COMMIT;
+--1，2、3と実行すると、１で削除した項目が２でロールバックされて元通りになり、COMMITで作業終了
+
+INTEGER AUTO_INCREMENT(1)と指定すると、自動でカウントして数字を割り当ててくれる。
+
+UPDATE Shohin SET hanbai_tanka = 2000
+       WHERE shohin_id = '0001';
+
+BEGIN TRANSACTION;
+
+/* List4-15　必ずトランザクションで行い、確認後、ROLLBACK；ののちにコミットする */
+UPDATE Shohin
+SET torokubi = '2009-10-10';
+
+SELECT * FROM Shohin;
+
+ROLLBACK;
+
+/* 商品分類が「キッチン用品」の行のみ販売単価を10倍に変更 */
+BEGIN TRANSACTION;
+UPDATE Shohin
+SET hanbai_tanka = hanbai_tanka * 10
+WHERE shohin_bunrui = 'キッチン用品';
+
+/* 商品IDが「0008」のボールペンの登録日をNULLに変更 */
+BEGIN TRANSACTION;
+UPDATE Shohin
+SET torokubi = NULL
+WHERE shohin_id = '0008';
+
+/* List4-19 2つの処理を1つのUPDATE文に */
+BEGIN TRANSACTION;
+UPDATE Shohin
+SET hanbai_tanka = hanbai_tanka * 10,
+    shiire_tanka = shiire_tanka / 2
+WHERE shohin_bunrui = 'キッチン用品';
+
+UPDATE Shohin
+SET hanbai_tanka = hanbai_tanka / 10,
+    shiire_tanka = shiire_tanka * 2
+WHERE shohin_bunrui = 'キッチン用品';
+
+/* 商品分類ごとに商品数を集計するビュー List5-8*/
+CREATE VIEW ShohinSum (shohin_bunrui, cnt_shohin)
+AS
+SELECT shohin_bunrui, COUNT(*)
+FROM Shohin
+GROUP BY shohin_bunrui;
+
+/* 他のSELECT文のFROMの後にビューを指定できる */
+SELECT shohin_bunrui, cnt_shohin FROM ShohinSum;
+
+/* サブクエリの一例 1番目のSELECTはメインクエリ、2番目のSELECTはサブクエリ */
+SELECT shohin_bunrui, cnt_shohin
+FROM (	SELECT shohin_bunrui, COUNT(*) AS cnt_shohin
+	FROM Shohin
+	GROUP BY shohin_bunrui) AS ShohinSum;
+
+/* List5-12 サブクエリの一例 */
+SELECT shohin_id, shohin_mei, hanbai_tanka
+FROM Shohin
+WHERE hanbai_tanka > (	SELECT AVG(hanbai_tanka)
+			FROM Shohin);
+
+ここから3日目ーーーーーーーー
+
+/* SampleLikeテーブルを作成する */
+CREATE TABLE SampleLike
+(strcol VARCHAR(6) NOT NULL,
+ PRIMARY KEY (strcol));
+
+BEGIN TRANSACTION;
+
+INSERT INTO SampleLike (strcol) VALUES ('abcddd');
+INSERT INTO SampleLike (strcol) VALUES ('dddabc');
+INSERT INTO SampleLike (strcol) VALUES ('abdddc');
+INSERT INTO SampleLike (strcol) VALUES ('abcdd');
+INSERT INTO SampleLike (strcol) VALUES ('ddabc');
+INSERT INTO SampleLike (strcol) VALUES ('abddc');
+
+COMMIT;
+
+/* 前方一致検索を行う List6-22*/
+SELECT * FROM SampleLike
+WHERE strcol LIKE '%ddd';
+
+/* 中間一致検索を行う List6-23*/
+SELECT * FROM SampleLike
+WHERE strcol LIKE '%ddd%';
+
+/* 後方一致検索を行う List6-24*/
+SELECT * FROM SampleLike
+WHERE strcol LIKE 'ddd%';
+
+/* アンダーバーによる後方一致検索(2文字) List6-25*/
+SELECT * FROM SampleLike
+WHERE strcol LIKE 'abc__';
+
+/* アンダーバーによる後方一致検索(3文字) List6-26*/
+SELECT * FROM SampleLike
+WHERE strcol LIKE 'abc___';
+
+/* SampleMathテーブルを作成 List6-1*/
+CREATE TABLE SampleMath
+(m	NUMERIC	(10, 3)
+ n	INTEGER	,
+ p	INTEGER);
+
+
+
+/* TenpoShohinテーブルのコードは同じファイル内の
+「TenpoShohinテーブルのSQL文.txt」 */
+
+/* List7-9 2つのテーブルを内部結合する */
+SELECT TS.tenpo_id, TS.tenpo_mei, TS.shohin_id, S.shohin_mei, S.hanbai_tanka
+FROM TenpoShohin AS TS INNER JOIN Shohin AS S
+ON TS.shohin_id = S.shohin_id;
+
+/* List7-10 内部結合したものにWHERE句を使う */
+SELECT TS.tenpo_id, TS.tenpo_mei, TS.shohin_id, S.shohin_mei, S.hanbai_tanka
+FROM TenpoShohin AS TS INNER JOIN Shohin AS S
+ON TS.shohin_id = S.shohin_id
+WHERE TS.tenpo_id = '000A';
+
+/* List7-11 2つのテーブルを外部結合する RIGHT */
+SELECT TS.tenpo_id, TS.tenpo_mei, TS.shohin_id, S.shohin_mei, S.hanbai_tanka
+FROM TenpoShohin AS TS RIGHT OUTER JOIN Shohin AS S
+ON TS.shohin_id = S.shohin_id;
+
+/* List7-11 2つのテーブルを外部結合する LEFT */
+SELECT TS.tenpo_id, TS.tenpo_mei, TS.shohin_id, S.shohin_mei, S.hanbai_tanka
+FROM TenpoShohin AS TS LEFT OUTER JOIN Shohin AS S
+ON TS.shohin_id = S.shohin_id;

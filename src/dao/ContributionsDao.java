@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -26,11 +25,7 @@ public class ContributionsDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する
-			String sql = "SELECT * FROM Bc WHERE company LIKE ? AND c_furigana LIKE ? AND department LIKE ? "
-					+ "AND position LIKE ? AND last_name LIKE ? AND first_name LIKE ? AND ln_furigana LIKE ? "
-					+ "AND fn_furigana LIKE ? AND zipcode LIKE ? AND address LIKE ? AND phone LIKE ? "
-					+ "AND fax LIKE ? AND email LIKE ? AND remarks LIKE ? AND regist_date LIKE ? "
-					+ "AND update_date LIKE ? AND id = ? ORDER BY ";
+			String sql = "SELECT * FROM Contributions WHERE user_id like ? AND rikishi_id like ? ";
 			if (Objects.nonNull(card.getSort())) {
 				sql += card.getSort() + " " + card.getOrder();
 			}

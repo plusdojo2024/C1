@@ -8,3 +8,10 @@ SELECT C_5.*, S.ID AS STAR
 FROM CONTRIBUTIONS_RIKISHI_ID_5 AS C_5 LEFT OUTER JOIN STARS AS S
 ON C_5.id = S.CONTRIBUTION_id;
 
+ログインは、検索かな
+
+難しいテーブル
+
+白星一覧
+マイページ
+ユーザーページ
