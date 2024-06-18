@@ -1,0 +1,6 @@
+SELECT * FROM STORES ;
+
+/* Ç®ìXåüçıÇÃSQL */
+SELECT venue_name, shop_pic, food_pic, shop_name, shop_link
+FROM STORES
+WHERE venue_name = '?';

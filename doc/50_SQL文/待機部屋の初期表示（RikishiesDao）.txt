@@ -1,0 +1,11 @@
+SELECT * FROM RIKISHIES;
+
+SELECT * FROM FAVORITES ;
+
+/* user_idごとの待機部屋の初期表示（推し力士を表示）*/
+
+SELECT R.pic, R.rikishi_name, F.user_id, F.rikishi_id
+FROM RIKISHIES AS R INNER JOIN FAVORITES AS F
+ON R.id = F.rikishi_id
+WHERE user_id = 'saku';
+
