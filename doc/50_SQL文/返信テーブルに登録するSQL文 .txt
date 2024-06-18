@@ -1,0 +1,8 @@
+/* CONTRIBUTION_ID = 1の返信テーブルを表示 */
+SELECT * FROM REPLIES WHERE contribution_id = 1;
+
+/* contribution_id = 1, user_id = ogu, text = 好き！, created_at = current_timestamp, updated_at = current_timestampとなるレコードを追加 */
+INSERT INTO REPLIES VALUES (NULL, 1, 'ogu', '好き！', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+/* 追加後のCONTRIBUTION_ID = 1の返信テーブルを表示 */
+SELECT * FROM REPLIES WHERE contribution_id = 1;
