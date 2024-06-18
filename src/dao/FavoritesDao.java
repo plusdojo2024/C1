@@ -1,5 +1,5 @@
 package dao;
 
-public class FavoritesDao {
+public class FavotitesDao {
 
 }

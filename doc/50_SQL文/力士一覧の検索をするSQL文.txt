@@ -1,0 +1,9 @@
+/* 力士一覧の検索をして、その検索結果を表示するSELECT文*/
+/* これではsakuが力士一覧で、伊勢というキーワードで曖昧検索をしたときのSQL文 */
+/* 全ての項目を１つのキーワードで検索したいので、「伊勢」と入力されたら、OR句で各項目でヒットする検索できるようにしている */
+SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id
+FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = 'saku') AS F
+ON R.id = F.rikishi_id
+GROUP BY rikishi_name
+HAVING rikishi_name LIKE '%伊勢%'
+OR sumo_stable_name LIKE '%伊勢%';

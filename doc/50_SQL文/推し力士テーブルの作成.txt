@@ -1,5 +1,5 @@
  /*コピペ用
- jdbc:h2:file:C:/pleiades/workspace/data/C1
+jdbc:h2:file:C:/pleiades/workspace/data/C1
 
 SELECT*FROM FAVORITES;
 

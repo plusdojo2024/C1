@@ -1,0 +1,5 @@
+/* 力士一覧を表示させ、USER_ID=sakuがお気に入りにした力士以外の力士を判別できるようにしたテーブル(テーブル内での力士の重複をしないようにしている) */
+SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id
+FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = 'saku') AS F
+ON R.id = F.rikishi_id
+GROUP BY rikishi_name;
