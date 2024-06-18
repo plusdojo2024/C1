@@ -58,6 +58,7 @@
 
 	<!-- JavaScriptを読み込む -->
 	<script src="/C1/js/login.js"></script>
+</main>
 
 <footer>
   <nav class="menu">
@@ -70,6 +71,5 @@
   </nav>
 </footer>
 
-</main>
 </body>
 </html>
