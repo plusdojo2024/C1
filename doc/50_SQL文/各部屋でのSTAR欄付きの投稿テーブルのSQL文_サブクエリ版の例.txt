@@ -1,0 +1,7 @@
+﻿/* 力士ID=5 の投稿にSTARの有無を付けたものを表示。STARの欄がNULLだとSTAR無しとなっている */
+SELECT C_5.*, S.ID AS STAR
+FROM (SELECT * from CONTRIBUTIONS WHERE rikishi_id = 5) AS C_5 LEFT OUTER JOIN STARS AS S
+ON C_5.id = S.CONTRIBUTION_id;
+
+
+
