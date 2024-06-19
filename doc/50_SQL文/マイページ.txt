@@ -1,5 +1,8 @@
-/* マイページ用SQL */
-SELECT users.user_id , users.user_name, users.icon, users.message, favorites.rikishi_id, RIKISHIES.pic, RIKISHIES.RIKISHI_NAME, contributions.PIC_MOVIE, contributions.TEXT, contributions.CREATED_AT    
+
+-------------------------------------------------------------------------------------
+
+/* マイページ用SQL（ユーザプロフィール） */
+SELECT users.user_id , users.user_name, users.icon, users.message, favorites.rikishi_id, RIKISHIES.pic, RIKISHIES.RIKISHI_NAME    
 
 /* usersテーブルとfavoritesテーブルを結合 */
 FROM users
@@ -10,9 +13,18 @@ ON users.user_id = favorites.user_id
 INNER JOIN RIKISHIES 
 ON favorites.rikishi_id = RIKISHIES.id
 
-/* contributionsテーブルも結合 */
+/* 取得したユーザIDで検索 */
+WHERE users.user_id = '?';
+
+-------------------------------------------------------------------------------------
+
+/* マイページ用SQL （ユーザの過去投稿）*/
+SELECT users.user_name, users.icon, users.message, contributions.PIC_MOVIE, contributions.text, contributions.created_at  
+
+/* usersテーブルとcontributionsテーブルを結合 */
+FROM users
 INNER JOIN contributions
 ON users.user_id = contributions.user_id
 
 /* 取得したユーザIDで検索 */
-WHERE users.user_id = 'saku';
+WHERE users.user_id = '?';
