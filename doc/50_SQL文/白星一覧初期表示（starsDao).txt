@@ -1,0 +1,26 @@
+SELECT * FROM USERS;
+
+SELECT * FROM CONTRIBUTIONS;
+
+SELECT * FROM STARS;
+
+
+/*白星一覧の初期表示*/
+
+SELECT U.user_id,C.id AS contribution_id,U.user_name,U.icon,C.pic_movie, S.user_id AS star
+
+/*usersテーブルとcontributionsテーブルをuser_idで内部結合*/
+FROM USERS AS U INNER JOIN CONTRIBUTIONS AS C
+ON U.user_id = C.user_id
+
+
+/*上記にstarsテーブルをcontribution_idで外部結合*/
+LEFT OUTER JOIN STARS AS S
+ON C.ID = S.CONTRIBUTION_ID
+
+/*sakuさんの白星一覧とする*/
+WHERE S.user_id='saku';
+
+
+
+
