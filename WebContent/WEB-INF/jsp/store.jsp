@@ -11,9 +11,48 @@
 <body>
 <main>
    <h1 class="chankopic">お店（検索結果)</h1>
+   <h2>両国国技館周辺</h2>
+	<%--<hr>
+	 <div id="mess">
+		<c:if test="${empty cardList}">
+			<p>一致するデータはありません。</p>
+		</c:if>
+	</div> --%>
 
 
-</main>
+
+	<%-- <c:forEach var="e" items="${cardList}">--%>
+		<form id="regist_form" method="post" action="/C1/"ChankoServlet">
+			<table class="tb">
+				<tr>
+					<td>
+					<table class="minitable">
+					<tr><td><img src="/C1/img/TokyoStore1.png"></td></tr>
+					<tr><td><img src="/C1/img/TokyoFood1.png"></td></tr>
+					<tr><td>鍋料理 ちゃんこ巴潟 両国店</td></tr>
+					<tr><td>https://tabelog.com/tokyo/A1312/A131201/13002987/</td></tr>
+
+					</table>
+					</td>
+					<td>
+					<table class="minitable">
+					<tr><td><img src="/C1/img/TokyoStore2.png"></td></tr>
+					<tr><td><img src="/C1/img/TokyoFood2.png"></td></tr>
+					<tr><td>川崎</td></tr>
+					<tr><td>https://tabelog.com/tokyo/A1312/A131201/13002979/</td></tr>
+
+					</table>
+					</td>
+				</tr>
+
+
+
+
+			</table>
+ 		</form>
+		<!--<hr>
+	 </c:forEach>  -->
+	 </main>
 </body>
 <footer>
   <nav class="menu">
