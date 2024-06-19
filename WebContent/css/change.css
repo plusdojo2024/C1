@@ -22,14 +22,15 @@ body {
 }
 
 .change-icon {
-	margin-bottom: 20px;
-	border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: 100px;
 }
 
 .change {
-    width: 300px;
+    width: 600px;
 }
 
 .change-screen {
@@ -41,6 +42,7 @@ body {
 .app-title {
     text-align: center;
     color: #777;
+    font-size: 36px;
 }
 
 .change-form {
@@ -55,13 +57,15 @@ input {
     text-align: center;
     background-color: #ECF0F1;
     border: 2px solid transparent;
-    font-size: 16px;
+    font-size: 32px;
     font-weight: 200;
     padding: 10px 0;
-    width: 250px;
+    width: 420px;
+    height: 80px;
     transition: border .5s;
-    border-radius: 25px;
-    margin-top: 20px;
+    border-radius: 50px;
+    margin-top: 70px;
+    font-family: "myfont";
 }
 
 input:focus {
@@ -70,9 +74,11 @@ input:focus {
 }
 
 #btnChange {
-	width: 120px;
+    width: 200px;
+    height: 80px;
     padding: 3px;
-    margin-top:50px;
+    margin-top: 50px;
+    font-family: "myfont";
 }
 
 .btn:hover {

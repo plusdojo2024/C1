@@ -50,7 +50,7 @@
 
 					<div id="error_message" style="color: red;"></div>
 
-					<input type="submit" id="btnChange" value="登録" style="width :120px; padding: 3px;">
+					<input type="submit" id="btnChange" value="新規入門">
 				</form>
 			</div>
 		</div>
@@ -59,7 +59,6 @@
 	<!-- JavaScriptを読み込む -->
 	<script src="/C1/js/login.js"></script>
 </main>
-
 <footer>
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
