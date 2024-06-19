@@ -1,7 +1,12 @@
-/*followのSQL*/
+/*followのSQL こっちは使わない*/
 SELECT U.user_id, U.user_name, U.icon, F.FOLLOW_USER_ID AS FOLLOWS_USER_NAME
 FROM (SELECT * from USERS WHERE ID = ?) AS U LEFT OUTER JOIN FOLLOWS AS F
 ON U.user_id = F.user_id;
+
+/*followのSQL こっちを使う*/
+SELECT U.user_id, U.user_name, U.icon, F.user_id
+FROM USERS U INNER JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = 'saku') F
+ON U.user_id = F.follow_user_id;
 
 /*フォロー登録SQL*/
 INSERT INTO  FOLLOWS VALUES (NULL,'awa','saku',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);

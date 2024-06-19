@@ -13,10 +13,9 @@ public class Contributions implements Serializable {
 	private Timestamp created_at;	// 投稿日時
 	private Timestamp updated_at;	// 更新日時
 
-
 	//全部入りのコンストラクタ(検索に入るとき)
 	public Contributions(int id, String user_id, int rikishi_id, String pic_movie, String text, Timestamp created_at,
-			Timestamp updated_at) {
+			Timestamp updated_at ) {
 		this.id = id;
 		this.user_id = user_id;
 		this.rikishi_id = rikishi_id;
