@@ -14,12 +14,12 @@ INNER JOIN RIKISHIES
 ON favorites.rikishi_id = RIKISHIES.id
 
 /* 取得したユーザIDで検索 */
-WHERE users.user_id = 'saku';
+WHERE users.user_id = '?';
 
 -------------------------------------------------------------------------------------
 
 /* マイページ用SQL （ユーザの過去投稿）*/
-SELECT users.user_name, users.icon, users.message, contributions.PIC_MOVIE, contributions.TEXT, contributions.CREATED_AT  
+SELECT users.user_name, users.icon, users.message, contributions.PIC_MOVIE, contributions.text, contributions.created_at  
 
 /* usersテーブルとcontributionsテーブルを結合 */
 FROM users
@@ -27,4 +27,4 @@ INNER JOIN contributions
 ON users.user_id = contributions.user_id
 
 /* 取得したユーザIDで検索 */
-WHERE users.user_id = 'saku';
+WHERE users.user_id = '?';

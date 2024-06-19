@@ -6,12 +6,12 @@ SELECT rikishies.id, rikishies.pic, rikishies.rikishi_name, rikishies.rikishi_pr
 FROM rikishies
 
 /* 取得した力士IDで検索 */
-WHERE rikishies.id = 5;
+WHERE rikishies.id = ?;
 
 --------------------------------------------------------------------------------------
 
 /* 各部屋用SQL(投稿内容) */
-SELECT contributions.id, contributions.user_id, contributions.pic_movie, contributions.text, contributions.created_at
+SELECT contributions.id, contributions.user_id, contributions.pic_movie
 
 /* rikishiesテーブルとcontributionsテーブルを結合 */
 FROM rikishies
@@ -19,4 +19,4 @@ INNER JOIN contributions
 ON rikishies.id = contributions.rikishi_id
 
 /* 取得した力士IDで検索 */
-WHERE rikishies.id = 5;
+WHERE rikishies.id = ?;
