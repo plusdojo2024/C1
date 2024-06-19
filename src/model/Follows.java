@@ -19,6 +19,11 @@ public class Follows {
 			this.updated_at = updated_at;
 		}
 
+	// デフォルトコンストラクタ
+		public Follows() {
+
+		}
+
     //ゲッターとセッター
 		public int getId() {
 			return id;
