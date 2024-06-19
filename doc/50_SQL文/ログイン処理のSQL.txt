@@ -2,7 +2,7 @@
 SELECT * FROM USERS;
 
 /*sakuでログイン処理*/
-SELECT user_id, password FROM USERS WHERE user_id = 'saku' AND password = 's';
+SELECT user_id, password FROM USERS WHERE user_id = '?' AND password = '?';
 
 
 
