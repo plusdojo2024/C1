@@ -18,9 +18,20 @@ WHERE users.user_id = ?;
 
 -------------------------------------------------------------------------------------
 /*マイページ用SQL（他人用）*/
+/* 自分のユーザーIDを'saku'、このページのユーザーIDを'ogu'とする */
+/* ページの情報の一番右に自分がフォローしていたらFOLLOW欄が自分のユーザーIDに、フォローしていなかったらFOLLOW欄がNULLになる */
 
+SELECT U.user_id , U.user_name, U.icon, U.message, F.rikishi_id, R.pic, R.rikishi_name, FU.user_id FOLLOW    
+FROM USERS U LEFT JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = 'saku') FU
+ON U.user_id = FU.follow_user_id
 
+INNER JOIN FAVORITES F
+ON U.user_id = F.user_id
 
+INNER JOIN RIKISHIES R
+ON F.rikishi_id = R.id
+
+WHERE U.user_id = 'ogu';
 
 -------------------------------------------------------------------------------------
 
