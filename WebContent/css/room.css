@@ -11,3 +11,25 @@ html {
     background-color:#FFEEFF;
 	font-family: "myfont";
     }
+
+.face {
+	text-align: center;
+}
+.calender{
+	text-align: left;
+}
+.contribution{
+	text-align: right;
+}
+.header {
+	  padding-top: 50px;
+	  background-image: url(/C1/img/bar.png);
+      background-repeat: repeat-x;
+}
+.footer {
+	  position: relative;
+	  padding-bottom: 70px;
+	  background-image: url(/C1/img/mat.png);
+      background-repeat: repeat-x;
+      top: 375px;
+}

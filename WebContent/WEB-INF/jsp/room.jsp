@@ -8,11 +8,15 @@
 <link rel="stylesheet" type="text/css" href="/C1/css/room.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
+<header class="header">
+</header>
 <body>
+  <div class="face">
   <img src="${rikishies.pic}">
-  <a href="/C1/CalenderServlet">カレンダー</a>
-
-  <button><a href="/C1/ContributionServlet">投稿ボタン</a></button>
+  </div>
+  <button class="calender">カレンダー</button>
+  <button class="contribution"><a href="/C1/ContributionServlet">投稿ボタン</a></button>
+<div class="footer"></div>
 <footer>
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
