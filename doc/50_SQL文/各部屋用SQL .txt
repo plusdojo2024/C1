@@ -1,5 +1,17 @@
-/* 各部屋用SQL */
-SELECT rikishies.id, rikishies.pic, rikishies.rikishi_name, rikishies.rikishi_profile,  contributions.id, contributions.user_id, contributions.pic_movie, contributions.text, contributions.created_at, STARS.ID AS STAR
+
+--------------------------------------------------------------------------------------
+
+/* 各部屋用SQL(力士紹介) */
+SELECT rikishies.id, rikishies.pic, rikishies.rikishi_name, rikishies.rikishi_profile
+FROM rikishies
+
+/* 取得した力士IDで検索 */
+WHERE rikishies.id = 5;
+
+--------------------------------------------------------------------------------------
+
+/* 各部屋用SQL(投稿内容) */
+SELECT contributions.id, contributions.user_id, contributions.pic_movie, contributions.text, contributions.created_at, STARS.ID AS STAR
 
 /* rikishiesテーブルとcontributionsテーブルを結合 */
 FROM rikishies
