@@ -78,4 +78,6 @@ public class ContributionsDao {
 		// 結果を返す
 		return contributionsList;
 	}
+
+
 }
