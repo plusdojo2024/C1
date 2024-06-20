@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SUMOO | 力士検索</title>
+<title>SUMOO | 力士一覧</title>
 <link rel="stylesheet" href="/C1/css/rikishi.css">
 </head>
-<body>
+<body class = rikishi-page>
 <div class="wrapper" id="top">
   <!-- ヘッダー（ここから） -->
   <header class="header">
       <div class="logo">
-        <h2>力士検索</h2>
+        <h2>力士一覧</h2>
       </div>
   </header>
   <!-- ヘッダー（ここまで） -->
@@ -82,11 +82,17 @@
 <%--   </c:forEach> --%>
 
   <!-- メイン（ここまで） -->
-  <!-- フッター（ここから） -->
-  <div id="footer">
-    <p class="copyright"></p>
-  </div>
-  <!-- フッター（ここまで） -->
+<!-- フッター（ここから） -->　
+<footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
+</footer>
 </div>
 <!-- JavaScript（ここから） -->
 
