@@ -21,6 +21,13 @@ public class Users implements Serializable {
 	private String question;			//質問の答え
 	private Timestamp created_at;		//追加時間
 	private Timestamp updated_at;		//更新時間
+	private int rikishi_id;			//力士ID
+	private String pic;					//力士写真
+	private String rikishi_name;		//力士の名前
+	private int follows_id;			//フォローID
+	private String follow_user_id;		//フォローユーザーのID
+	private String pic_movie;			//投稿の写真
+
 
 
 
@@ -33,7 +40,7 @@ public class Users implements Serializable {
 
 	//全部入りのコンストラクタ（検索に入るとき）
 	public Users(int id, String user_id, String password, String user_name, String icon, String message, String ask,
-			String question, Timestamp created_at, Timestamp updated_at) {
+			String question, Timestamp created_at, Timestamp updated_at, int rikishi_id, String pic, String rikishi_name, int follows_id, String follow_user_id, String pic_movie) {
 		this.id = id;
 		this.user_id = user_id;
 		this.password = password;
@@ -44,7 +51,54 @@ public class Users implements Serializable {
 		this.question = question;
 		this.created_at = created_at;
 		this.updated_at = updated_at;
+		this.rikishi_id = rikishi_id;
+		this.pic = pic;
+		this.rikishi_name = rikishi_name;
+		this.follows_id = follows_id;
+		this.follow_user_id = follow_user_id;
+		this.pic_movie = pic_movie;
 	}
+
+
+	public Users(String user_id, String user_name, String icon, String message,  int rikishi_id, String pic, String rikishi_name) {
+		this.user_id = user_id;
+		this.user_name = user_name;
+		this.icon = icon;
+		this.message = message;
+		this.rikishi_id = rikishi_id;
+		this.pic = pic;
+		this.rikishi_name = rikishi_name;
+	}
+
+	public Users(String user_id, String user_name, String icon, String message,  int rikishi_id, String pic, String rikishi_name, int follows_id, String follow_user_id) {
+		this.user_id = user_id;
+		this.user_name = user_name;
+		this.icon = icon;
+		this.message = message;
+		this.rikishi_id = rikishi_id;
+		this.pic = pic;
+		this.rikishi_name = rikishi_name;
+		this.follows_id = follows_id;
+		this.follow_user_id = follow_user_id;
+	}
+
+
+
+	public Users( String user_name, String icon,String pic_movie) {
+		this.user_name = user_name;
+		this.icon = icon;
+		this.pic_movie = pic_movie;
+	}
+
+
+
+	public Users(String user_id,String user_name, String icon, String follow_user_id) {
+		this.user_id = user_id;
+		this.user_name = user_name;
+		this.icon = icon;
+		this.follow_user_id = follow_user_id;
+	}
+
 
 
 
@@ -165,6 +219,81 @@ public class Users implements Serializable {
 	public void setUpdated_at(Timestamp updated_at) {
 		this.updated_at = updated_at;
 	}
+
+
+
+	public int getRikishi_id() {
+		return rikishi_id;
+	}
+
+
+
+	public void setRikishi_id(int rikishi_id) {
+		this.rikishi_id = rikishi_id;
+	}
+
+
+
+	public String getPic() {
+		return pic;
+	}
+
+
+
+	public void setPic(String pic) {
+		this.pic = pic;
+	}
+
+
+
+	public String getRikishi_name() {
+		return rikishi_name;
+	}
+
+
+
+	public void setRikishi_name(String rikishi_name) {
+		this.rikishi_name = rikishi_name;
+	}
+
+
+
+	public int getFollows_id() {
+		return follows_id;
+	}
+
+
+
+	public void setFollows_id(int follows_id) {
+		this.follows_id = follows_id;
+	}
+
+
+
+	public String getFollow_user_id() {
+		return follow_user_id;
+	}
+
+
+
+	public void setFollow_user_id(String follow_user_id) {
+		this.follow_user_id = follow_user_id;
+	}
+
+
+
+	public String getPic_movie() {
+		return pic_movie;
+	}
+
+
+
+	public void setPic_movie(String pic_movie) {
+		this.pic_movie = pic_movie;
+	}
+
+
+
 
 
 
