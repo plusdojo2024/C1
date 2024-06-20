@@ -24,7 +24,8 @@ public class Stores implements Serializable{
 		this.created_at = created_at;
 		this.updated_at = updated_at;
 	}
-	//Timestamp以外のコンストラクタ
+
+     //timestamp以外のコンストラクタ
 		public Stores(int id, String shop_name, String shop_pic, String food_pic, String shop_link, String venue_name
 				) {
 			this.id = id;
@@ -33,10 +34,12 @@ public class Stores implements Serializable{
 			this.food_pic = food_pic;
 			this.shop_link = shop_link;
 			this.venue_name = venue_name;
-		}
+	}
+
 	//デフォルトコンストラクタ
 	public Stores() {
 	}
+
     //ゲッターセッター
 	public int getId() {
 		return id;
