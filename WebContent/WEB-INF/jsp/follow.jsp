@@ -14,7 +14,7 @@
   <!-- ヘッダー（ここから） -->
   <header class="header">
       <div class="logo">
-        <h2>フォロー中ユーザー一覧</h2>
+        <h1>フォロー中ユーザー一覧</h1>
       </div>
   </header>
   <!-- ヘッダー（ここまで） -->
@@ -37,7 +37,7 @@
       <tr>
         <td>
         <a href="/C1/UserPageServlet?id=0">
-            <img src="/C1/img/daiamami.png" width="40" height="40" alt="SUMOO | フォロー中ユーザー一覧">
+            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
             <!--
              src="${user_pic} widthとheightはCSSで決める
              -->
@@ -50,7 +50,7 @@
         <td>
           <a href="/C1/FollowServlet?follow=1&id=0">
           <%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-            <img src="/C1/img/heartred.svg" width="30" height="30" alt="SUMOO | フォロー中ユーザー一覧">
+            <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
 		  </a>
         </td>
       </tr>

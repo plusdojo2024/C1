@@ -15,7 +15,7 @@
   <!-- ヘッダー（ここから） -->
   <header class="header">
       <div class="logo">
-        <h2>ユーザー検索</h2>
+        <h1>ユーザー検索</h1>
       </div>
   </header>
   <!-- ヘッダー（ここまで） -->
@@ -52,7 +52,7 @@
       <tr>
         <td>
         <a href="/C1/UserPageServlet?id=0">
-            <img src="/C1/img/daiamami.png" width="40" height="40" alt="SUMOO | ユーザー検索">
+            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | ユーザー検索">
             <!--
              src="${user_pic} widthとheightはCSSで決める
              -->
@@ -67,19 +67,20 @@
           <%-- このユーザーのことをフォローしていなかったら --%>
             <a href="/C1/UserServlet?follow=0&id=0">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-              <img src="/C1/img/heartwhite.png" width="30" height="30" alt="SUMOO | ユーザー検索">
+              <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | ユーザー検索">
 		    </a>
 		  </c:if>
           <c:if test="true">
           <%-- このユーザーのことをフォローしていたら --%>
             <a href="/C1/UserServlet?follow=1&id=0">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-              <img src="/C1/img/heartred.svg" width="30" height="30" alt="SUMOO | ユーザー検索">
+              <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | ユーザー検索">
 		    </a>
 		  </c:if>
         </td>
       </tr>
     </table>
+
 <!--     </form> -->
 <%--   </c:forEach> --%>
 

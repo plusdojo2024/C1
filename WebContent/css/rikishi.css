@@ -19,23 +19,36 @@
 /*ユーザー検索の入力フォーム*/
 #rikishiform {
     width: 21rem;
+    height: 3rem;
+	margin-top: 3rem;
 }
 
 /*ユーザー検索の入力フォームと検索ボタン*/
 .rikishiform {
 	font-size: 1.3rem;
+	height: 3rem;
+	margin-top: 3rem;
 }
 
 /*それぞれのユーザーのボード*/
 .boardpic {
-	font-size: 2rem;
+	font-size: 4rem;
+	margin-top: 1rem;
     color:black;
     text-align: center;
-    margin: 0 auto 13px;
     padding: 1.1px 6px;
     background-color: lightpink;
 }
 
 .rikishi-page {
 	background-color: #FFDDFF;
+}
+
+/* ページ全体の背景色 */
+.rikishi-page {
+	background-color: #FFDDFF;
+}
+/* 見出し */
+h1 {
+	font-size:6rem;
 }
