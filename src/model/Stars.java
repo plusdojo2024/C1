@@ -21,6 +21,13 @@ public class Stars implements Serializable{
 		this.created_at = created_at;
 		this.updated_at = updated_at;
 	}
+	//timestamo以外のコンストラクタ
+	public Stars(int id, int contribution_id, String user_id)
+	{
+		this.id = id;
+		this.contribution_id = contribution_id;
+		this.user_id = user_id;
+	}
 	//デフォルトコンストラクタ
 	public Stars() {
 	}
