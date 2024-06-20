@@ -35,8 +35,20 @@ WHERE U.user_id = 'ogu';
 
 -------------------------------------------------------------------------------------
 
-/* マイページ用SQL （ユーザの過去投稿）*/
+/* マイページ用SQL （ユーザの過去投稿つかわない）*/
 SELECT users.user_name, users.icon, users.message, contributions.PIC_MOVIE, contributions.text, contributions.created_at  
+
+/* usersテーブルとcontributionsテーブルを結合 */
+FROM users
+INNER JOIN contributions
+ON users.user_id = contributions.user_id
+
+/* 取得したユーザIDで検索 */
+WHERE users.user_id = '?';
+
+
+/* マイページ用SQL （ユーザの過去投稿使うほう　改訂版）*/
+SELECT users.user_name, users.icon, contributions.PIC_MOVIE 
 
 /* usersテーブルとcontributionsテーブルを結合 */
 FROM users
