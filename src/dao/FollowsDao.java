@@ -24,9 +24,9 @@ public class FollowsDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する
-			String sql = "SELECT U.user_id, U.user_name, U.icon, F.user_id"
-					+ " FROM USERS U INNER JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) F"
-					+ " ON U.user_id = F.follow_user_id";
+			String sql = "SELECT F.follow_user_id, U.user_name, U.icon, F.user_id\r\n"
+					+ "FROM USERS U INNER JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) F\r\n"
+					+ "ON U.user_id = F.follow_user_id";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			// SQL文を完成させる
 			if (follows.getUser_id() != null) {
@@ -40,11 +40,12 @@ public class FollowsDao {
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
 				Follows record = new Follows(
-				rs.getInt("id"),
-				rs.getString("user_id"),
+
 				rs.getString("follow_user_id"),
-				rs.getTimestamp("created_at"),
-				rs.getTimestamp("updated_at")
+				rs.getString("user_name"),
+				rs.getString("icon"),
+				rs.getString("user_id")
+
 				);
 				followsList.add(record);
 			}
