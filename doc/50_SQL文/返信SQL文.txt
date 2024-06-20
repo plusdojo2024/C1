@@ -4,18 +4,12 @@ SELECT * FROM REPLIES;
 SELECT * FROM STARS;
 
 
- /* CONTIBUTIONSテーブルとREPLIESテーブルを投稿IDで内部結合したもの */
-SELECT * FROM CONTRIBUTIONS AS C INNER JOIN REPLIES AS R 
-ON C.ID = R.CONTRIBUTION_ID
-WHERE C.ID = ?;
+ /* 返信ページの下の返信を表示する用テーブル */
+SELECT R.*, U.user_name FROM (SELECT * FROM REPLIES WHERE contribution_id = 1) AS R
+INNER JOIN USERS AS U
+ON R.user_id = U.user_id;
 
-
- /* CONTIBUTIONSテーブルとSTARSテーブルを投稿IDで内部結合したもの（白星の表示） */
-SELECT C.*, S.USER_ID AS STAR
-FROM (SELECT * from CONTRIBUTIONS WHERE ID = 6) AS C LEFT OUTER JOIN (SELECT * FROM STARS WHERE USER_ID = ?)AS S
-ON C.id = S.CONTRIBUTION_id;
-
-/* 上の白星表示の改善あと */
+/* 返信ページの上の投稿表示用テーブル */
 SELECT C.user_id, C.rikishi_id, C.id, U.icon,U.user_name, C.pic_movie, C.text, S.user_id star  
 FROM (SELECT * FROM CONTRIBUTIONS WHERE id = 1) AS C 
 LEFT JOIN USERS U
