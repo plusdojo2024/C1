@@ -6,10 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>SUMOO | フォロー中ユーザー一覧</title>
-<link rel="stylesheet" href="/C1/css/user.css">
+<link rel="stylesheet" href="/C1/css/follow.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
-<body>
+<body class = follow-page>
 <div class="wrapper" id="top">
   <!-- ヘッダー（ここから） -->
   <header class="header">

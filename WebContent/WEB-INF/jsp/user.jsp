@@ -9,7 +9,8 @@
 <link rel="stylesheet" href="/C1/css/user.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
-<body>
+<body class = user-page>
+<main>
 <div class="wrapper" id="top">
   <!-- ヘッダー（ここから） -->
   <header class="header">
@@ -83,6 +84,7 @@
 <%--   </c:forEach> --%>
 
   <!-- メイン（ここまで） -->
+  </main>
   <!-- フッター（ここから） -->　
 <footer>
   <nav class="menu">
