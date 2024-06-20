@@ -34,5 +34,18 @@ public class ContributionsDaoTest {
 			System.out.println("Starの有無(自分のID)：" + contributions.getStars_user_id());
 			System.out.println();
 		}
+
+		// selectReply()のテスト
+		Contributions reply = new Contributions();
+		reply.Reply(1);
+		System.out.println("---------- selectReply()のテスト ----------");
+		List<Contributions> contributionsList4 = dao.selectReply(reply);
+		System.out.println("aiouo");
+		for (Contributions contributions : contributionsList4) {
+			System.out.println("ユーザーID：" + contributions.getUser_id());
+			System.out.println("ユーザーネーム：" + contributions.getUser_name());
+			System.out.println("投稿テキスト：" + contributions.getText());
+			System.out.println();
+		}
 	}
 }

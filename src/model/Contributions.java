@@ -44,11 +44,6 @@ public class Contributions implements Serializable {
 			this.user_id = user_id;
 			this.pic_movie = pic_movie;
 	}
-	// 返信ページで、１つの投稿を白星込みで表示するための検索用コンストラクタ
-	public Contributions(int id, String stars_user_id) {
-			this.id = id;
-			this.stars_user_id = stars_user_id;
-	}
 	// 返信ページで、１つの投稿を白星込みで表示するための表示用コンストラクタ
 	public Contributions(String user_id, int rikishi_id, int id, String icon, String user_name, String pic_movie,
 			String text, String stars_user_id) {
@@ -61,10 +56,26 @@ public class Contributions implements Serializable {
 		this.text = text;
 		this.stars_user_id = stars_user_id;
 	}
+	// 返信ページで、１つの投稿を白星込みで表示するための検索用コンストラクタ
+	public Contributions(int id, String stars_user_id) {
+			this.id = id;
+			this.stars_user_id = stars_user_id;
+	}
+	// 投稿IDで返信をSELECTした結果を送るためのコンストラクタ
+	public Contributions(String user_id, String user_name, String text) {
+			this.user_id = user_id;
+			this.user_name = user_name;
+			this.text = text;
+	}
 
 	//デフォルトコンストラクタ
 	public Contributions() {
 
+	}
+
+	//投稿IDで返信をSELECTする用のメソッド
+	public void Reply(int id) {
+		this.id = id;
 	}
 
 
