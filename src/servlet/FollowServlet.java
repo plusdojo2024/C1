@@ -26,11 +26,11 @@ public class FollowServlet extends HttpServlet {
 			//followテーブルからレコードを削除する処理！
 
 		}
-		if (false) {
+		if (false) {//follow.jspに表示するための情報をとってくる
 
 		}
 
-
+		//requestスコープに情報を格納する
 
 
 		// ユーザー検索・一覧ページにフォワードする
