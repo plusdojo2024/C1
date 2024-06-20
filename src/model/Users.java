@@ -60,6 +60,20 @@ public class Users implements Serializable {
 	}
 
 
+
+	public Users(String user_id, String password) {
+		this.user_id = user_id;
+		this.password = password;
+	}
+
+
+
+
+
+	public Users(String user_id) {
+		this.user_id = user_id;
+	}
+
 	public Users(String user_id, String user_name, String icon, String message,  int rikishi_id, String pic, String rikishi_name) {
 		this.user_id = user_id;
 		this.user_name = user_name;

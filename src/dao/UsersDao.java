@@ -208,7 +208,7 @@ public class UsersDao {
 			// データベースに接続する
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
-			// SQL文を準備する（マイページの投稿の初期表示のために情報を取得）
+			// SQL文を準備する（マイページの投稿の初期表示のために情報を取得　　）
 			String sql = "SELECT users.user_name, users.icon, contributions.PIC_MOVIE, "
 					+ " FROM users"
 					+ " INNER JOIN contributions"
