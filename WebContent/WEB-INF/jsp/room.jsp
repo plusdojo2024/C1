@@ -7,6 +7,13 @@
 <title>各部屋</title>
 <link rel="stylesheet" type="text/css" href="/C1/css/room.css">
 <link rel="stylesheet" href="/C1/css/common.css">
+
+  <style>
+  * {
+    outline: 1px solid #FF0000;
+  }
+  </style>
+  -->
 </head>
 <header class="header">
 </header>

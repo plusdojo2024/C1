@@ -4,14 +4,16 @@ import java.sql.Timestamp;
 
 public class Follows {
 	//フィールド
-		private int id;
+	    private int id;
 		private String user_id;
 		private String follow_user_id;
+		private String user_name;
+		private String icon;
 		private Timestamp created_at;
 		private Timestamp updated_at;
 
 	//コンストラクタ
-		public Follows(int id, String user_id, String follow_user_id, Timestamp created_at, Timestamp updated_at) {
+		public Follows(int id,String user_id, String follow_user_id, Timestamp created_at, Timestamp updated_at) {
 			this.id = id;
 			this.user_id = user_id;
 			this.follow_user_id = follow_user_id;
@@ -22,6 +24,19 @@ public class Follows {
 	// デフォルトコンストラクタ
 		public Follows() {
 
+		}
+
+	// 結果用コンストラクタ
+		public Follows(String user_id, String follow_user_id, String user_name, String icon) {
+			this.user_id = user_id;
+			this.follow_user_id = follow_user_id;
+			this.user_name = user_name;
+			this.icon = icon;
+		}
+
+	//テスト用コンストラクタ
+		public Follows(String user_id) {
+			this.user_id = user_id;
 		}
 
     //ゲッターとセッター
@@ -63,6 +78,22 @@ public class Follows {
 
 		public void setUpdated_at(Timestamp updated_at) {
 			this.updated_at = updated_at;
+		}
+
+		public String getUser_name() {
+			return user_name;
+		}
+
+		public void setUser_name(String user_name) {
+			this.user_name = user_name;
+		}
+
+		public String getIcon() {
+			return icon;
+		}
+
+		public void setIcon(String icon) {
+			this.icon = icon;
 		}
 
 
