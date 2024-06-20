@@ -46,9 +46,7 @@ public class StarsDao {
 				Stars record = new Stars(
 				rs.getInt ("id"),
 				rs.getInt ("contribution_id"),
-				rs.getString ("user_id"),
-				rs.getTimestamp ("created_at"),
-				rs.getTimestamp ("updated_at")
+				rs.getString ("user_id")
 				);
 				starsList.add(record);
 			}
