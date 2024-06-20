@@ -11,7 +11,7 @@ import java.util.List;
 import model. Rikishies;
 
 public class RikishiesDao {
-	//力士の検索
+	//力士の検索 テスト済み
 	public List<Rikishies> select(Rikishies rikishies) {
 		Connection conn = null;
 		List<Rikishies> rikishiesList = new ArrayList<Rikishies>();
@@ -24,7 +24,7 @@ public class RikishiesDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する 力士のID検索
-			String sql = "SELECT rikishies.id, rikishies.pic, rikishies.rikishi_name, rikishies.rikishi_profile FROM rikishies WHERE rikishies.id = ?";
+			String sql = "SELECT * FROM rikishies WHERE rikishies.id = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -42,9 +42,9 @@ public class RikishiesDao {
 				rs.getString("sumo_association_link"),
 				rs.getString("rikishi_profile"),
 				rs.getString("calendar"),
-				rs.getString("sumo_stable_name"),
-				rs.getTimestamp("created_at"),
-				rs.getTimestamp("update_at")
+				rs.getString("sumo_stable_name")
+				//rs.getTimestamp("created_at"),
+				//rs.getTimestamp("update_at")
 				);
 				rikishiesList.add(record);
 			}
@@ -91,7 +91,7 @@ public class RikishiesDao {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				pStmt.setInt(1, rikishies.getId());
+				pStmt.setString(1, rikishies.getUser_id());
 
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
@@ -145,7 +145,7 @@ public class RikishiesDao {
 						conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 						// SQL文を準備する 力士のID検索
-						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = 'saku') AS F ON R.id = F.rikishi_id GROUP BY rikishi_name";
+						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = '?') AS F ON R.id = F.rikishi_id GROUP BY rikishi_name";
 						PreparedStatement pStmt = conn.prepareStatement(sql);
 
 						// SQL文を完成させる

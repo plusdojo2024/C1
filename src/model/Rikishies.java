@@ -34,7 +34,7 @@ public class Rikishies implements Serializable {
 
 		//力士の検索のコンストラクタ
 				public Rikishies(int id, String pic, String rikishi_name, String sumo_association_link, String rikishi_profile,
-						String calendar, String sumo_stable_name, Timestamp created_at, Timestamp update_at) {
+						String calendar, String sumo_stable_name) {
 					this.id = id;
 					this.pic = pic;
 					this.rikishi_name = rikishi_name;
@@ -42,8 +42,8 @@ public class Rikishies implements Serializable {
 					this.rikishi_profile = rikishi_profile;
 					this.calendar = calendar;
 					this.sumo_stable_name = sumo_stable_name;
-					this.created_at = created_at;
-					this.update_at = update_at;
+					//this.created_at = created_at;
+					//this.update_at = update_at;
 				}
 
 				//待機部屋のコンストラクタ、力士一覧初期表示のコンストラクタ、力士一覧の曖昧検索コンストラクタ
@@ -54,6 +54,20 @@ public class Rikishies implements Serializable {
 					this.sumo_association_link = sumo_association_link;
 					this.user_id = user_id;
 				}
+
+
+				//力士検索用コンストラクタ
+				public Rikishies(int id) {
+					this.id = id;
+
+				}
+
+				//力士検索用コンストラクタ
+				public Rikishies(String user_id) {
+					this.user_id = user_id;
+
+				}
+
 
 
 
