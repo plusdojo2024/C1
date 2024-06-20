@@ -10,7 +10,7 @@ public class StoresDaoTest {
 
 		// select()のテスト
 		System.out.println("---------- select()のテスト ----------");
-		List<Stores> storesList2 = dao.select(new Stores("東京"));
+		List<Stores> storesList2 = dao.select(new Stores("名古屋"));
 		System.out.println("aiouo");
 		for (Stores stores : storesList2) {
 			System.out.println("店名：" + stores.getShop_name());

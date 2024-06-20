@@ -34,9 +34,8 @@ public class StarsDao {
 
 			// SQL文を完成させる
 
-			if (stars.getUser_id() != null) {
-				pStmt.setString(1,stars.getUser_id());
-			}
+
+				pStmt.setString(1,stars.getStar());
 
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -44,9 +43,12 @@ public class StarsDao {
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
 				Stars record = new Stars(
-				rs.getInt ("id"),
+				rs.getString ("star"),
 				rs.getInt ("contribution_id"),
-				rs.getString ("user_id")
+				rs.getString ("user_id"),
+				rs.getString("icon"),
+				rs.getString("user_name"),
+				rs.getString("pic_movie")
 				);
 				starsList.add(record);
 			}
