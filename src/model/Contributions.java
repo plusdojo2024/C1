@@ -25,7 +25,7 @@ public class Contributions implements Serializable {
 		this.updated_at = updated_at;
 
 	}
-	//日時抜きのコンストラクタ(検索に入るとき)
+	//力士IDでSELECTする用のコンストラクタ(検索に入るとき)
 	public Contributions(int rikishi_id) {
 		this.rikishi_id = rikishi_id;
 
