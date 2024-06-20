@@ -14,11 +14,12 @@ public class Rikishies implements Serializable {
 		private String sumo_stable_name;		//所属部屋
 		private Timestamp created_at;			//
 		private Timestamp update_at;			//
+		private String user_id;   				//
 
 
-		//引数のあるコンストラクタ
+		//全部のコンストラクタ
 		public Rikishies(int id, String pic, String rikishi_name, String sumo_association_link, String rikishi_profile,
-				String calendar, String sumo_stable_name, Timestamp created_at, Timestamp update_at) {
+				String calendar, String sumo_stable_name, Timestamp created_at, Timestamp update_at, String user_id) {
 			this.id = id;
 			this.pic = pic;
 			this.rikishi_name = rikishi_name;
@@ -28,7 +29,46 @@ public class Rikishies implements Serializable {
 			this.sumo_stable_name = sumo_stable_name;
 			this.created_at = created_at;
 			this.update_at = update_at;
+			this.user_id = user_id;
 		}
+
+		//力士の検索のコンストラクタ
+				public Rikishies(int id, String pic, String rikishi_name, String sumo_association_link, String rikishi_profile,
+						String calendar, String sumo_stable_name) {
+					this.id = id;
+					this.pic = pic;
+					this.rikishi_name = rikishi_name;
+					this.sumo_association_link = sumo_association_link;
+					this.rikishi_profile = rikishi_profile;
+					this.calendar = calendar;
+					this.sumo_stable_name = sumo_stable_name;
+					//this.created_at = created_at;
+					//this.update_at = update_at;
+				}
+
+				//待機部屋のコンストラクタ、力士一覧初期表示のコンストラクタ、力士一覧の曖昧検索コンストラクタ
+				public Rikishies(int id, String pic, String rikishi_name, String sumo_association_link,String user_id) {
+					this.id = id;
+					this.pic = pic;
+					this.rikishi_name = rikishi_name;
+					this.sumo_association_link = sumo_association_link;
+					this.user_id = user_id;
+				}
+
+
+				//力士検索用コンストラクタ
+				public Rikishies(int id) {
+					this.id = id;
+
+				}
+
+				//力士検索用コンストラクタ
+				public Rikishies(String user_id) {
+					this.user_id = user_id;
+
+				}
+
+
 
 
 		// デフォルトコンストラクタ
@@ -92,6 +132,18 @@ public class Rikishies implements Serializable {
 		public void setUpdate_at(Timestamp update_at) {
 			this.update_at = update_at;
 		}
+
+
+		public String getUser_id() {
+			return user_id;
+		}
+
+		public void setUser_id(String user_id) {
+			this.user_id = user_id;
+		}
+
+
+
 
 
 

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Stores implements Serializable{
-	private int id;					//ID
 	private String shop_name;	 //店名
 	private String shop_pic;	//店の写真
 	private String food_pic;	 //料理の写真
@@ -13,9 +12,8 @@ public class Stores implements Serializable{
 	private Timestamp created_at;	// 投稿日時
 	private Timestamp updated_at;	// 更新日時
     //全て込みのコンストラクタ
-	public Stores(int id, String shop_name, String shop_pic, String food_pic, String shop_link, String venue_name,
+	public Stores(String shop_name, String shop_pic, String food_pic, String shop_link, String venue_name,
 			Timestamp created_at, Timestamp updated_at) {
-		this.id = id;
 		this.shop_name = shop_name;
 		this.shop_pic = shop_pic;
 		this.food_pic = food_pic;
@@ -26,9 +24,8 @@ public class Stores implements Serializable{
 	}
 
      //timestamp以外のコンストラクタ
-		public Stores(int id, String shop_name, String shop_pic, String food_pic, String shop_link, String venue_name
+		public Stores(String shop_name, String shop_pic, String food_pic, String shop_link, String venue_name
 				) {
-			this.id = id;
 			this.shop_name = shop_name;
 			this.shop_pic = shop_pic;
 			this.food_pic = food_pic;
@@ -36,17 +33,27 @@ public class Stores implements Serializable{
 			this.venue_name = venue_name;
 	}
 
+		//会場名でSELECTする用のコンストラクタ(検索に入るとき)
+		public Stores(String venue_name) {
+			this.venue_name = venue_name;
+
+		}
+		//検索結果のコンストラクタ(検索に入るとき)
+/*			public Stores(int id,String venue_name, String shop_name,String shop_pic,String food_pic,String shop_link) {
+				this.id = id;
+				this.shop_name = shop_name;
+				this.shop_pic = shop_pic;
+				this.food_pic = food_pic;
+				this.shop_link = shop_link;
+				this.venue_name = venue_name;
+			}
+*/
+
 	//デフォルトコンストラクタ
 	public Stores() {
 	}
 
     //ゲッターセッター
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getShop_name() {
 		return shop_name;
 	}

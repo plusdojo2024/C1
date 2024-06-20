@@ -16,8 +16,25 @@
   </div>
   <button class="calender">カレンダー</button>
   <button class="contribution"><a href="/C1/ContributionServlet">投稿ボタン</a></button>
-<div class="footer"></div>
-<footer>
+  <ul class="scroll_content">
+  <li>
+    <a href="#"><img src="/C1/img/iconatami.png"></a>
+    <h2>タイトル</h2>
+    <p>ディスクリプション</p>
+  </li>
+  <li>
+    <a href="#"><img src="/C1/img/iconendo.png"></a>
+    <h2>タイトル</h2>
+    <p>ディスクリプション</p>
+  </li>
+  <li>
+    <a href="#"><img src="/C1/img/heartwhite.png"></a>
+    <h2>タイトル</h2>
+    <p>ディスクリプション</p>
+  </li>
+</ul>
+<p id="mat"></p>
+<footer id="footer">
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
       <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>

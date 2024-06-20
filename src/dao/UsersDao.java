@@ -27,7 +27,7 @@ public class UsersDao {
 			String sql = "SELECT COUNT(*) FROM USERS WHERE user_id = ? AND password = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, users.getUser_id());
-			pStmt.setString(2,users.getPassword());
+			pStmt.setString(2, users.getPassword());
 
 			// SELECT文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -37,22 +37,18 @@ public class UsersDao {
 			if (rs.getInt("COUNT(*)") == 1) {
 				loginResult = true;
 			}
-		}
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 			loginResult = false;
-		}
-		catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			loginResult = false;
-		}
-		finally {
+		} finally {
 			// データベースを切断
 			if (conn != null) {
 				try {
 					conn.close();
-				}
-				catch (SQLException e) {
+				} catch (SQLException e) {
 					e.printStackTrace();
 					loginResult = false;
 				}
@@ -62,8 +58,6 @@ public class UsersDao {
 		// 結果を返す
 		return loginResult;
 	}
-
-
 
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
 	public List<Users> select(Users users) {
@@ -98,16 +92,13 @@ public class UsersDao {
 			//re.next()で
 			while (rs.next()) {
 				Users record = new Users(
-						rs.getInt("id"),
 						rs.getString("user_id"),
-						rs.getString("password"),
 						rs.getString("user_name"),
 						rs.getString("icon"),
 						rs.getString("message"),
-						rs.getString("ask"),
-						rs.getString("question"),
-						rs.getTimestamp("created_at"),
-						rs.getTimestamp("updated_at"));
+						rs.getInt("rikishi_id"),
+						rs.getString("pic"),
+						rs.getString("rikishi_name"));
 				usersList.add(record);
 			}
 
@@ -136,7 +127,7 @@ public class UsersDao {
 	}
 
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<Users> select(Users users) {
+	public List<Users> select_other(Users users) {
 		Connection conn = null;
 		List<Users> usersList = new ArrayList<Users>();
 
@@ -148,7 +139,7 @@ public class UsersDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する（他人のマイページの初期表示のために情報を取得　　followの有無がある）
-			String sql = "SELECT U.user_id , U.user_name, U.icon, U.message, F.rikishi_id, R.pic, R.rikishi_name, FU.user_id FOLLOW "
+			String sql = "SELECT * "
 					+ " FROM USERS U LEFT JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) FU"
 					+ " ON U.user_id = FU.follow_user_id"
 					+ " INNER JOIN FAVORITES F"
@@ -160,7 +151,7 @@ public class UsersDao {
 
 			// SQL文を完成させる
 			pStmt.setString(1, users.getUser_id());
-			pStmt.setString(2, users.getUser_id());
+			pStmt.setString(2, users.getFollow_user_id());
 
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -169,16 +160,14 @@ public class UsersDao {
 			//re.next()で
 			while (rs.next()) {
 				Users record = new Users(
-						rs.getInt("id"),
 						rs.getString("user_id"),
-						rs.getString("password"),
 						rs.getString("user_name"),
 						rs.getString("icon"),
 						rs.getString("message"),
-						rs.getString("ask"),
-						rs.getString("question"),
-						rs.getTimestamp("created_at"),
-						rs.getTimestamp("updated_at"));
+						rs.getInt("rikishi_id"),
+						rs.getString("pic"),
+						rs.getString("rikishi_name"),
+						rs.getString("follow_user_id"));
 				usersList.add(record);
 			}
 
@@ -206,4 +195,122 @@ public class UsersDao {
 		return usersList;
 	}
 
+	// 引数paramで検索項目を指定し、検索結果のリストを返す
+	public List<Users> select_mypagecontributions(Users users) {
+		Connection conn = null;
+		List<Users> usersList = new ArrayList<Users>();
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
+
+			// SQL文を準備する（マイページの投稿の初期表示のために情報を取得　　）
+			String sql = "SELECT users.user_name, users.icon, contributions.PIC_MOVIE"
+					+ " FROM users"
+					+ " INNER JOIN contributions"
+					+ " ON users.user_id = contributions.user_id"
+					+ " WHERE users.user_id = ?";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を完成させる
+			pStmt.setString(1, users.getUser_id());
+
+			// SQL文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
+
+			// 結果表をコレクションにコピーする
+			//re.next()で
+			while (rs.next()) {
+				Users record = new Users(
+						rs.getString("user_name"),
+						rs.getString("icon"),
+						rs.getString("pic_movie"));
+				usersList.add(record);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			usersList = null;
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			usersList = null;
+
+		} finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					usersList = null;
+				}
+			}
+		}
+
+		// 結果を返す
+		return usersList;
+	}
+
+	// 引数paramで検索項目を指定し、検索結果のリストを返す
+	public List<Users> select_usersearch(Users users) {
+		Connection conn = null;
+		List<Users> usersList = new ArrayList<Users>();
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
+
+			// SQL文を準備する（ユーザー一覧初期表示）
+			String sql = "SELECT U.user_id, U.user_name, U.icon, F.user_id AS follow_user_id"
+					+ " FROM USERS U LEFT JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) F"
+					+ " ON U.user_id = F.follow_user_id";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を完成させる
+			pStmt.setString(1, users.getUser_id());
+
+			// SQL文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
+
+			// 結果表をコレクションにコピーする
+			//re.next()で
+			while (rs.next()) {
+				Users record = new Users(
+						rs.getString("user_id"),
+						rs.getString("user_name"),
+						rs.getString("icon"),
+						rs.getString("follow_user_id"));
+				usersList.add(record);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			usersList = null;
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			usersList = null;
+
+		} finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					usersList = null;
+				}
+			}
+		}
+
+		// 結果を返す
+		return usersList;
+	}
 }
