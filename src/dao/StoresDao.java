@@ -42,7 +42,6 @@ public class StoresDao {
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
 				Stores record = new Stores(
-				rs.getInt("id"),
 				rs.getString("shop_name"),
 				rs.getString("shop_pic"),
 				rs.getString("food_pic"),
