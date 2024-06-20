@@ -45,11 +45,7 @@ public class ContributionsDao {
 				Contributions record = new Contributions(
 				rs.getInt("id"),
 				rs.getString("user_id"),
-				rs.getInt("rikishi_id"),
-				rs.getString("pic_movie"),
-				rs.getString("text"),
-				rs.getTimestamp("created_at"),
-				rs.getTimestamp("updated_at")
+				rs.getString("pic_movie")
 				);
 				contributionsList.add(record);
 			}
@@ -78,4 +74,6 @@ public class ContributionsDao {
 		// 結果を返す
 		return contributionsList;
 	}
+
+
 }

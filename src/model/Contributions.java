@@ -13,9 +13,9 @@ public class Contributions implements Serializable {
 	private Timestamp created_at;	// 投稿日時
 	private Timestamp updated_at;	// 更新日時
 
+
 	//全部入りのコンストラクタ(検索に入るとき)
-	public Contributions(int id, String user_id, int rikishi_id, String pic_movie, String text, Timestamp created_at,
-			Timestamp updated_at ) {
+	public Contributions(int id, String user_id, int rikishi_id, String pic_movie, String text, Timestamp created_at, Timestamp updated_at) {
 		this.id = id;
 		this.user_id = user_id;
 		this.rikishi_id = rikishi_id;
@@ -23,7 +23,19 @@ public class Contributions implements Serializable {
 		this.text = text;
 		this.created_at = created_at;
 		this.updated_at = updated_at;
+
 	}
+	//力士IDでSELECTする用のコンストラクタ(検索に入るとき)
+	public Contributions(int rikishi_id) {
+		this.rikishi_id = rikishi_id;
+
+	}
+	//力士の各部屋に表示する投稿のコンストラクタ(検索に入るとき)
+		public Contributions(int id, String user_id,String pic_movie) {
+			this.id = id;
+			this.user_id = user_id;
+			this.pic_movie = pic_movie;
+		}
 
 	//デフォルトコンストラクタ
 	public Contributions() {
