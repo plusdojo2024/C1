@@ -139,7 +139,7 @@ public class UsersDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する（他人のマイページの初期表示のために情報を取得　　followの有無がある）
-			String sql = "SELECT U.user_id , U.user_name, U.icon, U.message, F.rikishi_id, R.pic, R.rikishi_name, FU.user_id FOLLOW "
+			String sql = "SELECT * "
 					+ " FROM USERS U LEFT JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) FU"
 					+ " ON U.user_id = FU.follow_user_id"
 					+ " INNER JOIN FAVORITES F"
@@ -151,7 +151,7 @@ public class UsersDao {
 
 			// SQL文を完成させる
 			pStmt.setString(1, users.getUser_id());
-			pStmt.setString(2, users.getUser_id());
+			pStmt.setString(2, users.getFollow_user_id());
 
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -167,7 +167,6 @@ public class UsersDao {
 						rs.getInt("rikishi_id"),
 						rs.getString("pic"),
 						rs.getString("rikishi_name"),
-						rs.getInt("follows_id"),
 						rs.getString("follow_user_id"));
 				usersList.add(record);
 			}
@@ -209,7 +208,7 @@ public class UsersDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 			// SQL文を準備する（マイページの投稿の初期表示のために情報を取得　　）
-			String sql = "SELECT users.user_name, users.icon, contributions.PIC_MOVIE, "
+			String sql = "SELECT users.user_name, users.icon, contributions.PIC_MOVIE"
 					+ " FROM users"
 					+ " INNER JOIN contributions"
 					+ " ON users.user_id = contributions.user_id"
@@ -268,8 +267,8 @@ public class UsersDao {
 			// データベースに接続する
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
-			// SQL文を準備する（他人のマイページの初期表示のために情報を取得　　followの有無がある）
-			String sql = "SELECT U.user_id, U.user_name, U.icon, F.user_id"
+			// SQL文を準備する（ユーザー一覧初期表示）
+			String sql = "SELECT U.user_id, U.user_name, U.icon, F.user_id AS follow_user_id"
 					+ " FROM USERS U LEFT JOIN (SELECT user_id, follow_user_id FROM FOLLOWS WHERE user_id = ?) F"
 					+ " ON U.user_id = F.follow_user_id";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
