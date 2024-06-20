@@ -47,5 +47,27 @@ public class ContributionsDaoTest {
 			System.out.println("投稿テキスト：" + contributions.getText());
 			System.out.println();
 		}
+
+		// insertReply()のテスト
+		int upDelNumber = 0;
+		Contributions insReply = new Contributions();
+		insReply.InsReply(1, "ogu", "Coooooool!");
+		System.out.println("---------- insertReply()のテスト ----------");
+		if (dao.insertReply(insReply)) {
+			insReply.Reply(1);
+			System.out.println("aiouo");
+			List<Contributions> contributionsList5 = dao.selectReply(insReply);
+			for (Contributions contributions : contributionsList5) {
+				System.out.println("ユーザーID：" + contributions.getUser_id());
+				System.out.println("ユーザーネーム：" + contributions.getUser_name());
+				System.out.println("投稿テキスト：" + contributions.getText());
+				System.out.println();
+				upDelNumber = contributions.getId();	// 最後のレコードを後で更新および削除する
+			}
+		}
+		else {
+			System.out.println("登録失敗！");
+		}
+
 	}
 }

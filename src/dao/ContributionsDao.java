@@ -162,7 +162,8 @@ public class ContributionsDao {
 			// SQL文を準備する
 			String sql = "SELECT R.*, U.user_name FROM (SELECT * FROM REPLIES WHERE contribution_id = ?) AS R "
 					+ "INNER JOIN USERS AS U "
-					+ "ON R.user_id = U.user_id";
+					+ "ON R.user_id = U.user_id "
+					+ "ORDER BY id DESC";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
@@ -208,6 +209,55 @@ public class ContributionsDao {
 
 		// 結果を返す
 		return contributionsList;
+	}
+
+	// 返信ページで、その投稿に対する返信をINSERTする処理
+	public boolean insertReply(Contributions contributions) {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
+
+			// SQL文を準備する
+			String sql = "INSERT INTO  REPLIES VALUES (NULL,?,?,?,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を完成させる
+			pStmt.setInt(1, contributions.getId());
+			pStmt.setString(2, contributions.getUser_id());
+			pStmt.setString(3, contributions.getText());
+
+			// SQL文を実行する
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		// 結果を返す
+		return result;
 	}
 
 

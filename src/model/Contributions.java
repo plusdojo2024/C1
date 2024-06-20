@@ -33,12 +33,12 @@ public class Contributions implements Serializable {
 	}
 
 
-	//力士IDでSELECTする用のコンストラクタ(検索に入るとき)
+	//力士IDでSELECTする用のコンストラクタ
 	public Contributions(int rikishi_id) {
 		this.rikishi_id = rikishi_id;
 
 	}
-	//力士の各部屋に表示する投稿のコンストラクタ(検索に入るとき)
+	//力士の各部屋に表示する投稿のコンストラクタ
 	public Contributions(int id, String user_id,String pic_movie) {
 			this.id = id;
 			this.user_id = user_id;
@@ -67,7 +67,6 @@ public class Contributions implements Serializable {
 			this.user_name = user_name;
 			this.text = text;
 	}
-
 	//デフォルトコンストラクタ
 	public Contributions() {
 
@@ -76,6 +75,12 @@ public class Contributions implements Serializable {
 	//投稿IDで返信をSELECTする用のメソッド
 	public void Reply(int id) {
 		this.id = id;
+	}
+	//投稿に対しての返信をINSERTする用のメソッド
+	public void InsReply(int id, String user_id,String text) {
+			this.id = id;
+			this.user_id = user_id;
+			this.text = text;
 	}
 
 
