@@ -1,1 +1,41 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "myfont";
+  src: url("/C1/fonts/kai.ttf") format("truetype");
+}
+
+* {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "myfont";
+}
+
+/*ユーザー検索のフォーム全体*/
+#UserSearchform {
+    padding: 5px 0 20px 0;
+
+}
+
+/*ユーザー検索の入力フォーム*/
+#userform {
+    width: 21rem;
+}
+
+/*ユーザー検索の入力フォームと検索ボタン*/
+.userform {
+	font-size: 1.3rem;
+}
+
+/*それぞれのユーザーのボード*/
+.boardpic {
+	font-size: 2rem;
+    color:black;
+    text-align: center;
+    margin: 0 auto 13px;
+    padding: 1.1px 6px;
+    background-color: lightpink;
+}
+
+.follow-page {
+	background-color: #FFDDFF;
+}

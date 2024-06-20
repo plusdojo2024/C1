@@ -15,11 +15,12 @@ public class Rikishies implements Serializable {
 		private Timestamp created_at;			//
 		private Timestamp update_at;			//
 		private String user_id;   				//
+		private String rikishi_info;			//力士名前と所属部屋で検索するためのフィールド
 
 
 		//全部のコンストラクタ
 		public Rikishies(int id, String pic, String rikishi_name, String sumo_association_link, String rikishi_profile,
-				String calendar, String sumo_stable_name, Timestamp created_at, Timestamp update_at, String user_id) {
+				String calendar, String sumo_stable_name, Timestamp created_at, Timestamp update_at, String user_id, String rikishi_info) {
 			this.id = id;
 			this.pic = pic;
 			this.rikishi_name = rikishi_name;
@@ -30,6 +31,7 @@ public class Rikishies implements Serializable {
 			this.created_at = created_at;
 			this.update_at = update_at;
 			this.user_id = user_id;
+			this.rikishi_info = rikishi_info;
 		}
 
 		//力士の検索のコンストラクタ
@@ -59,13 +61,16 @@ public class Rikishies implements Serializable {
 				//力士検索用コンストラクタ
 				public Rikishies(int id) {
 					this.id = id;
-
 				}
 
 				//力士検索用コンストラクタ
 				public Rikishies(String user_id) {
 					this.user_id = user_id;
-
+				}
+				//力士検索用コンストラクタ
+				public Rikishies(String user_id, String rikishi_info) {
+					this.user_id = user_id;
+					this.rikishi_info = rikishi_info;
 				}
 
 
@@ -140,6 +145,14 @@ public class Rikishies implements Serializable {
 
 		public void setUser_id(String user_id) {
 			this.user_id = user_id;
+		}
+
+		public String getRikishi_info() {
+			return rikishi_info;
+		}
+
+		public void setRikishi_info(String rikishi_info) {
+			this.rikishi_info = rikishi_info;
 		}
 
 

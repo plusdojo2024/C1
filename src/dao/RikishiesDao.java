@@ -145,11 +145,11 @@ public class RikishiesDao {
 						conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 						// SQL文を準備する 力士のID検索
-						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = '?') AS F ON R.id = F.rikishi_id GROUP BY rikishi_name";
+						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = ?) AS F ON R.id = F.rikishi_id GROUP BY rikishi_name";
 						PreparedStatement pStmt = conn.prepareStatement(sql);
 
 						// SQL文を完成させる
-						pStmt.setInt(1, rikishies.getId());
+						pStmt.setString(1, rikishies.getUser_id());
 
 						// SQL文を実行し、結果表を取得する
 						ResultSet rs = pStmt.executeQuery();
@@ -203,13 +203,13 @@ public class RikishiesDao {
 						conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 						// SQL文を準備する 力士のID検索
-						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = ?) AS ON R.id = F.rikishi_id GROUP BY rikishi_name HAVING rikishi_name LIKE ? OR sumo_stable_name LIKE ?";
+						String sql = "SELECT R.pic, R.rikishi_name, R.sumo_association_link, F.user_id, R.id FROM RIKISHIES AS R  LEFT OUTER JOIN (SELECT * FROM FAVORITES WHERE user_id = ?) AS F ON R.id = F.rikishi_id GROUP BY rikishi_name HAVING rikishi_name LIKE ? OR sumo_stable_name LIKE ?";
 						PreparedStatement pStmt = conn.prepareStatement(sql);
 
 						// SQL文を完成させる
 						pStmt.setString(1, rikishies.getUser_id());
-						pStmt.setString(2, rikishies.getRikishi_name());
-						pStmt.setString(3, rikishies.getSumo_stable_name());
+						pStmt.setString(2, "%" + rikishies.getRikishi_info() + "%");
+						pStmt.setString(3, "%" + rikishies.getRikishi_info() + "%");
 						// SQL文を実行し、結果表を取得する
 						ResultSet rs = pStmt.executeQuery();
 
