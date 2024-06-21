@@ -28,8 +28,8 @@ INSERT INTO RIKISHIES (
 (2, '/C1/img/enho.jpg', '炎鵬友哉', 'https://www.sumo.or.jp/ResultRikishiData/profile/3803/', '小兵のひねり王子', ' ', '伊勢ヶ濱部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (3, '/C1/img/icontakerufuji.png', '尊富士 弥輝也', 'https://www.sumo.or.jp/ResultRikishiData/profile/4171/', '果物が好きで、特に桃が好き。', ' ', '伊勢ヶ濱部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (4, '/C1/img/icondaiamami.png', '大奄美　元規', 'https://www.sumo.or.jp/ResultRikishiData/profile/3665/', '鹿児島出身。好きな食べ物は「食べ物」', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(5, '/c1/img/iconendo.png', '遠藤 聖大', 'https://www.sumo.or.jp/ResultRikishiData/profile/3464/', '大相撲フィーバーの火付け役イケメン力士', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(6, '/C1/img/icoonosato.png', '大の里 泰輝', 'https://www.sumo.or.jp/ResultRikishiData/profile/4227/', '相撲界に現れた令和の“怪物”', ' ', '二所ノ関部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(5, '/C1/img/iconendo.png', '遠藤 聖大', 'https://www.sumo.or.jp/ResultRikishiData/profile/3464/', '大相撲フィーバーの火付け役イケメン力士', ' ', '追手風部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(6, '/C1/img/icononosato.png', '大の里 泰輝', 'https://www.sumo.or.jp/ResultRikishiData/profile/4227/', '相撲界に現れた令和の“怪物”', ' ', '二所ノ関部屋', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 /* テーブルの表示 */
 SELECT * FROM RIKISHIES;
