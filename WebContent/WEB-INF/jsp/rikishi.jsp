@@ -30,18 +30,16 @@
     <table>
       <tr>
         <td>
- 	      <input type="text" class="rikishiform" id="rikishiform"  placeholder="力士名を入力してください" name="rikishi_search">
+ 	      <input type="text" class="rikishiform" id="rikishiform"  placeholder="力士名を入力してください" name="rikishi_info">
         </td>
         <td>
           <input type="submit" class="rikishiform" id="search" name="submit" value="検索">
         </td>
       </tr>
     </table>
-
-
   </form>
 
-  <c:if test="${empty cardList}">
+  <c:if test="${empty rikishiesList}">
     <p>一致するデータはありません。</p>
   </c:if>
 
@@ -50,7 +48,7 @@
     <table class="boardpic">
       <tr>
         <td>
-        <a href="/C1/RoomServlet?${e.id}">
+        <a href="/C1/RoomServlet?rikishi_id=${e.id}">
         	<%-- idはid=${ cardList.rikishi_id }に変える --%>
             <img src="${e.pic}" width="70" height="70" alt="SUMOO | 力士検索">
             <!--
@@ -62,16 +60,16 @@
           ${e.rikishi_name}
         </td>
         <td>
-          <c:if test="false">
+          <c:if test="${!e.user_id}">
           <%-- この力士のことをお気に入りしていなかったら --%>
-            <a href="/C1/RikishiServlet?favorite=0&${e.id}">
+            <a href="/C1/RikishiServlet?favorite=0&rikishi_id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>
 		  </c:if>
-          <c:if test="true">
+          <c:if test="${e.user_id}">
           <%-- この力士のことをお気に入りしていたら --%>
-            <a href="/C1/RikishiServlet?favorite=1&${e.id}">
+            <a href="/C1/RikishiServlet?favorite=1&rikishi_id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>

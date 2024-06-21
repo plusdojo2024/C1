@@ -9,11 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import dao.RikishiesDao;
 import model.Rikishies;
-import model.Users;
 
 
 /**
@@ -29,13 +27,18 @@ public class RikishiSearchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//セッションを取得している
-		HttpSession session = request.getSession();
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+		/*HttpSession session = request.getSession();
+		if (session.getAttribute("user_id") == null) {
+			response.sendRedirect("/C1/LoginServlet");
+			return;
+		}*/
 
 		//リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		Users User = (Users)session.getAttribute("user_id");
-		String User_id = User.getUser_id();
+		//Users User = (Users)session.getAttribute("user_id");
+		//String User_id = User.getUser_id();
+		String User_id = "saku";
 
 		// 検索処理を行う
 		RikishiesDao rikishies = new RikishiesDao();
@@ -54,11 +57,28 @@ public class RikishiSearchServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+		/*HttpSession session = request.getSession();
+		if (session.getAttribute("user_id") == null) {
+			response.sendRedirect("/C1/LoginServlet");
+			return;
+		}*/
 
 		//ゲットパラメータを取得
+		request.setCharacterEncoding("UTF-8");
+		//Users User = (Users)session.getAttribute("user_id");
+		//String User_id = User.getUser_id();
+		String User_id = "saku";
+		String rikishi_info = request.getParameter("rikishi_info");
 
-		//検索処理
+
+		// 検索処理を行う
+		RikishiesDao rikishies = new RikishiesDao();
+		List<Rikishies> rikishiesList = rikishies.select_rikishiesSearch(new Rikishies(User_id, rikishi_info));
+
+		// 検索結果をリクエストスコープに格納する
+		request.setAttribute("rikishiesList", rikishiesList);
 
 		//力士検索・一覧ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/rikishi.jsp");
