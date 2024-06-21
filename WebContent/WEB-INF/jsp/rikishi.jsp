@@ -5,15 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SUMOO | 力士検索</title>
+<title>SUMOO | 力士一覧</title>
 <link rel="stylesheet" href="/C1/css/rikishi.css">
+<link rel="stylesheet" href="/C1/css/common.css">
 </head>
-<body>
+<body class = rikishi-page>
 <div class="wrapper" id="top">
   <!-- ヘッダー（ここから） -->
   <header class="header">
       <div class="logo">
-        <h2>力士検索</h2>
+        <h1>力士一覧</h1>
       </div>
   </header>
   <!-- ヘッダー（ここまで） -->
@@ -51,7 +52,7 @@
         <td>
         <a href="/C1/RoomServlet?id=0">
         	<%-- idはid=${ cardList.rikishi_id }に変える --%>
-            <img src="/C1/img/daiamami.png" width="30" height="30" alt="SUMOO | 力士検索">
+            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | 力士検索">
             <!--
              src="${rikishi_pic} widthとheightはCSSで決める
              -->
@@ -65,14 +66,14 @@
           <%-- この力士のことをお気に入りしていなかったら --%>
             <a href="/C1/RikishiServlet?favorite=0&id=0">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
-              <img src="/C1/img/heartwhite.png" width="30" height="30" alt="SUMOO | 力士検索">
+              <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>
 		  </c:if>
           <c:if test="true">
           <%-- この力士のことをお気に入りしていたら --%>
             <a href="/C1/RikishiServlet?favorite=1&id=0">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
-              <img src="/C1/img/heartred.svg" width="30" height="30" alt="SUMOO | 力士検索">
+              <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>
 		  </c:if>
         </td>
@@ -82,11 +83,17 @@
 <%--   </c:forEach> --%>
 
   <!-- メイン（ここまで） -->
-  <!-- フッター（ここから） -->
-  <div id="footer">
-    <p class="copyright"></p>
-  </div>
-  <!-- フッター（ここまで） -->
+<!-- フッター（ここから） -->　
+<footer>
+  <nav class="menu">
+      <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
+      <a href="/C1/UserSearchServlet"><img src="/C1/img/usersearch.png" id="icon" ></a>
+      <a href="/C1/RikishiSearchServlet"><img src="/C1/img/rikishiichiran.png" id="icon" ></a>
+      <a href="/C1/ChankoServlet"><img src="/C1/img/recipe.png" id="icon"></a>
+      <a href="/C1/SchoolServlet"><img src="/C1/img/school.png" id="icon"></a>
+      <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
+  </nav>
+</footer>
 </div>
 <!-- JavaScript（ここから） -->
 

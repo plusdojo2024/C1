@@ -5,9 +5,10 @@ SELECT * FROM STARS;
 
 
  /* 返信ページの下の返信を表示する用テーブル */
-SELECT R.*, U.user_name FROM (SELECT * FROM REPLIES WHERE contribution_id = 1) AS R
-INNER JOIN USERS AS U
-ON R.user_id = U.user_id;
+SELECT R.*, U.user_name FROM (SELECT * FROM REPLIES  WHERE contribution_id = 1) AS R 
+INNER JOIN USERS AS U 
+ON R.user_id = U.user_id 
+ORDER BY id DESC;
 
 /* 返信ページの上の投稿表示用テーブル */
 SELECT C.user_id, C.rikishi_id, C.id, U.icon,U.user_name, C.pic_movie, C.text, S.user_id star  
