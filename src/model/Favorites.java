@@ -19,6 +19,15 @@ public class Favorites {
 		this.updated_at = updated_at;
 	}
 
+
+
+	//テスト用
+	public Favorites(String user_id, int rikishi_id) {
+		this.user_id = user_id;
+		this.rikishi_id = rikishi_id;
+	}
+
+
 	// デフォルトコンストラクタ
 		public Favorites() {
 
