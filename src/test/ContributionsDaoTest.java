@@ -90,5 +90,14 @@ public class ContributionsDaoTest {
 			System.out.println("登録失敗！");
 		}
 
+		// delete()のテスト
+		System.out.println("---------- delete()のテスト ----------");
+		if (dao.delete(insStar)) {
+			System.out.println("削除成功！");
+		}
+		else {
+			System.out.println("削除失敗！");
+		}
+
 	}
 }

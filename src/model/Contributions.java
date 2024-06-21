@@ -58,6 +58,7 @@ public class Contributions implements Serializable {
 	}
 	// 返信ページで、１つの投稿を白星込みで表示するための検索用コンストラクタ
 	// 返信ページで、投稿に白星をつけるときのコンストラクタ
+	// 返信ページで、投稿の白星を削除するときのコンストラクタ
 	public Contributions(int id, String stars_user_id) {
 			this.id = id;
 			this.stars_user_id = stars_user_id;
@@ -90,6 +91,10 @@ public class Contributions implements Serializable {
 			this.id = id;
 			this.user_id = user_id;
 			this.text = text;
+	}
+	//白星IDで白星をDELETEする用のメソッド
+	public void Star(int star_id) {
+		this.star_id = star_id;
 	}
 
 
