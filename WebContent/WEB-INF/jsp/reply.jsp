@@ -2,6 +2,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +12,43 @@
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <main>
-  <h1>ユーザーネーム</h1>
-  <!-- ほんとは投稿 -->
-  <img src="/simpleBC/img/ホーム.png" width="200" height="100" alt="ホームの男">
-  <h1>テキスト</h1>
+
+<table class="boardpic">
+      <tr>
+        <td>
+        <!-- ユーザーネーム、アイコン -->
+        <a href="/C1/UserPageServlet?${e.id}">
+        	<%-- idはid=${ cardList.rikishi_id }に変える --%>
+            <img src="${e.pic_movie}" width="70" height="70" alt="投稿">
+            <!--
+             src="${rikishi_pic} widthとheightはCSSで決める
+             -->
+		</a>
+        </td>
+        <td>
+          ${e.user_id}
+        </td>
+        <td>
+          <c:if test="false">
+          <%-- この投稿のことをお気に入りしていなかったら --%>
+            <a href="/C1/RikishiServlet?favorite=0&${e.id}">
+        	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
+              <img src="/C1/img/starwhite.png" width="70" height="70" alt="☆">
+		    </a>
+		  </c:if>
+          <c:if test="true">
+          <%-- この投稿のことをお気に入りしていたら --%>
+            <a href="/C1/RikishiServlet?favorite=1&${e.id}">
+        	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
+              <img src="/C1/img/staryellow.svg" width="70" height="70" alt="色付き☆">
+		    </a>
+		  </c:if>
+        </td>
+      </tr>
+    </table>
+
+
+
 <form>
   <div>
     <label for="reply">テキストを入力</label><br>
