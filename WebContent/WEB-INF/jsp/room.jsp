@@ -7,7 +7,7 @@
 <title>各部屋</title>
 <link rel="stylesheet" type="text/css" href="/C1/css/room.css">
 <link rel="stylesheet" href="/C1/css/common.css">
-
+  <!--
   <style>
   * {
     outline: 1px solid #FF0000;
@@ -18,11 +18,17 @@
 <header class="header">
 </header>
 <body>
+<main>
   <div class="face">
-  <img src="${rikishies.pic}">
+  <img src="/C1/img/iconatami.png">
+  <h2>力士の名前</h2>
+  <p>プロフィール</p>
   </div>
-  <button class="calender">カレンダー</button>
-  <button class="contribution"><a href="/C1/ContributionServlet">投稿ボタン</a></button>
+  <div class="calender">
+  <a href="/C1/ContributionServlet"><img src="/C1/img/contribution.png"></a>
+  <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
+  </div>
+
   <ul class="scroll_content">
   <li>
     <a href="#"><img src="/C1/img/iconatami.png"></a>
@@ -41,6 +47,7 @@
   </li>
 </ul>
 <p id="mat"></p>
+</main>
 <footer id="footer">
   <nav class="menu">
       <a href="/C1/StandByServlet"><img src="/C1/img/taikibeya.png" id="icon" ></a>
