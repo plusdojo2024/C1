@@ -38,16 +38,7 @@ public class Stores implements Serializable{
 			this.venue_name = venue_name;
 
 		}
-		//検索結果のコンストラクタ(検索に入るとき)
-/*			public Stores(int id,String venue_name, String shop_name,String shop_pic,String food_pic,String shop_link) {
-				this.id = id;
-				this.shop_name = shop_name;
-				this.shop_pic = shop_pic;
-				this.food_pic = food_pic;
-				this.shop_link = shop_link;
-				this.venue_name = venue_name;
-			}
-*/
+
 
 	//デフォルトコンストラクタ
 	public Stores() {

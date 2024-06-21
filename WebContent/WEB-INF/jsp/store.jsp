@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,46 +13,34 @@
 <main>
    <h1 class="chankopicresult">お店（検索結果)</h1>
 
-	<%--<hr>
-	 <div id="mess">
-		<c:if test="${empty cardList}">
-			<p>一致するデータはありません。</p>
-		</c:if>
-	</div> --%>
+	<hr>
 
 	<div class="result">
-   <h2>両国国技館周辺</h2>
-	<%-- <c:forEach var="e" items="${cardList}">--%>
+   <h2>${storesList.venue_name}あ</h2>
+	<c:forEach var="e" items="${storesList}">
 		<form id="regist_form" method="post" action="/C1/ChankoServlet">
 			<table class="tb">
 				<tr>
 					<td>
 					<table class="minitable">
-					<tr><td>鍋料理 ちゃんこ巴潟 両国店</td></tr>
-					<tr><td><a href="https://tabelog.com/tokyo/A1312/A131201/13002987/">食べログ</a></td></tr>
-					<tr><td><img src="/C1/img/TokyoStore1.png" width="400" height="400"></td></tr>
-					<tr><td><img src="/C1/img/TokyoFood1.png" width="400" height="400"></td></tr>
+					<tr><td>${e.shop_name}</td></tr>
+					<tr><td><a href="${e.shop_link}">食べログ</a></td></tr>
+					<tr><td><img src="${e.shop_pic}" width="400" height="400"></td></tr>
+					<tr><td><img src="${e.food_pic}" width="400" height="400"></td></tr>
 					</table>
 					</td>
 					<td>
 					<table class="minitable">
-					<tr><td>川崎 </td></tr>
-					<tr><td><a href="https://tabelog.com/tokyo/A1312/A131201/13002979/">食べログ</a></td></tr>
-					<tr><td><img src="/C1/img/TokyoStore2.png" width="400" height="400"></td></tr>
-					<tr><td><img src="/C1/img/TokyoFood2.png" width="400" height="400"></td></tr>
-
-
+					<tr><td>${e.shop_name}</td></tr>
+					<tr><td><a href="${e.shop_link}">食べログ</a></td></tr>
+					<tr><td><img src="${e.shop_pic}" width="400" height="400"></td></tr>
+					<tr><td><img src="${e.food_pic}" width="400" height="400"></td></tr>
 					</table>
 					</td>
 				</tr>
-
-
-
-
 			</table>
  		</form>
-<!-- <hr> -->
-	<!--  </c:forEach> -->
+	 </c:forEach>
 	 </div>
 	 </main>
 </body>
