@@ -34,6 +34,7 @@
 					<input type="submit" id="btnLogin" value="土俵入り" style="width :120px; padding: 3px;">
 				</form>
 				<!-- 問い合わせ先は作る時間ないため#にしておく ただ下線引くだけ-->
+				<p>${result}</p>
 				<a class="login-link" href="RegistServlet">入門はこちらから</a>
 			</div>
 
