@@ -55,7 +55,8 @@ html {
 .scroll_content { /* リスト全体のスタイル */
   display: flex;
   max-width: 800px;
-  margin: auto;
+  max-height: 2000px;
+  /* margin: auto; */
   overflow-x: auto;
 }
 
@@ -69,7 +70,7 @@ html {
 
 .scroll_content img { /* 画像のスタイル */
   width: 100%;
-  max-height: 200px;
+  height: 400px;
   object-fit: cover;
 }
 

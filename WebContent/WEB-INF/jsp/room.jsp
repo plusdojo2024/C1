@@ -31,17 +31,17 @@
 
   <ul class="scroll_content">
   <li>
-    <a href="#"><img src="/C1/img/iconatami.png"></a>
+    <a href="#"><img src="/C1/img/movieendo1.mp4"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
   <li>
-    <a href="#"><img src="/C1/img/iconendo.png"></a>
+    <a href="#"><img src="/C1/img/picendo1.jpg"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
   <li>
-    <a href="#"><img src="/C1/img/heartwhite.png"></a>
+    <a href="#"><img src="/C1/img/pictakerufuji1.png"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
