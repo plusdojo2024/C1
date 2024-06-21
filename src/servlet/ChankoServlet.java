@@ -60,7 +60,7 @@ public class ChankoServlet extends HttpServlet {
 
 		//リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		String Store_venue_name = request.getParameter("venue_name");
+		String Store_venue_name = request.getParameter("venue");
 
 
 

@@ -57,11 +57,11 @@
 
 
 			<p>
-				会場<br> <select name=" venue">
-					<option value="1">東京：両国国技館</option>
-					<option value="2">大阪：エディオンアリーナ大阪</option>
-					<option value="3">名古屋：愛知国際アリーナ</option>
-					<option value="4">福岡：福岡国際センター</option>
+				会場<br> <select name ="venue">
+					<option value="東京：両国国技館">東京：両国国技館</option>
+					<option value="大阪：エディオンアリーナ大阪">大阪：エディオンアリーナ大阪</option>
+					<option value="名古屋：愛知国際アリーナ">名古屋：愛知国際アリーナ</option>
+					<option value="福岡：福岡国際センター">福岡：福岡国際センター</option>
 				</select>
 			</p>
 
