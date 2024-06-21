@@ -8,6 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.UsersDao;
+import model.Users;
+
 
 /*まだないためコメントアウト。コメントアウト消すとエラー発生
 import dao.IdpwDAO;
@@ -42,33 +47,34 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	/*まだエラーが出るためコメントアウト
+	//まだエラーが出るためコメントアウト
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
+		String user_id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 
 
 
 		// ログイン処理を行う
 		//まだDAO設定していないためエラーが出ています
-		IdpwDAO iDao = new IdpwDAO();
-		if (iDao.isLoginOK(new Idpw(id, pw))) {	// ログイン成功
+		UsersDao uDao = new UsersDao();
+		if (uDao.isLoginOK(new Users(user_id, pw))) {	// ログイン成功
 			// セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
-			session.setAttribute("id", new LoginUser(id));
+			session.setAttribute("user_id", new Users(user_id));
 
 			// マイページサーブレットにリダイレクトする
 			response.sendRedirect("/C1/MyPageServlet");
 		}
 		else {									// ログイン失敗
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する
-			request.setAttribute("result",
-			new Result("ログイン失敗！", "IDまたはPWに間違いがあります。", "/C1/LoginServlet"));
+			request.setAttribute("result","IDまたはPWに間違いがあります。");
 
 			// 結果ページにフォワードする
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 			dispatcher.forward(request, response);
-			*/
+
 		}
+	}
+}

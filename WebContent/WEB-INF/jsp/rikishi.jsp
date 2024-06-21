@@ -41,37 +41,37 @@
 
   </form>
 
-  <%-- <c:if test="${empty cardList}">
+  <c:if test="${empty cardList}">
     <p>一致するデータはありません。</p>
-  </c:if> --%>
+  </c:if>
 
-<%--   <c:forEach var="e" items="${cardList}" > --%>
-<!--     <form class="search_result" method="post" action="/C1/UserServlet"> -->
+  <c:forEach var="e" items="${rikishiesList}" >
+
     <table class="boardpic">
       <tr>
         <td>
-        <a href="/C1/RoomServlet?id=0">
+        <a href="/C1/RoomServlet?${e.id}">
         	<%-- idはid=${ cardList.rikishi_id }に変える --%>
-            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | 力士検索">
+            <img src="${e.pic}" width="70" height="70" alt="SUMOO | 力士検索">
             <!--
              src="${rikishi_pic} widthとheightはCSSで決める
              -->
 		</a>
         </td>
         <td>
-          力士名
+          ${e.rikishi_name}
         </td>
         <td>
           <c:if test="false">
           <%-- この力士のことをお気に入りしていなかったら --%>
-            <a href="/C1/RikishiServlet?favorite=0&id=0">
+            <a href="/C1/RikishiServlet?favorite=0&${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>
 		  </c:if>
           <c:if test="true">
           <%-- この力士のことをお気に入りしていたら --%>
-            <a href="/C1/RikishiServlet?favorite=1&id=0">
+            <a href="/C1/RikishiServlet?favorite=1&${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | 力士検索">
 		    </a>
@@ -79,8 +79,8 @@
         </td>
       </tr>
     </table>
-<!--     </form> -->
-<%--   </c:forEach> --%>
+
+  </c:forEach>
 
   <!-- メイン（ここまで） -->
 <!-- フッター（ここから） -->　
@@ -97,7 +97,7 @@
 </div>
 <!-- JavaScript（ここから） -->
 
-<!--
+
 <script>
 /* submitボタンをクリックしたときの処理 */
 function submitClick() {
@@ -115,9 +115,8 @@ for (let item of formObjs) {
   item.onsubmit = submitClick;
 }
 </script>
-<script src="/simpleBC/js/script.js"></script>
 
--->
+
 <!-- JavaScript（ここまで） -->
 
 </body>

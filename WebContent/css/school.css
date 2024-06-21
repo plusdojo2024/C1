@@ -20,7 +20,7 @@ html {
 
 /*教習所の写真*/
 .school-pic {
-        font-size: 10rem;
+        font-size: 8rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -29,6 +29,7 @@ html {
         margin: auto;
         padding: 200px 0;
         background-image: url(/C1/img/school.jpg);
+        height: 60px;
       }
 
 .accordion {
@@ -43,6 +44,8 @@ html {
 .option {
 	position: relative;
 	margin-bottom: 1em;
+	font-size: 50px;
+	width: 40rem;
 }
 
 .title,
@@ -58,10 +61,10 @@ transition: all 0.3s;
 content: "";
 position: absolute;
 right: 1.25em;
-top: 1.25em;
+top: 0.3em;
 width: 2px;
 height: 0.75em;
-background-color: #999;
+background-color: #800080;
 transition: all 0.3s;
 }
 .title::after {
@@ -71,15 +74,23 @@ transform: rotate(90deg);
 max-height: 0;
 overflow: hidden;
 }
-.content p {
+
+.pText {
 margin: 0;
 padding: 0.5em 1em 1em;
-font-size: 0.9em;
+font-size: 0.8em;
+line-height: 1.5;
+color:#800080;
+}
+.pMainText {
+margin: 0;
+font-size: 0.6em;
 line-height: 1.5;
 }
 
+
 .toggle:checked + .title + .content {
-max-height: 500px;
+max-height: 500rem;
 transition: all 1.5s;
 }
 .toggle:checked + .title::before {

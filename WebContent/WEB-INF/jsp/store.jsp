@@ -10,8 +10,8 @@
 </head>
 <body>
 <main>
-   <h1 class="chankopic">お店（検索結果)</h1>
-   <h2>両国国技館周辺</h2>
+   <h1 class="chankopicresult">お店（検索結果)</h1>
+
 	<%--<hr>
 	 <div id="mess">
 		<c:if test="${empty cardList}">
@@ -19,27 +19,27 @@
 		</c:if>
 	</div> --%>
 
-
-
+	<div class="result">
+   <h2>両国国技館周辺</h2>
 	<%-- <c:forEach var="e" items="${cardList}">--%>
-		<form id="regist_form" method="post" action="/C1/"ChankoServlet">
+		<form id="regist_form" method="post" action="/C1/ChankoServlet">
 			<table class="tb">
 				<tr>
 					<td>
 					<table class="minitable">
-					<tr><td><img src="/C1/img/TokyoStore1.png"></td></tr>
-					<tr><td><img src="/C1/img/TokyoFood1.png"></td></tr>
 					<tr><td>鍋料理 ちゃんこ巴潟 両国店</td></tr>
-					<tr><td>https://tabelog.com/tokyo/A1312/A131201/13002987/</td></tr>
-
+					<tr><td><a href="https://tabelog.com/tokyo/A1312/A131201/13002987/">食べログ</a></td></tr>
+					<tr><td><img src="/C1/img/TokyoStore1.png" width="400" height="400"></td></tr>
+					<tr><td><img src="/C1/img/TokyoFood1.png" width="400" height="400"></td></tr>
 					</table>
 					</td>
 					<td>
 					<table class="minitable">
-					<tr><td><img src="/C1/img/TokyoStore2.png"></td></tr>
-					<tr><td><img src="/C1/img/TokyoFood2.png"></td></tr>
-					<tr><td>川崎</td></tr>
-					<tr><td>https://tabelog.com/tokyo/A1312/A131201/13002979/</td></tr>
+					<tr><td>川崎 </td></tr>
+					<tr><td><a href="https://tabelog.com/tokyo/A1312/A131201/13002979/">食べログ</a></td></tr>
+					<tr><td><img src="/C1/img/TokyoStore2.png" width="400" height="400"></td></tr>
+					<tr><td><img src="/C1/img/TokyoFood2.png" width="400" height="400"></td></tr>
+
 
 					</table>
 					</td>
@@ -50,8 +50,9 @@
 
 			</table>
  		</form>
-		<!--<hr>
-	 </c:forEach>  -->
+<!-- <hr> -->
+	<!--  </c:forEach> -->
+	 </div>
 	 </main>
 </body>
 <footer>
