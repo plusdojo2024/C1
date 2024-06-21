@@ -69,5 +69,26 @@ public class ContributionsDaoTest {
 			System.out.println("登録失敗！");
 		}
 
+		// insertStar()のテスト
+		int starUpDelNumber = 0;
+		Contributions insStar = new Contributions(1, "ogu");
+		System.out.println("---------- insertStar()のテスト ----------");
+		if (dao.insertStar(insStar)) {
+			System.out.println("aiouo");
+			List<Contributions> contributionsList5 = dao.selectStar(insStar);
+			for (Contributions contributions : contributionsList5) {
+				System.out.println("白星ID：" + contributions.getStar_id());
+				System.out.println("投稿ID：" + contributions.getId());
+				System.out.println("ユーザーID：" + contributions.getUser_id());
+				System.out.println("登録日時：" + contributions.getCreated_at());
+				System.out.println("更新日時：" + contributions.getUpdated_at());
+				System.out.println();
+				starUpDelNumber = contributions.getId();	// 最後のレコードを後で更新および削除する
+			}
+		}
+		else {
+			System.out.println("登録失敗！");
+		}
+
 	}
 }
