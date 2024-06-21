@@ -13,10 +13,8 @@
 <main>
    <h1 class="chankopicresult">お店（検索結果)</h1>
 
-	<hr>
-
 	<div class="result">
-   <h2>${storesList.venue_name}あ</h2>
+   <h2>${Store_venue_name}</h2>
 	<c:forEach var="e" items="${storesList}">
 		<form id="regist_form" method="post" action="/C1/ChankoServlet">
 			<table class="tb">

@@ -70,6 +70,7 @@ public class ChankoServlet extends HttpServlet {
 
 			// 検索結果をリクエストスコープに格納する
 			request.setAttribute("storesList", storesList);
+			request.setAttribute("Store_venue_name", Store_venue_name);
 
 		// レシピ検索結果、お店検索結果へ遷移
 		System.out.println("submit:" + request.getParameter("submit"));
