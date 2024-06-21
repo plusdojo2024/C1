@@ -14,15 +14,32 @@ html {
 
 .face {
 	text-align: center;
+	font-size: 1.5em;
+
 }
-.calender{
-	text-align: left;
+
+.face img {
+	width: 350px;
+    height: auto;
+    border-radius:50%;
+    border: 5px solid #800080;
 }
-.contribution{
-	text-align: right;
+
+.calender {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
+
+.calender img {
+	width: 100px;
+    height: auto;
+    border-radius:50%;
+    border: 5px solid #800080;
+}
+
 .header {
-	  padding-top: 50px;
+	  padding-top: 150px;
 	  background-image: url(/C1/img/bar.png);
       background-repeat: repeat-x;
 }
@@ -30,8 +47,7 @@ html {
 
 
 #mat {
-	position: absolute;
-    bottom: 100px;
+    padding-bottom: 100px;
 	background-image: url(/C1/img/mat.png);
     background-repeat: repeat-x;
 }
