@@ -31,6 +31,19 @@ html {
         background-image: url(/C1/img/nabe.png);
       }
 
+      /*お店ページの上部のちゃんこの写真*/
+.chankopicresult {
+        font-size: 7rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color:black;
+        text-align: center;
+        margin: auto;
+        padding: 100px 0;
+        background-image: url(/C1/img/nabe.png);
+      }
+
 
 
 
@@ -58,6 +71,18 @@ select{
 }
 
 
+
+.tb{
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.result{
+	  font-size:30px;
+  text-align:center;
+
+}
 
 
 

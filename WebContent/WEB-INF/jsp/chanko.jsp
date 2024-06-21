@@ -8,9 +8,6 @@
 <link rel="stylesheet" type="text/css" href="/C1/css/chanko.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
-
-
-
 <body>
 <main>
 	<h1 class="chankopic">ちゃんこ</h1>
