@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.RikishiesDao;
 import model.Rikishies;
+import model.Users;
 
 
 /**
@@ -20,25 +22,22 @@ import model.Rikishies;
 @WebServlet("/RikishiSearchServlet")
 public class RikishiSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	String favorite = "";
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/*HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("user_id") == null) {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
-		}*/
+		}
 
 		//リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		//Users User = (Users)session.getAttribute("user_id");
-		//String User_id = User.getUser_id();
-		String User_id = "saku";
+		Users User = (Users)session.getAttribute("user_id");
+		String User_id = User.getUser_id();
 
 		// 検索処理を行う
 		RikishiesDao rikishies = new RikishiesDao();
@@ -56,20 +55,18 @@ public class RikishiSearchServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/*HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("user_id") == null) {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
-		}*/
+		}
 
 		//ゲットパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		//Users User = (Users)session.getAttribute("user_id");
-		//String User_id = User.getUser_id();
-		String User_id = "saku";
+		Users User = (Users)session.getAttribute("user_id");
+		String User_id = User.getUser_id();
 		String rikishi_info = request.getParameter("rikishi_info");
 
 

@@ -9,11 +9,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.FavoritesDao;
 import dao.RikishiesDao;
 import model.Favorites;
 import model.Rikishies;
+import model.Users;
 
 /**
  * Servlet implementation class UserSearchServlet
@@ -28,17 +30,16 @@ public class RikishiServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/*HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("user_id") == null) {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
-		}*/
+		}
 
 		//ゲットパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		//Users User = (Users)session.getAttribute("user_id");
-		//String User_id = User.getUser_id();
-		String User_id = "saku";
+		Users User = (Users)session.getAttribute("user_id");
+		String User_id = User.getUser_id();
 
 		//クエリパラメータを取得
         String favorite = request.getParameter("favorite");
