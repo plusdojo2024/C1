@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body class = user-page>
-<main>
 <div class="wrapper" id="top">
+<main>
   <!-- ヘッダー（ここから） -->
   <header class="header">
       <div class="logo">
@@ -42,37 +42,36 @@
 
   </form>
 
-  <%-- <c:if test="${empty cardList}">
+  <c:if test="${empty usersList}">
     <p>一致するデータはありません。</p>
-  </c:if> --%>
+  </c:if>
 
-<%--   <c:forEach var="e" items="${cardList}" > --%>
-<!--     <form class="search_result" method="post" action="/C1/UserServlet"> -->
+<c:forEach var="e" items="${usersList}">
+
     <table class="boardpic">
       <tr>
         <td>
-        <a href="/C1/UserPageServlet?id=0">
-            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | ユーザー検索">
-            <!--
-             src="${user_pic} widthとheightはCSSで決める
-             -->
-
+        <a href="/C1/UserPageServlet?user_id=${e.id}">
+            <img src="${e.pic}" width="70" height="70" alt="SUMOO | ユーザー検索">
+             <%-- src="${user_pic} widthとheightはCSSで決める --%>
 		</a>
         </td>
         <td>
-          ユーザー名
+        	<a href="/C1/UserPageServlet?user_id=${e.id}">
+          		${e.user_name}
+          	</a>
         </td>
         <td>
           <c:if test="false">
           <%-- このユーザーのことをフォローしていなかったら --%>
-            <a href="/C1/UserServlet?follow=0&id=0">
+            <a href="/C1/UserServlet?follow=0&user_id=${e.user_id}">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-              <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | ユーザー検索">
+              <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
 		    </a>
 		  </c:if>
           <c:if test="true">
           <%-- このユーザーのことをフォローしていたら --%>
-            <a href="/C1/UserServlet?follow=1&id=0">
+            <a href="/C1/UserServlet?follow=1&user_id=${e.user_id}">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
               <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | ユーザー検索">
 		    </a>
@@ -80,7 +79,7 @@
         </td>
       </tr>
     </table>
-
+</c:forEach>
 <!--     </form> -->
 <%--   </c:forEach> --%>
 
@@ -97,8 +96,8 @@
       <a href="/C1/MyPageServlet"><img src="/C1/img/mypage.png" id="icon"></a>
   </nav>
 </footer>
-  <!-- フッター（ここまで） -->
 </div>
+  <!-- フッター（ここまで） -->
 <!-- JavaScript（ここから） -->
 
 <!--
