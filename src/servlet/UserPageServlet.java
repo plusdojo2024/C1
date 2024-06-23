@@ -32,12 +32,13 @@ public class UserPageServlet extends HttpServlet {
 			return;
 		}
 
-		//リクエストパラメータを取得
+		//リクエストスコープを取得
 		request.setCharacterEncoding("UTF-8");
 		Users User = (Users)session.getAttribute("User_id");
 		String User_id = User.getUser_id();
-		Users User2 = (Users)session.getAttribute("Follow_user_id");
-		String Follow_user_id = User2.getFollow_user_id();
+
+		//クエリパラメータを取得
+		String Follow_user_id = request.getParameter("Follow_user_id");
 
 		//各種情報を取得する
 		UsersDao users = new UsersDao();

@@ -52,7 +52,7 @@
       <tr>
         <td>
         <a href="/C1/UserPageServlet?user_id=${e.id}">
-            <img src="${e.pic}" width="70" height="70" alt="SUMOO | ユーザー検索">
+            <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
              <%-- src="${user_pic} widthとheightはCSSで決める --%>
 		</a>
         </td>

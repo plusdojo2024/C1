@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,31 +22,23 @@
 <main>
   <div class="face">
   <img src="/C1/img/iconatami.png">
-  <h2>力士の名前</h2>
-  <p>プロフィール</p>
+  <h2>${rikishies.rikishi_name}</h2>
+  <p>${rikishies.rikishi_profile}</p>
   </div>
   <div class="calender">
   <a href="/C1/ContributionServlet"><img src="/C1/img/contribution.png"></a>
   <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
   </div>
 
+  <c:forEach var="e" items="${contributionsList}" >
   <ul class="scroll_content">
   <li>
-    <a href="#"><img src="/C1/img/movieendo1.mp4"></a>
+    <a href="/C1/ReplyServlet?rikishi_id=${e.rikishi_id}"><img src="${e.pic_movie}"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
-  <li>
-    <a href="#"><img src="/C1/img/picendo1.jpg"></a>
-    <h2>タイトル</h2>
-    <p>ディスクリプション</p>
-  </li>
-  <li>
-    <a href="#"><img src="/C1/img/pictakerufuji1.png"></a>
-    <h2>タイトル</h2>
-    <p>ディスクリプション</p>
-  </li>
-</ul>
+  </ul>
+  </c:forEach>
 <p id="mat"></p>
 </main>
 <footer id="footer">
