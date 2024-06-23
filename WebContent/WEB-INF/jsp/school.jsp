@@ -14,12 +14,6 @@
 
 
 
-<!-- 後で必ずやること
-・optionのboxに枠を作る
-・枠内のどこをクリックしてもアコーディオンメニューを開けるようにする -->
-
-
-
 	<div class="accordion">
 		<div class="option">
 			<input type="checkbox" id="toggle1" class="toggle">

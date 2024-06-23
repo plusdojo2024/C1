@@ -39,6 +39,13 @@ public class Follows {
 			this.user_id = user_id;
 		}
 
+	// 新しいコンストラクタ
+	    public Follows(String user_id, String follow_user_id) {
+	        this.user_id = user_id;
+	        this.follow_user_id = follow_user_id;
+	    }
+
+
     //ゲッターとセッター
 		public int getId() {
 			return id;
