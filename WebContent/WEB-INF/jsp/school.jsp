@@ -69,6 +69,7 @@
 			<label class="title" for="toggle2">豆知識</label>
 			<div class="content">
 			<p>後でここに本文2追加</p>
+
 			</div>
 		</div>
 
@@ -76,7 +77,27 @@
 			<input type="checkbox" id="toggle3" class="toggle">
 			<label class="title" for="toggle3">イケメン力士紹介</label>
 			<div class="content">
-			<p>後でここに本文3追加</p>
+
+				<div class = "items">
+					<div class = "item">
+						<img src="/C1/img/coolEndo.jpg" alt="遠藤　聖大">
+						<p class = "rikishi-name">遠藤　聖大</p>
+						<p class = "rikishi-content">大相撲フィーバーの火付け役イケメン力士</p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢">
+						<p class = "rikishi-name">千代の富士貢</p>
+						<p class = "rikishi-content">昭和時代の名横綱</p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/coolTera.jpg" alt="寺尾　常史">
+						<p class = "rikishi-name">寺尾　常史</p>
+						<p class = "rikishi-content">目鼻立ちのはっきりした彫りの深い顔立ち</p>
+					</div>
+				</div>
+
+
+
 			</div>
 		</div>
 	</div>
