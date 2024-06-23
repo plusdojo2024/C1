@@ -27,14 +27,6 @@
 					<tr><td><img src="${e.food_pic}" width="400" height="400"></td></tr>
 					</table>
 					</td>
-					<td>
-					<table class="minitable">
-					<tr><td>${e.shop_name}</td></tr>
-					<tr><td><a href="${e.shop_link}">食べログ</a></td></tr>
-					<tr><td><img src="${e.shop_pic}" width="400" height="400"></td></tr>
-					<tr><td><img src="${e.food_pic}" width="400" height="400"></td></tr>
-					</table>
-					</td>
 				</tr>
 			</table>
  		</form>
