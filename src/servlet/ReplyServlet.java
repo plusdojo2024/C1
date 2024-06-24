@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.ContributionsDao;
 import model.Contributions;
+import model.Users;
 
 /**
  * Servlet implementation class MenuServlet
@@ -28,17 +29,39 @@ public class ReplyServlet extends HttpServlet {
 
 		//セッションを取得している
 		HttpSession session = request.getSession();
+		if (session.getAttribute("user_id") == null) {
+			response.sendRedirect("/C1/LoginServlet");
+			return;
+		}
 
 		//リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
-		//Users User = (Users)session.getAttribute("user_id");
-		//String User_id = User.getUser_id();
-		String User_id = "saku";
+		Users User = (Users)session.getAttribute("user_id");
+		String User_id = User.getUser_id();
+
+		//クエリパラメータを取得
+        String star = request.getParameter("star");
+		int id = Integer.parseInt(request.getParameter("id"));
+
+
+		//処理
+		ContributionsDao contributions = new ContributionsDao();
+		if (star.equals("0")) {
+			//starsテーブルにレコードを追加する処理
+			contributions.insertStar(new Contributions(id, User_id));
+
+		} else if (star.equals("1")) {
+			//starsテーブルからレコードを削除する処理
+			contributions.delete(new Contributions(id, User_id));
+
+		}
+
 
 		// 初期表示の処理
-		ContributionsDao contributions = new ContributionsDao();
-		List<Contributions> contributionsList = contributions.selectReplyContribution(new Contributions(6,User_id));
+		List<Contributions> contributionsList = contributions.selectReplyContribution(new Contributions(id));
 
+
+		// 検索結果をリクエストスコープに格納する
 		request.setAttribute("contributionsList", contributionsList);
 
 
