@@ -46,7 +46,10 @@ public class UserPageServlet extends HttpServlet {
 
 		//各種情報を取得する
 		UsersDao users = new UsersDao();
-		List<Users> usersList = users.select_other(new Users(User_id, Follow_user_id));
+		Users user = new Users();
+		user.setFollow_user_id(Follow_user_id);
+		user.setUser_id(User_id);
+		List<Users> usersList = users.select_other(user);
 		request.setAttribute("usersList", usersList);
 
 		ContributionsDao contributions = new ContributionsDao();

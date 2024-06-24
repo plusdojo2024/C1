@@ -50,7 +50,7 @@
 				<!-- <tr class="my_contributions">  -->
 					<td class="my_contributions">
 						<%-- 返信へ遷移するユーザーアイコン --%> <a
-						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
+						href="/C1/ReplyServlet?id=${e.id}&judge=1"> <img
 							src="${e.pic_movie}" width="300" height="300">
 
 					</a>
