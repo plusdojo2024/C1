@@ -48,6 +48,7 @@ public class Users implements Serializable {
 		this.pic_movie = pic_movie;
 	}
 
+
 	public Users(String user_id, String password) {
 		this.user_id = user_id;
 		this.password = password;
