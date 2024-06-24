@@ -46,7 +46,7 @@ public class RoomServlet extends HttpServlet {
 
 		//リクエストスコープを取得
 		request.setCharacterEncoding("UTF-8");
-		Users User = (Users)session.getAttribute("User_id");
+		Users User = (Users)session.getAttribute("user_id");
 		String User_id = User.getUser_id();
 
 		//クエリパラメータを取得
