@@ -1,1 +1,42 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "myfont";
+  src: url("/C1/fonts/kai.ttf") format("truetype");
+}
+
+* {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "myfont";
+}
+
+
+/*それぞれのユーザーのボード*/
+.stars_contributions {
+	font-size: 4rem;
+	margin-top: 1rem;
+    color:black;
+    text-align: center;
+    padding: 1.1px 6px;
+  background-color: #800080;
+
+}
+
+.stars-page {
+	background-color: #FFDDFF;
+}
+
+/* ページ全体の背景色 */
+.rikishi-page {
+	background-color: #FFDDFF;
+}
+/* 見出し */
+h1 {
+	font-size:6rem;
+}
+
+/* aタグの設定 */
+a {
+  text-decoration: none;
+  color: black;
+}
