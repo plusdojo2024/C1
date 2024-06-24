@@ -48,3 +48,9 @@
 h1 {
 	font-size:7rem;
 }
+
+/* aタグの設定 */
+a {
+  text-decoration: none;
+  color: black;
+}

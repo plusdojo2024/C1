@@ -29,19 +29,21 @@
   <!-- ほんとは推しの力士のアイコンが入る-->
     <img src="${usersList[0].pic}">
     <h1 class="toko">投稿一覧</h1>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>あ</h1><br>
-    <h1>い</h1><br>
-    <img src="/C1/img/daiamami.png" >
+    <c:forEach var="e" items="${contributionsList}">
+
+
+				<!-- <tr class="my_contributions">  -->
+					<td class="my_contributions">
+						<%-- 返信へ遷移するユーザーアイコン --%> <a
+						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
+							src="${e.pic_movie}" width="300" height="300">
+
+					</a>
+					</td>
+
+				<!-- </tr>  -->
+
+		</c:forEach>
   </main>
   <footer>
   <nav class="menu">
