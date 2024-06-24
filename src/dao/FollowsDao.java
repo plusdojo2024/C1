@@ -38,9 +38,9 @@ public class FollowsDao {
             // 結果表をコレクションにコピーする
             while (rs.next()) {
                 Follows record = new Follows(
-                    rs.getString("follow_user_id"),
-                    rs.getString("user_name"),
-                    rs.getString("icon"),
+                    rs.getString("follow_user_id"),//user_name
+                    rs.getString("user_name"),//icon
+                    rs.getString("icon"), //icon=user_id
                     rs.getString("user_id")
                 );
                 followsList.add(record);

@@ -92,6 +92,15 @@ input:focus {
     margin-top: 20px;
 }
 
+.regist-field {
+	opacity: 0.8;
+}
+
+.change-field {
+	height: 180px;
+	opacity: 0.8;
+}
+
 
  @font-face {
   font-family: "myfont";
