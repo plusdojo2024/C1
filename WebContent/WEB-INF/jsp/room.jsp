@@ -30,15 +30,17 @@
   <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
   </div>
 
-  <c:forEach var="e" items="${contributionsList}" >
   <ul class="scroll_content">
+  <c:forEach var="e" items="${contributionsList}" >
+
   <li>
     <a href="/C1/ReplyServlet?rikishi_id=${e.rikishi_id}"><img src="${e.pic_movie}"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
-  </ul>
   </c:forEach>
+  </ul>
+
 <p id="mat"></p>
 </main>
 <footer id="footer">

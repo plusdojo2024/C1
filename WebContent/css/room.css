@@ -53,6 +53,7 @@ html {
 }
 
 .scroll_content { /* リスト全体のスタイル */
+  text-align: center;
   display: flex;
   max-width: 800px;
   max-height: 2000px;
