@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <body>
-<form method="post" action="/C1/ContributionServlet">
-  <input type="file"><br>
-  <input type="text"><br>
+<form method="post" action="/C1/ContributionServlet" enctype="multipart/form-data">
+  <input type="file" name="pict"><br>
+  <input type="text" name="text"><br>
   <button type="submit">送信する</button>
+  <img src="C:\pleiades\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\C1\C1\img">
 </form>
 <footer>
   <nav class="menu">
