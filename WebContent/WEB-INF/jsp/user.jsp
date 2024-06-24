@@ -50,26 +50,41 @@
 
     <table class="boardpic">
       <tr>
+        <c:if test="${e.user_id == User_id}">
         <td>
-        <a href="/C1/UserPageServlet?user_id=${e.id}">
-            <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
-             <%-- src="${user_pic} widthとheightはCSSで決める --%>
-		</a>
+          <a href="/C1/MyPageServlet">
+              <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
+               <%-- src="${user_pic} widthとheightはCSSで決める --%>
+		  </a>
         </td>
         <td>
-        	<a href="/C1/UserPageServlet?user_id=${e.id}">
+        	<a href="/C1/MyPageServlet">
           		${e.user_name}
           	</a>
         </td>
+		</c:if>
+		<c:if test="${e.user_id != User_id}">
+		<td>
+          <a href="/C1/UserPageServlet?Follow_user_id=${e.user_id}">
+              <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
+               <%-- src="${user_pic} widthとheightはCSSで決める --%>
+		  </a>
+		</td>
         <td>
-          <c:if test="false">
+        	<a href="/C1/UserPageServlet?Follow_user_id=${e.user_id}">
+          		${e.user_name}
+          	</a>
+        </td>
+	    </c:if>
+        <td>
+          <c:if test="${empty e.follow_user_id}">
           <%-- このユーザーのことをフォローしていなかったら --%>
             <a href="/C1/UserServlet?follow=0&user_id=${e.user_id}">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-              <img src="${e.icon}" width="70" height="70" alt="SUMOO | ユーザー検索">
+              <img src="/C1/img/heartwhite.png" width="70" height="70" alt="SUMOO | ユーザー検索">
 		    </a>
 		  </c:if>
-          <c:if test="true">
+          <c:if test="${!empty e.follow_user_id}">
           <%-- このユーザーのことをフォローしていたら --%>
             <a href="/C1/UserServlet?follow=1&user_id=${e.user_id}">
         	<%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>

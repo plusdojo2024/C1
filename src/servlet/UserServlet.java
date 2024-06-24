@@ -42,8 +42,9 @@ public class UserServlet extends HttpServlet {
 				String User_id = User.getUser_id();
 
 				//クエリパラメータを取得
-		        String follow = request.getParameter("follow");
-		        String follow_user_id = User.getFollow_user_id();
+				String follow_user_id = request.getParameter("user_id");
+				String follow = request.getParameter("follow");
+
 
 
 				//処理
