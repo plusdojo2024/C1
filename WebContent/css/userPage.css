@@ -21,3 +21,9 @@ html {
     width:120px;
     height:120px;
 }
+
+.my_contributions{
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
