@@ -23,11 +23,11 @@
   <main>
   <!-- ほんとは自分のアイコンが入る-->
     <img src="${usersList[0].icon}" >
-    <h1 class="user_name">ユーザーネーム</h1>
-    <h1 class="message">メッセージ</h1>
-    <h1 class="oshirikishi">推し力士</h1>
+    <h1 class="user_name">${usersList[0].user_name}</h1>
+    <h1 class="message">${usersList[0].message}</h1>
+    <h1 class="oshirikishi">${usersList[0].rikishi_name}</h1>
   <!-- ほんとは推しの力士のアイコンが入る-->
-    <img src="ユーザーネーム">
+    <img src="${usersList[0].pic}">
     <h1 class="toko">投稿一覧</h1>
     <h1>あ</h1><br>
     <h1>あ</h1><br>
