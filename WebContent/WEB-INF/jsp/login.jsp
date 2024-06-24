@@ -18,7 +18,7 @@
 			<div class="login-form">
 				<form id="login_form" method="post" action="/C1/LoginServlet">
 					<div class="login-name">
-						<input type="text" class="login-field" name="id"
+						<input type="text" class="login-field-id" name="id"
 							placeholder="ID" id="login-name"> <label
 							class="login-field-name" for="login-name"></label>
 					</div>
@@ -33,7 +33,9 @@
 
 					<input type="submit" id="btnLogin" value="土俵入り" style="width :120px; padding: 3px;">
 				</form>
-				<p>${result}</p>
+				<p class="error-message">
+					<%= request.getAttribute("result") != null ? request.getAttribute("result") : "" %>
+				</p>
 				<a class="login-link" href="RegistServlet">入門はこちらから</a>
 			</div>
 

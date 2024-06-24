@@ -58,7 +58,7 @@
 
 					<!-- アイコンの設定 -->
 					<div class="regist-icon">
-						<input type = "file"><br>
+						<input type = "file" class="regist-field-icon"><br>
 					</div>
 
 					<div id="error_message" style="color: red;"></div>

@@ -22,7 +22,7 @@ body {
 }
 
 .regist {
-    width: 300px;
+    width: 600px;
 }
 
 .regist-screen {
@@ -51,10 +51,11 @@ input {
     font-size: 16px;
     font-weight: 200;
     padding: 10px 0;
-    width: 250px;
+    width: 340px;
     transition: border .5s;
     border-radius: 25px;
     margin-top: 20px;
+
 }
 
 input:focus {
@@ -77,6 +78,12 @@ input:focus {
     margin-top: 20px;
 }
 
+.regist-field-icon {
+	border-radius: 50%;
+    width: 160px;
+    height: 160px;
+}
+
  @font-face {
   font-family: "myfont";
   src: url("/C1/fonts/kai.ttf") format("truetype");
@@ -86,3 +93,23 @@ h1 {
   font-family: "myfont";
 }
 
+/* 各項目の間隔 */
+.regist-name {
+	margin-bottom: 3rem;
+}
+
+.regist-pass {
+	margin-bottom: 3rem;
+}
+
+.regist-question {
+	margin-bottom: 3rem;
+}
+
+.regist-username {
+	margin-bottom: 3rem;
+}
+
+.regist-icon {
+	margin-bottom: 3rem;
+}

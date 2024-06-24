@@ -13,8 +13,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.login-field-id {
+	opacity: 0.8;
+
+}
+
 .login-field {
 	opacity: 0.8;
+
 }
 
 .login-page {
@@ -60,7 +66,7 @@ input {
     transition: border .5s;
     border-radius: 25px;
     margin-top: 50px;
-    font-family: "myfont";
+
 }
 
 input:focus {
@@ -68,8 +74,9 @@ input:focus {
     box-shadow: none;
 }
 
-.btnLogin {
+#btnLogin {
 	width:120px;
+	font-family: "myfont";
 }
 
 .btn:hover {
@@ -98,4 +105,12 @@ input:focus {
 h1 {
   font-family: "myfont";
 }
+
+/* resultを赤文字に変更 */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
 

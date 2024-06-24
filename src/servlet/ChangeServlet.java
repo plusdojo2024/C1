@@ -28,7 +28,7 @@ public class ChangeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// もしもログインしていなかったらログインサーブレットにリダイレクトする 開発中はコメントアウト
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 	/*	HttpSession session = request.getSession();
 		if (session.getAttribute("id") == null) {
 			response.sendRedirect("/C1/LoginServlet");
@@ -49,7 +49,6 @@ public class ChangeServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-	/*これからやりたいこと
-	 登録情報を変更した後にマイページに画面遷移するようにしたい。名刺管理アプリの更新を参考にする*/
+	/*時間がないためChangeServletの開発は中止、他機能優先*/
 
 }
