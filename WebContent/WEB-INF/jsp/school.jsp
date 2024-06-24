@@ -80,17 +80,17 @@
 
 				<div class = "items">
 					<div class = "item">
-						<img src="/C1/img/coolEndo.jpg" alt="遠藤　聖大">
+						<img src="/C1/img/coolEndo.jpg" alt="遠藤　聖大" style="width: 30rem;height: 30rem;">
 						<p class = "rikishi-name">遠藤　聖大</p>
 						<p class = "rikishi-content">大相撲フィーバーの火付け役イケメン力士</p>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢">
+						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢" style="width: 30rem; height: 26rem;">
 						<p class = "rikishi-name">千代の富士貢</p>
 						<p class = "rikishi-content">昭和時代の名横綱</p>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/coolTera.jpg" alt="寺尾　常史">
+						<img src="/C1/img/coolTera.jpg" alt="寺尾　常史" style="width: 30rem; height: 30rem;">
 						<p class = "rikishi-name">寺尾　常史</p>
 						<p class = "rikishi-content">目鼻立ちのはっきりした彫りの深い顔立ち</p>
 					</div>

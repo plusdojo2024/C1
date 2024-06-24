@@ -13,6 +13,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.login-field {
+	opacity: 0.8;
+}
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -22,7 +26,7 @@ body {
 }
 
 .login {
-    width: 300px;
+    width: 30rem;
 }
 
 .login-screen {
@@ -34,6 +38,7 @@ body {
 .app-title {
     text-align: center;
     color: #777;
+    font-size: 20px;
 }
 
 .login-form {
@@ -50,11 +55,12 @@ input {
     border: 2px solid transparent;
     font-size: 16px;
     font-weight: 200;
-    padding: 10px 0;
-    width: 250px;
+    padding: 12px 0;
+    width: 300px;
     transition: border .5s;
     border-radius: 25px;
-    margin-top: 20px;
+    margin-top: 50px;
+    font-family: "myfont";
 }
 
 input:focus {
