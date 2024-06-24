@@ -7,59 +7,81 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SUMOO</title>
+<title>SUMOO | 返信ページ</title>
 <link rel="stylesheet" href="/C1/css/reply.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
 <main>
-
+<c:forEach var="e" items="${contributionsList}" >
 <table class="boardpic">
       <tr>
         <td>
         <!-- ユーザーネーム、アイコン -->
-        <a href="/C1/UserPageServlet?${e.id}">
         	<%-- idはid=${ cardList.rikishi_id }に変える --%>
-            <img src="${e.pic_movie}" width="70" height="70" alt="投稿">
+
+            <img src="${e.icon}" width="70" height="70" alt="アイコン">
             <!--
              src="${rikishi_pic} widthとheightはCSSで決める
              -->
-		</a>
         </td>
         <td>
-          ${e.user_id}
+          ${e.user_name}
         </td>
         <td>
-          <c:if test="false">
+          <c:if test="${empty e.stars_user_id}">
           <%-- この投稿のことをお気に入りしていなかったら --%>
-            <a href="/C1/RikishiServlet?favorite=0&${e.id}">
+            <a href="/C1/ReplyServlet?star=0&id=${e.id}">
+        	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
+              <img src="/C1/img/staryellow.svg" width="70" height="70" alt="☆">
+		    </a>
+		  </c:if>
+          <c:if test="${!empty e.stars_user_id}">
+          <%-- この投稿のことをお気に入りしていたら --%>
+            <a href="/C1/ReplyServlet?star=1&id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/starwhite.png" width="70" height="70" alt="☆">
 		    </a>
 		  </c:if>
-          <c:if test="true">
-          <%-- この投稿のことをお気に入りしていたら --%>
-            <a href="/C1/RikishiServlet?favorite=1&${e.id}">
-        	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
-              <img src="/C1/img/staryellow.svg" width="70" height="70" alt="色付き☆">
-		    </a>
-		  </c:if>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <img src="${e.pic_movie}" width="70" height="70" alt="投稿">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          ${e.text}
         </td>
       </tr>
     </table>
+</c:forEach>
 
 
-
-<form>
+<form method="post" action="/C1/ReplyServlet">
   <div>
     <label for="reply">テキストを入力</label><br>
     <input id="reply" type="text" name="text" />
   </div>
   <div>
+    <input type="hidden" name="id" value="${contributionsList[0].id}">
     <input type="submit" value="送信" />
   </div>
-
-  <h1>他のユーザーの返信</h1>
 </form>
+  <h1>他のユーザーの返信</h1>
+  <c:forEach var="e" items="${replyList}" >
+    <table class="reply">
+     <tr>
+       <td>
+         ${e.user_name}
+       </td>
+       <td>
+         ${e.text}
+       </td>
+     </tr>
+    </table>
+  </c:forEach>
+
 
 </main>
 <body>

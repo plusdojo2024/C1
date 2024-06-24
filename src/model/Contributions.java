@@ -77,6 +77,11 @@ public class Contributions implements Serializable {
 		this.updated_at = updated_at;
 		this.star_id = star_id;
 	}
+
+	public Contributions(String user_id) {
+		this.user_id = user_id;
+	}
+
 	//デフォルトコンストラクタ
 	public Contributions() {
 
@@ -188,5 +193,6 @@ public class Contributions implements Serializable {
 	public void setStar_id(int star_id) {
 		this.star_id = star_id;
 	}
+
 
 }

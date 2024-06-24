@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.ContributionsDao;
 import dao.UsersDao;
+import model.Contributions;
 import model.Users;
 
 /**
@@ -41,6 +43,11 @@ public class MyPageServlet extends HttpServlet {
 		UsersDao users = new UsersDao();
 		List<Users> usersList = users.select(new Users(User_id));
 		request.setAttribute("usersList", usersList);
+
+		ContributionsDao contributions = new ContributionsDao();
+		List<Contributions> contributionsList = contributions.select2(new Contributions(User_id));
+		request.setAttribute("contributionsList", contributionsList);
+
 
 		// マイページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/myPage.jsp");

@@ -26,12 +26,6 @@
 							<label class="change-field-icon" for="change-icon"></label>
 					</div>
 
-					<!-- IDの入力 -->
-					<div class="change-name">
-						<input type="text" class="change-field" name="id"
-							placeholder="ID" id="change-name"> <label
-							class="change-field-name" for="change-name"></label>
-					</div>
 
 					<!-- ユーザーネームの入力 -->
 					<div class="regist-username">
@@ -50,7 +44,7 @@
 
 					<div id="error_message" style="color: red;"></div>
 
-					<input type="submit" id="btnChange" value="新規入門">
+					<input type="submit" id="btnChange" value="更新">
 				</form>
 			</div>
 		</div>

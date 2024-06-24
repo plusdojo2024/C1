@@ -50,7 +50,7 @@ public class RoomServlet extends HttpServlet {
 		String User_id = User.getUser_id();
 
 		//クエリパラメータを取得
-		int Rikishi_id = Integer.parseInt(request.getParameter("rikishi_id"));
+		int id = Integer.parseInt(request.getParameter("rikishi_id"));
 
 		//各種情報を取得する
 		UsersDao users = new UsersDao();
@@ -58,11 +58,11 @@ public class RoomServlet extends HttpServlet {
 		request.setAttribute("usersList", usersList);
 
 		RikishiesDao rikishies = new RikishiesDao();
-		List<Rikishies> rikishiesList = rikishies.select(new Rikishies(Rikishi_id));
+		List<Rikishies> rikishiesList = rikishies.select(new Rikishies(id));
 		request.setAttribute("rikishiesList", rikishiesList);
 
 		ContributionsDao contributions = new ContributionsDao();
-		List<Contributions> contributionsList = contributions.select(new Contributions(Rikishi_id));
+		List<Contributions> contributionsList = contributions.select(new Contributions(id));
 		request.setAttribute("contributionsList", contributionsList);
 
 		// 各部屋ページにフォワードする

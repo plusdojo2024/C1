@@ -31,32 +31,33 @@
     <p>一致するデータはありません。</p>
   </c:if> --%>
 
-<%--   <c:forEach var="e" items="${cardList}" > --%>
-<!--     <form class="search_result" method="post" action="/C1/UserServlet"> -->
+<c:forEach var="e" items="${followsList}">
+<form class="search_result" method="post" action="/C1/UserServlet">
     <table class="boardpic">
       <tr>
         <td>
-        <a href="/C1/UserPageServlet?id=0">
-            <img src="/C1/img/daiamami.png" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
+        <a href="/C1/UserPageServlet?"user_id=${e.user_id}>
+            <img src="${e.user_name}" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
             <!--
              src="${user_pic} widthとheightはCSSで決める
              -->
-
 		</a>
         </td>
+
+		<td>
+			<td><a href="/C1/RoomServlet?user_id=${e.user_id}">
+			${e.follow_user_id} </a></td>
+
         <td>
-          ユーザー名
-        </td>
-        <td>
-          <a href="/C1/FollowServlet?follow=1&id=0">
+          <a href="/C1/FollowServlet?follow=1&id=${e.user_id}">
           <%-- followはそのまま、idはid=${ cardList.user_id }に変える --%>
-            <img src="/C1/img/heartred.svg" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
+            <img src="/C1/img/heartred.svg" width="70" height="70">
 		  </a>
         </td>
       </tr>
     </table>
-<!--     </form> -->
-<%--   </c:forEach> --%>
+</form>
+</c:forEach>
 
   <!-- メイン（ここまで） -->
   <!-- フッター（ここから） -->　
