@@ -419,5 +419,68 @@ public class ContributionsDao {
 		return result;
 	}
 
+	// マイページ
+		public List<Contributions> select2(Contributions contributions) {
+			Connection conn = null;
+			List<Contributions> contributionsList = new ArrayList<Contributions>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
+
+				// SQL文を準備する
+				String sql = "SELECT contributions.id, contributions.user_id, contributions.pic_movie "
+						+ "FROM rikishies INNER JOIN contributions "
+						+ "ON rikishies.id = contributions.rikishi_id "
+						+ "WHERE contributions.user_id = ?";
+
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				pStmt.setString(1, contributions.getUser_id());
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				//rs.next()で、最初は最初の1行をさしtrueを返す
+				//次からは、次の1行があればtrueを返し、その行を指す
+				//次の行がないとfalseとなり、while文は終了で次に進む
+				while (rs.next()) {
+					Contributions record = new Contributions(
+					rs.getInt("id"),
+					rs.getString("user_id"),
+					rs.getString("pic_movie")
+					);
+					contributionsList.add(record);
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				contributionsList = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				contributionsList = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						contributionsList = null;
+					}
+				}
+			}
+
+			// 結果を返す
+			return contributionsList;
+		}
 
 }
