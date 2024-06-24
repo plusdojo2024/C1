@@ -42,20 +42,22 @@ public class ReplyServlet extends HttpServlet {
 		//クエリパラメータを取得
         String star = request.getParameter("star");
 		int id = Integer.parseInt(request.getParameter("id"));
-
+		String judge = request.getParameter("judge");
 
 		//処理
 		ContributionsDao contributions = new ContributionsDao();
-		if (star.equals("0")) {
+		if (judge==null) {}
+		else if (judge.equals("1")){
+		if (star==null) {
 			//starsテーブルにレコードを追加する処理
 			contributions.insertStar(new Contributions(id, User_id));
 
-		} else if (star.equals("1")) {
+		} else if (star.equals(User_id)) {
 			//starsテーブルからレコードを削除する処理
 			contributions.delete(new Contributions(id, User_id));
 
 		}
-
+		}
 
 		// 初期表示の処理
 		List<Contributions> contributionsList = contributions.selectReplyContribution(new Contributions(id));

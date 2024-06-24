@@ -34,7 +34,7 @@
   <c:forEach var="e" items="${contributionsList}" >
 
   <li>
-    <a href="/C1/ReplyServlet?id=${e.id}"><img src="${e.pic_movie}"></a>
+    <a href="/C1/ReplyServlet?id=${e.id}&star=${e.stars_user_id}&judge=1"><img src="${e.pic_movie}"></a>
     <h2>タイトル</h2>
     <p>ディスクリプション</p>
   </li>
