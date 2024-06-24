@@ -22,7 +22,7 @@
   </header>
   <main>
   <!-- ほんとは自分のアイコンが入る-->
-    <img src="${usersList.icon}" >
+    <img src="${usersList[0].icon}" >
     <h1 class="user_name">ユーザーネーム</h1>
     <h1 class="message">メッセージ</h1>
     <h1 class="oshirikishi">推し力士</h1>

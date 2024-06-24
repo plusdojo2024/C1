@@ -22,8 +22,8 @@
 <main>
   <div class="face">
   <img src="/C1/img/iconatami.png">
-  <h2>${rikishies.rikishi_name}</h2>
-  <p>${rikishies.rikishi_profile}</p>
+  <h2>${rikishies[0].rikishi_name}</h2>
+  <p>${rikishies[0].rikishi_profile}</p>
   </div>
   <div class="calender">
   <a href="/C1/ContributionServlet"><img src="/C1/img/contribution.png"></a>
