@@ -1,7 +1,8 @@
 @charset "UTF-8";
+
 @font-face {
-  font-family: "myfont";
-  src: url("/C1/fonts/kai.ttf") format("truetype");
+	font-family: "myfont";
+	src: url("/C1/fonts/kai.ttf") format("truetype");
 }
 
 * {
@@ -10,16 +11,20 @@
 	font-family: "myfont";
 }
 
-
 /*それぞれのユーザーのボード*/
 .stars_contributions {
 	font-size: 4rem;
 	margin-top: 1rem;
-    color:black;
-    text-align: center;
-    padding: 1.1px 6px;
-    background-color: lightpink;
+	color: black;
+	text-align: center;
+	padding: 1.1px 6px;
+	background-color: lightpink;
+	display: inline-block;
+}
 
+.photo {
+	text-align: center;
+	place-items: center;
 }
 
 .stars-page {
@@ -32,11 +37,11 @@
 }
 /* 見出し */
 h1 {
-	font-size:6rem;
+	font-size: 6rem;
 }
 
 /* aタグの設定 */
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
