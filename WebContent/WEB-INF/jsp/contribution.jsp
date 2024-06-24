@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+	String filename=(String)request.getAttribute("filename");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
   <input type="file" name="pict"><br>
   <input type="text" name="text"><br>
   <button type="submit">送信する</button>
-  <img src="C:\pleiades\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\C1\C1\img">
+  <img src="img/<%=filename%>">
 </form>
 <footer>
   <nav class="menu">

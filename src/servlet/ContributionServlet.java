@@ -1,5 +1,6 @@
 package servlet;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -61,9 +62,14 @@ public class ContributionServlet extends HttpServlet {
 		String path=getServletContext().getRealPath("/img");
 		//実際にファイルが保存されるパス確認
 		System.out.println(path);
+		//書き込み
+		part.write(path+File.separator+filename);
 
 		//投稿処理
 		ContributionsDao cDao = new ContributionsDao();
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/contribution.jsp");
+		dispatcher.forward(request, response);
 
 	}
 
