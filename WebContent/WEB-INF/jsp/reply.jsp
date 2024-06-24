@@ -28,16 +28,16 @@
           ${e.user_name}
         </td>
         <td>
-          <c:if test="false">
+          <c:if test="${empty e.stars_user_id}">
           <%-- この投稿のことをお気に入りしていなかったら --%>
-            <a href="/C1/ContributionServlet?star=0&${e.id}">
+            <a href="/C1/ReplyServlet?star=0&id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/staryellow.svg" width="70" height="70" alt="☆">
 		    </a>
 		  </c:if>
-          <c:if test="true">
+          <c:if test="${!empty e.stars_user_id}">
           <%-- この投稿のことをお気に入りしていたら --%>
-            <a href="/C1/ContributionServlet?star=1&${e.id}">
+            <a href="/C1/ReplyServlet?star=1&id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
               <img src="/C1/img/starwhite.png" width="70" height="70" alt="☆">
 		    </a>
@@ -58,17 +58,30 @@
 </c:forEach>
 
 
-<form>
+<form method="post" action="/C1/ReplyServlet">
   <div>
     <label for="reply">テキストを入力</label><br>
     <input id="reply" type="text" name="text" />
   </div>
   <div>
+    <input type="hidden" name="id" value="${contributionsList[0].id}">
     <input type="submit" value="送信" />
   </div>
-
-  <h1>他のユーザーの返信</h1>
 </form>
+  <h1>他のユーザーの返信</h1>
+  <c:forEach var="e" items="${replyList}" >
+    <table class="reply">
+     <tr>
+       <td>
+         ${e.user_name}
+       </td>
+       <td>
+         ${e.text}
+       </td>
+     </tr>
+    </table>
+  </c:forEach>
+
 
 </main>
 <body>
