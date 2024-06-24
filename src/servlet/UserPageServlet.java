@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.ContributionsDao;
 import dao.UsersDao;
+import model.Contributions;
 import model.Users;
 
 /**
@@ -46,6 +48,10 @@ public class UserPageServlet extends HttpServlet {
 		UsersDao users = new UsersDao();
 		List<Users> usersList = users.select_other(new Users(User_id, Follow_user_id));
 		request.setAttribute("usersList", usersList);
+
+		ContributionsDao contributions = new ContributionsDao();
+		List<Contributions> contributionsList = contributions.select2(new Contributions(Follow_user_id));
+		request.setAttribute("contributionsList", contributionsList);
 
 		// マイページ（他人）にフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/userPage.jsp");
