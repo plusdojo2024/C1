@@ -27,14 +27,16 @@ public class UserPageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
-		if (session.getAttribute("id") == null) {
+		if (session.getAttribute("user_id") == null) {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
 		}
 
+
+
 		//リクエストスコープを取得
 		request.setCharacterEncoding("UTF-8");
-		Users User = (Users)session.getAttribute("User_id");
+		Users User = (Users)session.getAttribute("user_id");
 		String User_id = User.getUser_id();
 
 		//クエリパラメータを取得

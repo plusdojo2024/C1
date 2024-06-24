@@ -46,6 +46,7 @@ public class UserSearchServlet extends HttpServlet {
 		List<Users> usersList = users.select_usersearch(new Users(User_id));
 
 		// 検索結果をリクエストスコープに格納する
+		request.setAttribute("User_id", User_id);
 		request.setAttribute("usersList", usersList);
 
 
