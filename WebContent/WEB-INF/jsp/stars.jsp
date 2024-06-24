@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="/C1/css/stars.css">
 <link rel="stylesheet" href="/C1/css/common.css">
 </head>
-<body>
+
 <body class=stars-page>
+<main>
 	<div class="wrapper" id="top">
 		<header class="header">
 			<div class="logo">
@@ -23,7 +24,7 @@
 
 		<c:forEach var="e" items="${starsList}">
 			<table class="stars_contributions">
-				<tr>
+				<tr class="info">
 					<td>
 						<%-- 返信へ遷移するユーザーアイコン --%> <a
 						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
@@ -41,13 +42,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td></td>
+					<td class="photo">
 						<%-- 返信へ遷移するユーザーアイコン --%> <a
 						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
-							src="${e.pic_movie}" width="100" height="100">
+							src="${e.pic_movie}" width="200" height="200">
 
 					</a>
 					</td>
+					<td></td>
 
 				</tr>
 			</table>
@@ -79,6 +82,6 @@
 
 
 
-
+</main>
 </body>
 </html>

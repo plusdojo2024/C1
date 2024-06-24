@@ -70,13 +70,16 @@ select{
   background: #cfcedb;
 }
 
+#regist_form{
+display: inline-block;
+}
 
-
-.tb{
-  display: grid;
+/* .tb{
+  display: flex;
+  align-items: flex-start;
   place-items: center;
   place-content: center;
-}
+} */
 
 .result{
 	  font-size:30px;
