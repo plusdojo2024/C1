@@ -48,7 +48,7 @@ input {
     text-align: center;
     background-color: #ECF0F1;
     border: 2px solid transparent;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 200;
     padding: 10px 0;
     width: 340px;
@@ -63,8 +63,11 @@ input:focus {
     box-shadow: none;
 }
 
-.btnLogin {
-	width:120px;
+#btnLogin {
+	width:160px;
+	height: 80px;
+	font-family: "myfont";
+	font-size: 24px;
 }
 
 .btn:hover {
@@ -84,6 +87,13 @@ input:focus {
     height: 160px;
 }
 
+
+.regist-field-message {
+	height: 10rem;
+}
+
+
+
  @font-face {
   font-family: "myfont";
   src: url("/C1/fonts/kai.ttf") format("truetype");
@@ -91,25 +101,26 @@ input:focus {
 
 h1 {
   font-family: "myfont";
+  font-size: 4rem;
 }
 
 /* 各項目の間隔 */
 .regist-name {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .regist-pass {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .regist-question {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .regist-username {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .regist-icon {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
