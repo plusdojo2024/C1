@@ -74,9 +74,9 @@
 
 					<!-- messageの入力 -->
 					<div class="regist-username">
-						<input type="text" class="regist-field-message" name="username"
-							placeholder="message" id="regist-username"> <label
-							class="regist-field-username" for="regist-username"></label>
+						<textarea class="regist-field-message" name="message"
+							placeholder="message" id="regist-message" rows="5" cols="40"></textarea>
+						<label class="regist-field-message" for="regist-message"></label>
 					</div>
 
 

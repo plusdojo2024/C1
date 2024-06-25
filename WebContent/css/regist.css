@@ -89,7 +89,15 @@ input:focus {
 
 
 .regist-field-message {
-	height: 10rem;
+    text-align: center;
+    background-color: rgb(236, 240, 241);
+    border: 2px solid transparent;
+    padding: 10px 0px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: black;
+    font-family: Arial, sans-serif;
 }
 
 
