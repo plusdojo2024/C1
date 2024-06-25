@@ -34,7 +34,7 @@
   <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
   </div>
   </div>
-  <div class="tape">
+  <div class="tape"></div>
 
 
   <ul class="scroll_content">

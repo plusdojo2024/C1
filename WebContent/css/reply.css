@@ -1,9 +1,55 @@
 @charset "UTF-8";
- @font-face {
-  font-family: "myfont";
-  src: url("/C1/fonts/kai.ttf") format("truetype");
+@font-face {
+    font-family:"myfont" ;
+    src: url("../fonts/kai.ttf")format("truetype");
 }
 
-h1 {
-  font-family: "myfont";
+/*html（全体）
+ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
+html {
+    font-size: 60px;
+    background-color:#FFDEAD;
+	font-family: "myfont";
+
+    }
+
+
+#icon {
+	width: 750px;
+    height: auto;
+}
+
+#icon img {
+    width: 750px;
+    height: auto;
+}
+
+#name {
+	font-size: 100px;
+	position: relative;
+	right: 100px;
+}
+
+#star {
+	width: 150px;
+    height: auto;
+	position: relative;
+	left: 160px;
+}
+
+#syasin {
+	margin: 0;
+	text-align: center;
+	width: 980px;
+    height: auto;
+	/*width: 800px;
+    height: 800px;*/
+}
+
+#position {
+	text-align: center;
+}
+
+#comment {
+	font-size: 60px;
 }

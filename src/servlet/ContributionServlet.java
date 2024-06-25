@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,7 +15,10 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import dao.ContributionsDao;
+import dao.RikishiesDao;
+import dao.UsersDao;
 import model.Contributions;
+import model.Rikishies;
 import model.Users;
 
 /**
@@ -44,6 +48,25 @@ public class ContributionServlet extends HttpServlet {
 			response.sendRedirect("/C1/LoginServlet");
 			return;
 		}
+
+		//リクエストスコープを取得
+		request.setCharacterEncoding("UTF-8");
+		Users User = (Users)session.getAttribute("user_id");
+		String User_id = User.getUser_id();
+
+		//クエリパラメータを取得
+		int id = Integer.parseInt(request.getParameter("rikishi_id"));
+
+		//各種情報を取得する
+		UsersDao users = new UsersDao();
+		List<Users> usersList = users.select_other(new Users(User_id));
+		request.setAttribute("usersList", usersList);
+
+		RikishiesDao rikishies = new RikishiesDao();
+		List<Rikishies> rikishiesList = rikishies.select(new Rikishies(id));
+		request.setAttribute("rikishiesList", rikishiesList);
+
+		// 各部屋ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/contribution.jsp");
 		dispatcher.forward(request, response);
 	}
