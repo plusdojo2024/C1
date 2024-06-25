@@ -27,12 +27,12 @@
 				<tr class="info">
 					<td>
 						<%-- 返信へ遷移するユーザーアイコン --%> <a
-						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
+						href="/C1/ReplyServlet?user_id=${e.user_id}&id=${e.contribution_id}&judge=1"> <img
 							src="${e.icon}" width="70" height="70">
 
 					</a>
 					</td>
-					<td><a href="/C1/ReplyServlet?user_id=${e.user_id}">
+					<td><a href="/C1/ReplyServlet?user_id=${e.user_id}&id=${e.contribution_id}&judge=1">
 							${e.user_name} </a></td>
 					<td>
 						<%-- この力士のことをお気に入りしていたら --%> <a
@@ -45,7 +45,7 @@
 					<td></td>
 					<td class="photo">
 						<%-- 返信へ遷移するユーザーアイコン --%> <a
-						href="/C1/ReplyServlet?user_id=${e.user_id}"> <img
+						href="/C1/ReplyServlet?user_id=${e.user_id}&id=${e.contribution_id}&judge=1"> <img
 							src="${e.pic_movie}" width="200" height="200">
 
 					</a>
