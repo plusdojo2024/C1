@@ -10,6 +10,11 @@
 <title>SUMOO | 返信ページ</title>
 <link rel="stylesheet" href="/C1/css/reply.css">
 <link rel="stylesheet" href="/C1/css/common.css">
+<style>
+    span{
+     margin-right: 100px;
+    }
+  </style>
 </head>
 <main>
 <c:forEach var="e" items="${contributionsList}" >
@@ -19,12 +24,12 @@
         <!-- ユーザーネーム、アイコン -->
         	<%-- idはid=${ cardList.rikishi_id }に変える --%>
 
-            <img src="${e.icon}" width="70" height="70" alt="アイコン">
+            <img src="${e.icon}" width="70" height="70" alt="アイコン" id="icon">
             <!--
              src="${rikishi_pic} widthとheightはCSSで決める
              -->
         </td>
-        <td>
+        <td id="name">
           ${e.user_name}
         </td>
         <td>
@@ -32,21 +37,21 @@
           <%-- この投稿のことをお気に入りしていなかったら --%>
             <a href="/C1/ReplyServlet?star=0&id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
-              <img src="/C1/img/staryellow.svg" width="70" height="70" alt="☆">
+              <img src="/C1/img/staryellow.svg" width="70" height="70" alt="☆" id="star">
 		    </a>
 		  </c:if>
           <c:if test="${!empty e.stars_user_id}">
           <%-- この投稿のことをお気に入りしていたら --%>
             <a href="/C1/ReplyServlet?star=1&id=${e.id}">
         	<%-- favoriteはそのまま、idはid=${ cardList.rikishi_id }に変える --%>
-              <img src="/C1/img/starwhite.png" width="70" height="70" alt="☆">
+              <img src="/C1/img/starwhite.png" width="70" height="70" alt="☆" id="star">
 		    </a>
 		  </c:if>
         </td>
       </tr>
       <tr>
-        <td colspan="3">
-          <img src="${e.pic_movie}" width="70" height="70" alt="投稿">
+        <td colspan="3" id="position">
+          <img src="${e.pic_movie}" width="70" height="70" alt="投稿" id="syasin">
         </td>
       </tr>
       <tr>
@@ -56,11 +61,11 @@
       </tr>
     </table>
 </c:forEach>
-
+<br>
 
 <form method="post" action="/C1/ReplyServlet">
   <div>
-    <label for="reply">テキストを入力</label><br>
+    <label for="reply" id="text">テキストを入力</label><br>
     <input id="reply" type="text" name="text" />
   </div>
   <div>
@@ -68,12 +73,12 @@
     <input type="submit" value="送信" />
   </div>
 </form>
-  <h1>他のユーザーの返信</h1>
+  <h1 id="comment">コメント</h1>
   <c:forEach var="e" items="${replyList}" >
     <table class="reply">
      <tr>
        <td>
-         ${e.user_name}
+         <span>${e.user_name}</span>
        </td>
        <td>
          ${e.text}

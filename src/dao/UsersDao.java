@@ -74,9 +74,9 @@ public class UsersDao {
 			// SQL文を準備する（マイページの初期表示のために情報を取得　　ユーザプロフィールを取得したユーザIDで検索）
 			String sql = "SELECT users.user_id , users.user_name, users.icon, users.message, favorites.rikishi_id, RIKISHIES.pic, RIKISHIES.RIKISHI_NAME"
 					+ " FROM users"
-					+ " INNER JOIN favorites"
+					+ " LEFT OUTER JOIN favorites"
 					+ " ON users.user_id = favorites.user_id"
-					+ " INNER JOIN RIKISHIES"
+					+ " LEFT OUTER JOIN RIKISHIES"
 					+ " ON favorites.rikishi_id = RIKISHIES.id"
 					+ " WHERE users.user_id = ?";
 

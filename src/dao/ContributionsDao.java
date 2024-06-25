@@ -483,7 +483,7 @@ public class ContributionsDao {
 			return contributionsList;
 		}
 
-		// マイページ
+		// 投稿ページから投稿するときの処理
 				public boolean insert(Contributions contributions) {
 					Connection conn = null;
 					boolean result = false;
@@ -496,7 +496,7 @@ public class ContributionsDao {
 						conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/C1", "sa", "");
 
 						// SQL文を準備する
-						String sql = "INSERT INTO CONTRIBUTIONS (NULL, ?, ?, /img + ?,  ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+						String sql = "INSERT INTO CONTRIBUTIONS VALUES (NULL, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
 
 						PreparedStatement pStmt = conn.prepareStatement(sql);
 

@@ -31,10 +31,10 @@
   </div>
   <div class="calender">
   <a href="/C1/ContributionServlet?rikishi_id=${rikishiesList[0].id}"><img src="/C1/img/contribution.png"></a>
-  <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
+  <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDBiMzZjZzc5amVtNXFmaHE1N3ZvdWV0NmQgaGF5dW11NzUxQG0&tmsrc=hayumu751%40gmail.com"><img src="/C1/img/calender.png"></a>
   </div>
   </div>
-  <div class="tape">
+  <div class="tape"></div>
 
 
   <ul class="scroll_content">
