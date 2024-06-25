@@ -37,7 +37,9 @@
     color:black;
     text-align: center;
     padding: 1.1px 6px;
-    background: linear-gradient(45deg, #8b4513 0%, #cd853f 50%, #deb887 100%);
+    /* background: linear-gradient(45deg, #8b4513 0%, #cd853f 50%, #deb887 100%); */
+    background-image: url(../img/mat.png);
+    background-repeat: repeat;
 
 }
 
