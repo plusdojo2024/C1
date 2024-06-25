@@ -16,10 +16,14 @@
   </style>
   -->
 </head>
+
 <header class="header">
+<div class="hero">
+ </div>
 </header>
 <body>
 <main>
+  <div class="hero">
   <div class="face">
   <img src="${rikishiesList[0].pic}">
   <h2>${rikishiesList[0].rikishi_name}</h2>
@@ -29,19 +33,21 @@
   <a href="/C1/ContributionServlet?rikishi_id=${rikishiesList[0].id}"><img src="/C1/img/contribution.png"></a>
   <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
   </div>
+  </div>
+  <div class="tape">
+
 
   <ul class="scroll_content">
   <c:forEach var="e" items="${contributionsList}" >
 
   <li>
     <a href="/C1/ReplyServlet?id=${e.id}&judge=1"><img src="${e.pic_movie}"></a>
-    <h2>タイトル</h2>
-    <p>ディスクリプション</p>
+
   </li>
   </c:forEach>
   </ul>
 
-<p id="mat"></p>
+<p class="mat"></p>
 </main>
 <footer id="footer">
   <nav class="menu">
