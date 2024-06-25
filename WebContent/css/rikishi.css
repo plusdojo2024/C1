@@ -18,15 +18,15 @@
 
 /*ユーザー検索の入力フォーム*/
 #rikishiform {
-    width: 21rem;
-    height: 3rem;
+    width: 40rem;
+    height: 5rem;
 	margin-top: 3rem;
 }
 
 /*ユーザー検索の入力フォームと検索ボタン*/
 .rikishiform {
-	font-size: 1.3rem;
-	height: 3rem;
+	font-size: 3rem;
+	height: 5rem;
 	margin-top: 3rem;
 }
 
@@ -37,7 +37,9 @@
     color:black;
     text-align: center;
     padding: 1.1px 6px;
-    background: linear-gradient(45deg, #8b4513 0%, #cd853f 50%, #deb887 100%);
+    /* background: linear-gradient(45deg, #8b4513 0%, #cd853f 50%, #deb887 100%); */
+    background-image: url(../img/mat.png);
+    background-repeat: repeat;
 
 }
 

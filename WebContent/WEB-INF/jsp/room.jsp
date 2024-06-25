@@ -26,7 +26,7 @@
   <p>${rikishiesList[0].rikishi_profile}</p>
   </div>
   <div class="calender">
-  <a href="/C1/ContributionServlet"><img src="/C1/img/contribution.png"></a>
+  <a href="/C1/ContributionServlet?rikishi_id=${rikishiesList[0].id}"><img src="/C1/img/contribution.png"></a>
   <a href="/C1/ContributionServlet"><img src="/C1/img/calender.png"></a>
   </div>
 
