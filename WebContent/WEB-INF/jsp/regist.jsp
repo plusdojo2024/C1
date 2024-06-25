@@ -83,14 +83,28 @@
 
 
 					<!-- アイコンの設定 -->
-					<div class="regist-icon">
-						<input type = "file" class="regist-field-icon"><br>
-					</div>
 
-					<div id="error_message" style="color: red;"></div>
 
-					<input type="submit" id="btnLogin" value="入門">
-				</form>
+
+					<form id="regist_form" method="post" action="/C1/RegistServlet" enctype="multipart/form-data">
+                    <!-- フォームで選択した画像 -->
+                    <img id="user-icon" src="/C1/img/default.png">
+
+                    <div class="buttons">
+                        <!-- フォーム -->
+                        <input type="file" name="logo" id="form" accept=".jpg, .jpeg, .png, .gif">
+
+                        <!-- 画像削除ボタン -->
+                        <button type="button" id="delete">削除</button>
+                    </div>
+
+                    <div id="error_message" style="color: red;"></div>
+
+                    <input type="submit" id="btnLogin" value="入門">
+                </form>
+			</form>
+
+
 
 			</div>
 
