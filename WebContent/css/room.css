@@ -8,8 +8,10 @@
 ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
 html {
     font-size: 16px;
-    background-color:#FFEEFF;
+    background-color:#FFDEAD;
 	font-family: "myfont";
+	-webkit-text-stroke: 0.1px #000000;
+	color:#FFF;
     }
 
 .face {
@@ -39,25 +41,44 @@ html {
 }
 
 .header {
-	  padding-top: 150px;
+	  padding-top: 80px;
 	  background-image: url(/C1/img/bar.png);
       background-repeat: repeat-x;
+      position:static;
 }
 
+.tape {
+	  padding-top: 100px;
+	  background-image: url(/C1/img/bar.png);
+      background-repeat: repeat-x;
 
+}
 
-#mat {
-    padding-bottom: 100px;
+.mat {
+	padding-top: 100px;
 	background-image: url(/C1/img/mat.png);
     background-repeat: repeat-x;
+    position: relative;
+    top: 35px;
+
+}
+
+.hero {
+	    background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(/C1/img/sumoroom.png);
+        position: relative;
+
+
 }
 
 .scroll_content { /* リスト全体のスタイル */
-  text-align: center;
+  /*text-align: center;*/
   display: flex;
   max-width: 800px;
-  max-height: 2000px;
-  /* margin: auto; */
+  max-height: 800px;
+   margin: auto;
   overflow-x: auto;
 }
 
@@ -67,11 +88,12 @@ html {
   margin: 3px;
   flex-shrink: 0;
   list-style: none;
+  position:static;
 }
 
 .scroll_content img { /* 画像のスタイル */
   width: 100%;
-  height: 400px;
+  height: 600px;
   object-fit: cover;
 }
 

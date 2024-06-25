@@ -31,11 +31,14 @@
 
 					<div id="error_message" style="color: red;"></div>
 
+
+					<p class="error-message">
+						<%= request.getAttribute("result") != null ? request.getAttribute("result") : "" %>
+					</p>
+
 					<input type="submit" id="btnLogin" value="土俵入り" style="width :120px; padding: 3px;">
 				</form>
-				<p class="error-message">
-					<%= request.getAttribute("result") != null ? request.getAttribute("result") : "" %>
-				</p>
+
 				<a class="login-link" href="RegistServlet">入門はこちらから</a>
 			</div>
 

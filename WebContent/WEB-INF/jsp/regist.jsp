@@ -21,7 +21,7 @@
 					<!-- IDの入力 -->
 					<div class="regist-name">
 						<input type="text" class="regist-field" name="id"
-							placeholder="username" id="regist-name"> <label
+							placeholder="ID" id="regist-name"> <label
 							class="login-field-name" for="regist-name"></label>
 					</div>
 
@@ -36,14 +36,22 @@
 					<!-- パスワードの再度確認 -->
 					<div class="regist-pass">
 						<input type="password" class="regist-field" name="pw"
-							placeholder="passwordをもう一度入力してください" id="regist-pass"> <label
+							placeholder="もう一度入力してください" id="regist-pass"> <label
 							class="regist-field-pass" for="regist-pass"></label>
 					</div>
 
-					<!-- 秘密の質問 ！修正必須！-->
+
+					<p>
+						秘密の質問<br> <select name="secret-question">
+						<option value="1">初めて飼った動物は？</option>
+						<option value="2">初恋の人は？</option>
+						<option value="3">推し力士は？</option>
+						</select>
+					</p>
+					<!-- 秘密の質問-->
 					<div class="regist-question">
 						<input type="text" class="regist-field" name="question"
-							placeholder="秘密の質問の答えを入力してください" id="regist-pass"> <label
+							placeholder="上記の答えを入力してください" id="regist-pass" style="margin-top: 0px;"> <label
 							class="regist-field-pass" for="regist-pass"></label>
 					</div>
 
@@ -56,6 +64,24 @@
 					</div>
 
 
+					<!-- 推し力士 -->
+					<div class="regist-favorite-rikishi">
+						<input type="text" class="regist-field" name="favorites"
+							placeholder="推し力士" id="regist-favorites"> <label
+							class="regist-field-favorites" for="regist-username"></label>
+					</div>
+
+
+					<!-- messageの入力 -->
+					<div class="regist-username">
+						<textarea class="regist-field-message" name="message"
+							placeholder="message" id="regist-message" rows="5" cols="40"></textarea>
+						<label class="regist-field-message" for="regist-message"></label>
+					</div>
+
+
+
+
 					<!-- アイコンの設定 -->
 					<div class="regist-icon">
 						<input type = "file" class="regist-field-icon"><br>
@@ -63,7 +89,7 @@
 
 					<div id="error_message" style="color: red;"></div>
 
-					<input type="submit" id="btnLogin" value="入門" style="width :120px; padding: 3px;">
+					<input type="submit" id="btnLogin" value="入門">
 				</form>
 
 			</div>
