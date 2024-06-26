@@ -35,8 +35,8 @@
     <div id="preview" style="width: 300px;"></div><br>
         <input id="inputElm" type="file" name="pict" accept="image/*"><br>
 
-  <input type="text" name="text" placeholder><br>
-  <button type="submit">送信する</button>
+  <input type="text" name="text" placeholder="テキストを入力してください" id="text"><br>
+  <button type="submit" id="submit">送信する</button>
 </form>
 
 

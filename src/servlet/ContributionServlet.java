@@ -3,6 +3,7 @@ package servlet;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +16,10 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import dao.ContributionsDao;
+import dao.RikishiesDao;
+import dao.UsersDao;
 import model.Contributions;
+import model.Rikishies;
 import model.Users;
 
 /**
@@ -37,15 +41,27 @@ public class ContributionServlet extends HttpServlet {
 			return;
 		}
 
-		//クエリパラメータを取得
-		int Rikishi_id = Integer.parseInt(request.getParameter("rikishi_id"));
+		//リクエストスコープを取得
+				request.setCharacterEncoding("UTF-8");
+				Users User = (Users)session.getAttribute("user_id");
+				String User_id = User.getUser_id();
 
-		//リクエストスコープに格納
-		request.setAttribute("Rikishi_id", Rikishi_id);
+				//クエリパラメータを取得
+				int rikishi_id = Integer.parseInt(request.getParameter("rikishi_id"));
 
-		//投稿ページへフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/contribution.jsp");
-		dispatcher.forward(request, response);
+				//各種情報を取得する
+				UsersDao users = new UsersDao();
+				List<Users> usersList = users.select_other(new Users(User_id));
+				request.setAttribute("usersList", usersList);
+
+				RikishiesDao rikishies = new RikishiesDao();
+				List<Rikishies> rikishiesList = rikishies.select(new Rikishies(rikishi_id));
+				request.setAttribute("rikishiesList", rikishiesList);
+				request.setAttribute("Rikishi_id", rikishi_id);
+
+				// 各部屋ページにフォワードする
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/contribution.jsp");
+				dispatcher.forward(request, response);
 	}
 
 	/**
@@ -92,9 +108,11 @@ public class ContributionServlet extends HttpServlet {
 		ContributionsDao cDao = new ContributionsDao();
 		cDao.insert(new Contributions(User_id, Rikishi_id, filepath, text));
 
+
+
+
 		//投稿ページへフォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/contribution.jsp");
-		dispatcher.forward(request, response);
+		response.sendRedirect("/C1/RoomServlet?rikishi_id=" + Rikishi_id);
 
 	}
 

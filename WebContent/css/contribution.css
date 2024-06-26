@@ -4,6 +4,12 @@
     src: url("../fonts/kai.ttf")format("truetype");
 }
 
+* {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "myfont";
+}
+
 /*html（全体）
 ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
 html {
@@ -93,4 +99,24 @@ html {
 	margin: auto;
 	text-align: center;
 	position: relative;
+}
+
+#inputElm {
+	font-size: 3rem;
+	height: auto;
+	width: 50rem;
+	margin-top: 1rem;
+}
+
+#text {
+	font-size: 3rem;
+    width: 55rem;
+    height: 5rem;
+	margin-top: 1rem;
+}
+
+#submit {
+    font-size: 3rem;
+	height: 5rem;
+	margin-top: 1rem;
 }
