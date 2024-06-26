@@ -23,13 +23,10 @@
     background-repeat: repeat;
 }
 
-.rikishi-page {
-	background-color: #FFDDFF;
-}
 
 /* ページ全体の背景色 */
 .rikishi-page {
-	background-color: #FFDDFF;
+	background-color:#FFDEAD;
 }
 /* 見出し */
 h1 {
