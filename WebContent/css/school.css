@@ -89,6 +89,16 @@ font-size: 0.6em;
 line-height: 1.5;
 }
 
+.mame-title {
+	color:#800080;
+	font-size: 3.6rem;
+}
+
+.mame-content {
+	font-size: 2rem;
+}
+
+
 .rikishi-name {
 	color:#800080;
 	font-size: 3.6rem;

@@ -17,7 +17,7 @@
 
 
 			<div class="regist-form">
-				<form id="regist_form" method="post" action="/C1/RegistServlet">
+				<form id="regist_form" method="post" action="/C1/RegistServlet" enctype="multipart/form-data">
 					<!-- IDの入力 -->
 					<div class="regist-name">
 						<input type="text" class="regist-field" name="id"
@@ -86,7 +86,7 @@
 
 
 
-					<form id="regist_form" method="post" action="/C1/RegistServlet" enctype="multipart/form-data">
+
                     <!-- フォームで選択した画像 -->
                     <img id="user-icon" src="/C1/img/default.png">
 
@@ -101,7 +101,7 @@
                     <div id="error_message" style="color: red;"></div>
 
                     <input type="submit" id="btnLogin" value="入門">
-                </form>
+
 			</form>
 
 
