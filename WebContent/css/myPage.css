@@ -27,3 +27,12 @@ height:120px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
 }
+
+
+
+#icon img{
+	width: 350px;
+    height: auto;
+    border-radius:50%;
+    border: 5px solid #800080;
+}
