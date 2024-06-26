@@ -36,7 +36,7 @@
     <table class="boardpic">
       <tr>
         <td>
-        <a href="/C1/UserPageServlet?"user_id=${e.user_id}>
+        <a href="/C1/UserPageServlet?user_id=${e.user_id}">
             <img src="${e.user_name}" width="70" height="70" alt="SUMOO | フォロー中ユーザー一覧">
             <!--
              src="${user_pic} widthとheightはCSSで決める
@@ -45,7 +45,7 @@
         </td>
 
 		<td>
-			<td><a href="/C1/RoomServlet?user_id=${e.user_id}">
+			<td><a href="/C1/UserPageServlet?user_id=${e.user_id}">
 			${e.follow_user_id} </a></td>
 
         <td>
