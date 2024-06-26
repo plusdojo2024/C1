@@ -7,7 +7,7 @@
 /*html（全体）
 ピンク色の背景と玉ねぎフォント、フォントサイズ16px*/
 html {
-    font-size: 60px;
+    /*font-size: 60px;*/
     background-color:#FFDEAD;
 	font-family: "myfont";
 
@@ -52,4 +52,40 @@ html {
 
 #comment {
 	font-size: 60px;
+}
+
+#reply {
+	margin: auto;
+	font-size: 30px;
+    width: 35rem;
+    height: 3rem;
+	margin-top: 1rem;
+}
+
+#submit {
+	margin: auto;
+	font-size: 1rem;
+	height: 3rem;
+	width: 6rem;
+	margin-top: 1rem;
+}
+
+#etext{
+	font-size: 60px;
+}
+
+#text {
+	font-size: 40px;
+}
+
+#form {
+	text-align: center;
+}
+
+#comment1 {
+	font-size: 40px;
+}
+
+#comment2 {
+	font-size: 40px;
 }

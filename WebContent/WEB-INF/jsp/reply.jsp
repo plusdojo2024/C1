@@ -55,7 +55,7 @@
         </td>
       </tr>
       <tr>
-        <td colspan="3">
+        <td colspan="3" id="etext">
           ${e.text}
         </td>
       </tr>
@@ -63,26 +63,26 @@
 </c:forEach>
 <br>
 
-<form method="post" action="/C1/ReplyServlet">
+<form method="post" action="/C1/ReplyServlet" id="form">
   <div>
-    <label for="reply" id="text">テキストを入力</label><br>
+    <label for="reply" id="text">返信を入力</label><br>
     <input id="reply" type="text" name="text" />
   </div>
-  <div>
+
     <input type="hidden" name="id" value="${contributionsList[0].id}">
-    <input type="submit" value="送信" />
-  </div>
+    <input type="submit" value="送信" id="submit"/>
+
 </form>
   <h1 id="comment">コメント</h1>
   <c:forEach var="e" items="${replyList}" >
     <table class="reply">
      <tr>
-       <td>
+       <td id="comment1">
          <span>${e.user_name}</span>
        </td>
-       <td>
+       <td id="comment2">
          ${e.text}
-       </td>
+       </td >
      </tr>
     </table>
   </c:forEach>
