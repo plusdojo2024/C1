@@ -68,8 +68,40 @@
 			<input type="checkbox" id="toggle2" class="toggle">
 			<label class="title" for="toggle2">豆知識</label>
 			<div class="content">
-			<p>後でここに本文2追加</p>
-
+				<div class = "items">
+					<div class = "item">
+						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">相撲の起源</p>
+						<p class = "mame-content">相撲の起源は、古事記（７１２年）や日本書紀（７２０年）の中にある力比べの神話や天覧勝負の伝説があげられる。
+江戸時代に入ると力自慢の者の中から相撲を職業にする人たちが現れた。
+						</p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢" style="width: 30rem; height: 26rem;">
+						<p class = "mame-title">千代の富士貢</p>
+						<p class = "mame-content">昭和時代の名横綱</p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢" style="width: 30rem; height: 26rem;">
+						<p class = "mame-title">千代の富士貢</p>
+						<p class = "mame-content">昭和時代の名横綱</p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">相撲の起源</p>
+						<p class = "mame-content"></p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">相撲の起源</p>
+						<p class = "mame-content"></p>
+					</div>
+					<div class = "item">
+						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">相撲の起源</p>
+						<p class = "mame-content"></p>
+					</div>
+				</div>
 			</div>
 		</div>
 
