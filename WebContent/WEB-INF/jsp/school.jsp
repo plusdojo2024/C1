@@ -77,29 +77,35 @@
 						</p>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢" style="width: 30rem; height: 26rem;">
-						<p class = "mame-title">千代の富士貢</p>
-						<p class = "mame-content">昭和時代の名横綱</p>
+						<img src="/C1/img/mame2.png" alt="戦国の力自慢" style="width: 30rem; height: 26rem;">
+						<p class = "mame-title">戦国の力自慢</p>
+						<p class = "mame-content">鎌倉時代から戦国時代にかけては武士の時代。武士の戦闘の訓練として盛んに行われた。織田信長は長く相撲を愛好し、近江の安土城などで各地から力士を集めて上覧相撲を催し、勝ち抜いた者を家臣として召し抱えた。
+</p>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/coolChiyo.jpg" alt="千代の富士貢" style="width: 30rem; height: 26rem;">
-						<p class = "mame-title">千代の富士貢</p>
-						<p class = "mame-content">昭和時代の名横綱</p>
+						<img src="/C1/img/mame3.png" alt="四股" style="width: 30rem; height: 26rem;">
+						<p class = "mame-title">四股</p>
+						<p class = "mame-content">力士の足腰を鍛え、体をほぐす効果がある。古くは、「醜」という字が当てられ、地面に潜む邪悪なものを踏みつけて、封じ込める意味が込められている。
+</p>
+
+					<div class = "item">
+						<img src="/C1/img/mame4.png" alt="ちゃんこという名前の由来" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">ちゃんこという名前の由来</p>
+						<p class = "mame-content">力士はそれぞれの部屋に入り、親方と共に過ごすため、親方を親、弟子を子と呼ぶ。そのため、父（とう）ちゃん、子（こ）→「ちゃんこ」となった。そのため、力士が作るものはすべて「ちゃんこ」と呼ぶ。
+						</p>
+					</div>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
-						<p class = "mame-title">相撲の起源</p>
-						<p class = "mame-content"></p>
+						<img src="/C1/img/mame5.png" alt="力士の給与" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">給与が貰えるのは力士全体の１０分の１</p>
+						<p class = "mame-content">大相撲の力士数は約６００人。この内給与がでるのは十両以上の力士のみで約７０人。
+						</p>
 					</div>
 					<div class = "item">
-						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
-						<p class = "mame-title">相撲の起源</p>
-						<p class = "mame-content"></p>
-					</div>
-					<div class = "item">
-						<img src="/C1/img/mame1.png" alt="相撲の起源" style="width: 30rem;height: 30rem;">
-						<p class = "mame-title">相撲の起源</p>
-						<p class = "mame-content"></p>
+						<img src="/C1/img/mame6.png" alt="力士の移籍" style="width: 30rem;height: 30rem;">
+						<p class = "mame-title">力士は部屋の移籍が原則できない</p>
+						<p class = "mame-content">大相撲では、部屋の吸収・合併や親方の独立のような特殊な事情を除いて個人の都合では移籍が不可能。
+						</p>
 					</div>
 				</div>
 			</div>
