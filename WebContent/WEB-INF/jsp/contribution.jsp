@@ -30,10 +30,10 @@
   <div class="tape"></div>
   <H2 class="boardpic">投稿部屋</H2>
 
-<form id="button" method="post" action="/C1/ContributionServlet" enctype="multipart/form-data">
+<form id="button" method="post" action="/C1/ContributionServlet?Rikishi_id=${Rikishi_id}" enctype="multipart/form-data">
 
     <div id="preview" style="width: 300px;"></div><br>
-        <input id="inputElm" type="file"><br>
+        <input id="inputElm" type="file" name="pict" accept="image/*"><br>
 
   <input type="text" name="text" placeholder><br>
   <button type="submit">送信する</button>

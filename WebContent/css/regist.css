@@ -70,6 +70,12 @@ input:focus {
 	font-size: 24px;
 }
 
+#user-icon {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
 .btn:hover {
     background-color: #2980B9;
 }

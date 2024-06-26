@@ -81,6 +81,14 @@ public class Contributions implements Serializable {
 	public Contributions(String user_id) {
 		this.user_id = user_id;
 	}
+	//投稿を登録するためのコンストラクタ
+	public Contributions(String user_id, int rikishi_id, String pic_movie, String text) {
+
+		this.user_id = user_id;
+		this.rikishi_id = rikishi_id;
+		this.pic_movie = pic_movie;
+		this.text = text;
+	}
 
 	//デフォルトコンストラクタ
 	public Contributions() {
@@ -192,13 +200,6 @@ public class Contributions implements Serializable {
 	}
 	public void setStar_id(int star_id) {
 		this.star_id = star_id;
-	}
-	public Contributions(String user_id, int rikishi_id, String pic_movie, String text) {
-
-		this.user_id = user_id;
-		this.rikishi_id = rikishi_id;
-		this.pic_movie = pic_movie;
-		this.text = text;
 	}
 
 
